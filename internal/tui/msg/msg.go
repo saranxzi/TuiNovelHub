@@ -1,0 +1,31 @@
+package msg
+
+import (
+	"treading/internal/db"
+	"treading/internal/providers"
+)
+
+// NavigateMsg is used to transition between views.
+type NavigateMsg struct {
+	View string
+	Data interface{}
+}
+
+// SearchResultsMsg carries search results back to the search view.
+type SearchResultsMsg struct {
+	Results []providers.SearchResult
+	Err     error
+}
+
+// SyncCompleteMsg indicates a novel has finished syncing its chapters.
+type SyncCompleteMsg struct {
+	Novel *db.Novel
+	Err   error
+}
+
+// ChapterContentMsg returns the markdown content of a chapter.
+type ChapterContentMsg struct {
+	Chapter *db.Chapter
+	Content string
+	Err     error
+}
