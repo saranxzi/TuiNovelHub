@@ -1,0 +1,209 @@
+# NovelFire Provider Configuration
+# This file contains the configuration for scraping novels from NovelFire (novelfire.net)
+
+provider:
+  name: "NovelFire"
+  base_url: "https://novelfire.net"
+  description: "Web novel provider for novelfire.net with paginated chapter lists"
+
+# CSS selectors for extracting content
+selectors:
+  # Novel metadata selectors
+  title: ".novel-title"
+  author: ".author span[itemprop='author']"
+  description: ".summary .content.expand-wrapper"
+  cover_image: ".cover img"
+  genres: ".categories ul li a.property-item"
+  tags: ".categories ul li a.property-item"
+  status: ".header-stats .completed, .header-stats .ongoing"
+  rating: ".rating .nub"
+
+  # Chapter discovery selectors
+  chapter_list: "ul.chapter-list li a"
+  chapter_links: "ul.chapter-list li a"
+  chapter_title: ".chapter-title"
+  chapter_number: ".chapter-no"
+
+  # Chapter content selectors
+  chapter_content: "#content.clearfix"
+  prev_chapter: ".nav-previous a"
+  next_chapter: ".nav-next a"
+
+  # Pagination selectors
+  pagination_container: ".pagination"
+  pagination_next: ".pagination .page-item:not(.disabled) a[aria-label*='Next'], .pagination .page-item:not(.disabled) a[rel='next']"
+  pagination_links: ".pagination .page-item a.page-link"
+
+# Request settings
+request:
+  rate_limit: 2.0 # Seconds between requests (be respectful to NovelFire)
+  max_retries: 3 # Maximum retry attempts
+  timeout: 30 # Request timeout in seconds
+  user_agent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+
+  # Headers to send with requests
+  headers:
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8"
+    "Accept-Language": "en-US,en;q=0.5"
+    "Accept-Encoding": "gzip, deflate"
+    "Connection": "keep-alive"
+    "Upgrade-Insecure-Requests": "1"
+
+# Chapter discovery settings
+chapter_discovery:
+  discovery_method: "paginated" # NovelFire uses paginated chapter lists
+  pagination:
+    enabled: true
+    max_pages: 100 # Safety limit for pagination
+    page_param: "page" # URL parameter for pagination
+    start_page: 1 # First page number
+
+# Chapter downloading settings
+chapter_downloading:
+  max_concurrent: 8 # Maximum concurrent chapter downloads (reduced for stability)
+  chunk_size: 20 # Number of chapters to process in each chunk
+  retry_failed: true # Retry failed chapter downloads
+  max_retries: 5 # Maximum retries for failed chapters (increased)
+  delay_between_chunks: 2.0 # Delay in seconds between chunks (increased)
+
+# Content processing settings
+content_cleaning:
+  # Use markdownify for better HTML to markdown conversion
+  use_markdownify: true
+
+  remove_selectors:
+    - ".ads"
+    - ".advertisement"
+    - ".ad-container"
+    - ".google-ads"
+    - ".adsense"
+    - ".chapter-nav"
+    - ".btn-group"
+    - ".text-center"
+    - ".support-author"
+    - ".donation"
+    - ".patreon"
+    - ".social-links"
+    - ".share-buttons"
+    - ".navigation"
+    - ".breadcrumb"
+    - "script"
+    - "style"
+    - ".bg-info"
+    - "#chapter_error"
+    - ".translator-note"
+    - ".author-note"
+    - ".promo"
+    - ".banner"
+    - ".chapter-nav-bottom"
+    - ".chapter-nav-top"
+    - ".portlet-title"
+    - ".donation-box"
+    - ".support-box"
+    - ".ad-banner"
+    - ".popup"
+    - ".modal"
+    - ".overlay"
+    - ".sidebar"
+    - ".footer"
+    - ".header"
+    - ".menu"
+    - ".nav"
+    - ".comments"
+    - ".comment-section"
+
+  text_processing:
+    remove_empty_lines: true
+    replace_quotes: true
+    normalize_whitespace: true
+    enhance_titles_from_content: true # Extract better titles from chapter content
+    title_search_paragraphs: 3 # Number of paragraphs to search for titles
+
+    # Intelligent title merging (prevents "no HTML content" warnings)
+    intelligent_title_merging: true # Merge duplicate chapter headings intelligently
+    remove_redundant_headings: true # Remove redundant H2 headings from content
+    prefer_descriptive_titles: true # Choose more descriptive titles over simple ones
+
+  # Text patterns to remove from content (regex patterns)
+  remove_patterns:
+    - "Search the \\*\\*NovelFire\\.net\\*\\* website on Google to access chapters of novels early and in the highest quality\\."
+    - "Search the NovelFire\\.net website on Google to access chapters of novels early and in the highest quality\\."
+    - "Visit \\*\\*NovelFire\\.net\\*\\* for more chapters\\."
+    - "Visit NovelFire\\.net for more chapters\\."
+
+  transformations:
+    - type: "remove_empty_paragraphs"
+    - type: "normalize_whitespace"
+    - type: "remove_duplicate_content"
+    - type: "remove_ad_paragraphs"
+    - type: "fix_invalid_characters"
+
+# Rate limiting
+rate_limiting:
+  requests_per_minute: 20 # Conservative rate limiting for NovelFire
+  burst_limit: 5
+
+# Error handling
+error_handling:
+  max_consecutive_failures: 5
+  retry_delay: 2.5
+  skip_on_error: true
+  circuit_breaker:
+    failure_threshold: 5
+    recovery_timeout: 30
+    half_open_max_calls: 3
+
+# Concurrent processing
+concurrent_processing:
+  max_workers: 15 # Maximum concurrent workers
+  chunk_size: 25 # Chapters per chunk
+  delay_between_chunks: 1.5 # Delay between chunks
+
+# Output formatting
+output:
+  chapter_title_format: "title_only"
+  include_chapter_numbers: true
+
+  # EPUB specific settings
+  epub:
+    chapter_level: 2 # Chapter break level for Pandoc
+    include_toc: true # Include table of contents
+    toc_depth: 2 # TOC depth
+    # Chapter title formatting options
+    chapter_title_format: "title_only" # Options: title_only, number_title, chapter_number_title, number_only
+    chapter_number_format: "arabic" # Options: arabic, roman, roman_upper
+
+    # EbookLib backup generator settings
+    use_ebooklib: false # Force use of EbookLib instead of Pandoc
+    ebooklib_fallback: true # Enable automatic fallback to EbookLib when Pandoc fails
+    ebooklib_compression: true # Enable EPUB compression for smaller file sizes
+    ebooklib_validation: true # Enable EPUB structure validation
+
+    # Pandoc-specific settings (when not using EbookLib)
+    custom_css: true # Include custom CSS styling
+    pandoc_args: [] # Additional Pandoc command line arguments
+
+# Domain mappings for URL validation
+domains:
+  - "novelfire.net"
+  - "www.novelfire.net"
+
+# Provider-specific settings
+provider_settings:
+  # NovelFire specific configurations
+  extract_rating_from_meta: true # Extract rating from meta tags
+  handle_premium_chapters: false # NovelFire doesn't have premium chapters
+  respect_author_notes: true # Keep author notes in content
+  
+  # Content processing
+  preserve_formatting: true # Preserve original formatting where possible
+  clean_chapter_titles: true # Clean up chapter titles
+  
+  # Pagination handling
+  pagination_delay: 1.0 # Delay between pagination requests
+  max_pagination_retries: 3 # Maximum retries for pagination failures
+  
+  # URL patterns
+  novel_url_pattern: "^https?://(www\\.)?novelfire\\.net/book/[^/]+/?$"
+  chapter_url_pattern: "^https?://(www\\.)?novelfire\\.net/book/[^/]+/chapter-\\d+"
+  chapters_url_pattern: "^https?://(www\\.)?novelfire\\.net/book/[^/]+/chapters"

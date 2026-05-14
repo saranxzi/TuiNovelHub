@@ -1,0 +1,261 @@
+# NovelBuddy Provider Configuration
+# This file contains the configuration for scraping novels from NovelBuddy (novelbuddy.com)
+
+provider:
+  name: "NovelBuddy"
+  base_url: "https://novelbuddy.com"
+  description: "Web novel provider for novelbuddy.com with AJAX-based chapter discovery"
+
+# CSS selectors for extracting content
+selectors:
+  # Novel metadata selectors
+  title: ".detail .name h1"
+  author: ".meta p:-soup-contains('Authors') a"
+  description: "div.section-body.summary p.content"
+  cover_image: "#cover .img-cover img"
+  genres: ".meta p:-soup-contains('Genres') a"
+  tags: "p:-soup-contains('Tags:') a"
+  status: ".meta p:-soup-contains('Status') a"
+  rating: ".post-total-rating .score"
+  rating_count: ".post-total-rating .total"
+  alternative_names: ".post-content_item:-soup-contains('Alternative') .summary-content"
+
+  # Chapter discovery selectors (AJAX-based)
+  chapter_list: "ul.chapter-list li"
+  chapter_list_container: "ul.chapter-list"
+  chapter_link: "a"
+  chapter_title: "a"
+  latest_chapter: ".chapter-item .chapter a"
+
+  # Chapter content selectors
+  chapter_title_page: "div.chapter__content h1"
+  chapter_content: "div.chapter__content div.content-inner"
+  prev_chapter: ".nav-previous a"
+  next_chapter: ".nav-next a"
+
+  # Navigation and metadata
+  breadcrumb: ".breadcrumb"
+  novel_link: ".breadcrumb a[href*='/novel/']"
+
+# Request settings
+request:
+  rate_limit: 3 # Seconds between requests (conservative for AJAX-heavy site)
+  max_retries: 5 # Maximum retry attempts
+  timeout: 60 # Request timeout in seconds (longer for AJAX)
+  user_agent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+
+  # Headers to send with requests
+  headers:
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8"
+    "Accept-Language": "en-US,en;q=0.5"
+    "Accept-Encoding": "gzip, deflate"
+    "Connection": "keep-alive"
+    "Upgrade-Insecure-Requests": "1"
+    "Cache-Control": "no-cache"
+    "Pragma": "no-cache"
+
+  # AJAX-specific headers for chapter list requests
+  ajax_headers:
+    "X-Requested-With": "XMLHttpRequest"
+    "Content-Type": "application/json"
+    "Accept": "application/json, text/javascript, */*; q=0.01"
+
+# Content cleaning configuration
+content_cleaning:
+  # Use markdownify for better HTML to markdown conversion
+  use_markdownify: true
+
+  # Selectors for elements to remove
+  remove_selectors:
+    - "script" # JavaScript code
+    - "style" # CSS styles
+    - ".advertisement" # Ad containers
+    - "[class*='ad-']" # Ad-related classes
+    - "[id*='ad-']" # Ad-related IDs
+    - "iframe" # Embedded frames
+    - "noscript" # No-script content
+    - ".chapter-nav" # Chapter navigation
+    - ".breadcrumb" # Breadcrumb navigation
+    - ".social-share" # Social sharing buttons
+    - ".comments" # Comment sections
+    - ".related-posts" # Related posts
+    - ".author-info" # Author info boxes
+    - ".donation" # Donation boxes
+    - ".patreon" # Patreon links
+    - "[class*='sponsor']" # Sponsor content
+    - "[class*='donate']" # Donation content
+
+  # Elements to preserve formatting
+  preserve_selectors:
+    - "p" # Paragraphs
+    - "h1" # Headers level 1
+    - "h2" # Headers level 2
+    - "h3" # Headers level 3
+    - "h4" # Headers level 4
+    - "h5" # Headers level 5
+    - "h6" # Headers level 6
+    - "strong" # Strong emphasis
+    - "em" # Emphasis
+    - "i" # Italic
+    - "b" # Bold
+    - "br" # Line breaks
+    - "blockquote" # Block quotes
+    - "ul" # Unordered lists
+    - "ol" # Ordered lists
+    - "li" # List items
+
+  # Text processing options
+  text_processing:
+    remove_empty_lines: true
+    normalize_whitespace: true
+    preserve_paragraph_breaks: true
+    convert_html_entities: true
+    remove_extra_spaces: true
+
+    # Content-based title extraction
+    enhance_titles_from_content: true # Extract better titles from chapter content
+    title_search_paragraphs: 3 # Number of paragraphs to search for titles
+    remove_html_tags: true # Important for NovelBuddy to avoid EPUB issues
+
+    # Intelligent title merging (prevents "no HTML content" warnings)
+    intelligent_title_merging: true # Merge duplicate chapter headings intelligently
+    remove_redundant_headings: true # Remove redundant H2 headings from content
+    prefer_descriptive_titles: true # Choose more descriptive titles over simple ones
+
+# Cover image processing
+cover_processing:
+  enabled: true
+  target_size: [600, 800] # Width x Height in pixels
+  quality: 85 # JPEG quality (1-100)
+  format: "JPEG" # Output format (JPEG, PNG, WEBP)
+  create_placeholder: true # Create placeholder if download fails
+  placeholder_color: "#2c3e50" # Background color for placeholder
+  placeholder_text_color: "#ecf0f1" # Text color for placeholder
+  handle_lazy_loading: true # Handle lazy-loaded images (data-src)
+
+# Chapter discovery settings
+chapter_discovery:
+  # Method for finding chapters (AJAX for NovelBuddy)
+  discovery_method: "ajax" # Options: tab_content, ajax, pagination
+
+  # AJAX discovery settings
+  ajax_endpoint: "/api/manga/{novel_id}/chapters?source=detail"
+  ajax_method: "GET"
+  ajax_data: {}
+  ajax_response_type: "html" # This endpoint returns HTML, not JSON
+
+  # Novel ID extraction settings
+  novel_id_extraction:
+    method: "javascript_variables" # Extract from JavaScript variables
+    variables:
+      - "bookId" # Primary variable containing numeric ID
+      - "mangaId" # Alternative variable name
+    fallback_method: "url_parsing" # Fallback to URL parsing if variables not found
+
+  # Chapter URL patterns
+  url_patterns:
+    - "/novel/{novel_slug}/chapter-{number}/"
+    - "/novel/{novel_slug}/chapter-{number}-{title}/"
+
+# Chapter downloading settings (optimized for faster scraping while maintaining stability)
+chapter_downloading:
+  max_concurrent: 35 # Increased concurrency for faster scraping (below NovelFull's 40)
+  chunk_size: 20 # Larger chunks for better throughput (below NovelFull's 60)
+  retry_failed: true # Retry failed chapter downloads
+  max_retries: 5 # More retries for reliability
+  delay_between_chunks: 1.5 # Reduced delay between chunks (seconds)
+  delay_between_requests: 0.5 # Reduced delay between individual requests
+  respect_rate_limit: true # Strictly follow rate limiting
+
+# Error handling
+error_handling:
+  # Retry configuration
+  retry_delays: [3, 6, 12, 24, 48] # Exponential backoff delays
+  retry_on_status: [429, 500, 502, 503, 504, 520, 521, 522, 524] # Status codes to retry
+
+  # Circuit breaker configuration
+  circuit_breaker:
+    failure_threshold: 3 # Trigger circuit breaker after 3 failures
+    recovery_timeout: 180 # Recovery time (3 minutes)
+    half_open_max_calls: 1 # Only allow 1 test call when half-open
+
+  # Rate limiting configuration
+  rate_limiting:
+    requests_per_second: 0.33 # Very conservative rate (1 request every 3 seconds)
+    burst_size: 1 # No burst allowed
+    adaptive: true # Adapt based on server responses
+    backoff_on_429: true # Back off when rate limited
+
+  # Fallback strategies
+  fallback_selectors:
+    title: ["h1", "h1.entry-title", ".post-title h1"]
+    author: ["p strong", ".author-content a", ".post-author", "[rel='author']"]
+    description: ["div.section-body.summary p.content", ".summary", ".description"]
+    chapter_title: ["h1", "h2", "h3", ".entry-title", ".chapter-title"]
+    chapter_content: [
+        "div.chapter__content div.content-inner", # Primary selector
+        "div.chapter__content", # Alternative
+        ".chapter-content", # Common alternative
+        ".entry-content", # Entry content
+        ".post-content", # Post content
+        "article", # Article tag
+        ".content", # Generic content
+        "#content", # Generic content ID
+        "main", # Main content area
+      ]
+
+# Output formatting
+output:
+  # Markdown formatting
+  markdown:
+    chapter_heading_level: 2 # H2 for chapters
+    include_chapter_numbers: true
+    include_word_count: false
+    add_page_breaks: true
+
+  # EPUB specific settings
+  epub:
+    chapter_level: 2 # Chapter break level for Pandoc
+    include_toc: true # Include table of contents
+    toc_depth: 2 # TOC depth
+    chapter_title_format: "title_only" # Options: title_only, number_title, chapter_number_title, number_only
+    chapter_number_format: "arabic" # Options: arabic, roman, roman_upper
+
+    # EbookLib backup generator settings
+    use_ebooklib: false # Force use of EbookLib instead of Pandoc
+    ebooklib_fallback: true # Enable automatic fallback to EbookLib when Pandoc fails
+    ebooklib_compression: true # Enable EPUB compression for smaller file sizes
+    ebooklib_validation: true # Enable EPUB structure validation
+
+    # Pandoc-specific settings (when not using EbookLib)
+    custom_css: true # Include custom CSS styling
+    pandoc_args: [] # Additional Pandoc command line arguments
+
+# Validation rules
+validation:
+  # Minimum content requirements
+  min_title_length: 1
+  min_author_length: 1
+  min_description_length: 10
+  min_chapter_content_length: 50
+
+# Debugging and logging
+debug:
+  save_raw_html: false # Save raw HTML for debugging
+  log_selectors: false # Log selector matches
+  verbose_errors: true # Detailed error messages
+
+# Site-specific quirks and workarounds
+quirks:
+  # Handle dynamic content loading
+  wait_for_content: 3 # Seconds to wait for content to load
+
+  # NovelBuddy specific handling
+  ajax_heavy_site: true # Enable AJAX-heavy site specific features
+  lazy_loading_images: true # Handle lazy-loaded images
+  javascript_variables: true # Extract data from JavaScript variables
+  novel_id_required: true # Novel ID required for API calls
+
+  # Content processing
+  strip_html_tags: true # Strip HTML tags from content for clean EPUB
+  handle_special_characters: true # Handle special characters in content

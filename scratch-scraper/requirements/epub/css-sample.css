@@ -1,0 +1,278 @@
+@charset "utf-8";
+
+/*
+================================================================================
+1. EPUB MINIMAL CSS RESET
+   - Based on modern reset principles.[5, 6]
+   - Neutralizes default e-reader styles for a consistent baseline.
+   - Disables hyphenation globally; it will be enabled selectively later.
+================================================================================
+*/
+html,
+body,
+div,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+em,
+strong,
+i,
+b,
+cite,
+code,
+sub,
+sup,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+figure,
+figcaption,
+footer,
+header,
+nav,
+section,
+article,
+aside,
+hr {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    /* Reset vendor-specific hyphenation by default.[7] */
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    -epub-hyphens: none;
+    hyphens: none;
+}
+
+/* Ensure HTML5 elements are treated as block-level for older readers.[5, 8] */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    /* Set a comfortable, accessible line-height. 1.4 to 1.6 is a good range.
+	   Using a unitless value is crucial for scalability.[2, 9] */
+    line-height: 1.5;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+/*
+================================================================================
+2. FONT EMBEDDING (@font-face)
+   - Embeds the custom font "Source Serif 4".
+   - Ensure you have the legal right to embed the font (OFL is best).[10, 11]
+   - Place font files in a "Fonts" folder relative to this CSS file.
+================================================================================
+*/
+@font-face {
+    font-family: "Source Serif 4";
+    font-weight: normal;
+    /* Corresponds to 400 weight */
+    font-style: normal;
+    src: url('../Fonts/SourceSerif4-Regular.ttf');
+}
+
+@font-face {
+    font-family: "Source Serif 4";
+    font-weight: normal;
+    /* Corresponds to 400 weight */
+    font-style: italic;
+    src: url('../Fonts/SourceSerif4-It.ttf');
+}
+
+@font-face {
+    font-family: "Source Serif 4";
+    font-weight: bold;
+    /* Corresponds to 700 weight */
+    font-style: normal;
+    src: url('../Fonts/SourceSerif4-Bold.ttf');
+}
+
+@font-face {
+    font-family: "Source Serif 4";
+    font-weight: bold;
+    /* Corresponds to 700 weight */
+    font-style: italic;
+    src: url('../Fonts/SourceSerif4-BoldIt.ttf');
+}
+
+
+/*
+================================================================================
+3. CORE TYPOGRAPHY & LAYOUT
+   - Defines the fundamental look and feel of the book.
+   - Uses relative units (em) to respect user font size settings.[12, 9]
+================================================================================
+*/
+
+body {
+    /* Apply the embedded font with a generic fallback.[13] */
+    font-family: "Source Serif 4", serif;
+    /* Let the user's device set the base font size. `100%` is equivalent to `1em`.[2] */
+    font-size: 100%;
+    /* Add small margins to the body to prevent text from touching the screen edges.
+	   Using percentages is better than `em` for horizontal margins.[14] */
+    margin-left: 2%;
+    margin-right: 2%;
+    /* Do NOT set a 'color' property here. This allows e-reader night modes to work correctly.[15, 4] */
+}
+
+/* This rule helps fix a line-height bug on Kobo e-readers.[8, 14] */
+body * {
+    line-height: inherit;
+}
+
+p {
+    /* Standard fiction formatting uses a first-line indent, not space between paragraphs.
+	   1.5em is a common and comfortable indent size.[14] */
+    text-indent: 1.5em;
+    /* Remove top and bottom margins for a clean, continuous text block. */
+    margin-top: 0;
+    margin-bottom: 0;
+    /* Justified text can create "rivers" of white space. Left-align is often more readable.[9] */
+    text-align: left;
+    /* Enable hyphenation for body paragraphs for a more even text block.
+	   Include all vendor prefixes for maximum compatibility.[14, 7] */
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    -epub-hyphens: auto;
+    hyphens: auto;
+}
+
+/* This is the magic for professional paragraph styling. It removes the indent
+   from the first paragraph immediately following a heading or a scene break.[1] */
+h1+p,
+h2+p,
+hr+p,
+.first-paragraph {
+    text-indent: 0;
+}
+
+
+/*
+================================================================================
+4. HEADINGS & BREAKS
+   - Styles for chapter titles and other divisions.
+   - Includes rules to prevent awkward page breaks.
+================================================================================
+*/
+
+h1,
+h2,
+h3 {
+    text-align: center;
+    font-weight: bold;
+    /* Ensure headings do not break from the content that follows them.
+	   This group of properties provides the best compatibility across modern
+	   e-readers that use different layout engines (e.g., multi-column).[8, 16, 17] */
+    page-break-after: avoid;
+    -webkit-column-break-after: avoid;
+    break-after: avoid;
+    page-break-inside: avoid;
+    -webkit-column-break-inside: avoid;
+    break-inside: avoid;
+    /* Headings should not be hyphenated.[7] */
+    hyphens: none;
+}
+
+h1 {
+    font-size: 1.6em;
+    margin-top: 2em;
+    margin-bottom: 1.5em;
+    /* A slightly tighter line-height for multi-line headings looks better.
+	   Must be >= 1.2 for Kindle compatibility.[8, 14] */
+    line-height: 1.3;
+}
+
+h2 {
+    font-size: 1.3em;
+    margin-top: 1.5em;
+    margin-bottom: 1em;
+    line-height: 1.3;
+}
+
+/* Style for semantic scene breaks (<hr>). This creates a simple, centered
+   ornament. An SVG background image could also be used for a more graphical
+   break.[14, 16] */
+hr.scene-break {
+    border: 0;
+    border-top: 1px solid #888;
+    width: 20%;
+    margin: 2em auto;
+}
+
+
+/*
+================================================================================
+5. PLATFORM-SPECIFIC OVERRIDES
+   - Contains targeted fixes for specific e-reader ecosystems.
+   - This is a key part of "defensive design".[8, 18]
+================================================================================
+*/
+
+/* Kindle (KF8) does not support the adjacent sibling selector (`+`).[2, 12]
+   Therefore, we must rely on the `.first-paragraph` class we added in the HTML
+   to remove the first-line indent. We place this inside a Kindle-specific
+   media query. Do not leave these queries empty.[8, 18] */
+@media amzn-kf8 {
+
+    h1+p,
+    h2+p,
+    hr+p {
+        /* This rule won't work on Kindle, but we leave it for other readers. */
+    }
+
+    .first-paragraph {
+        /* This class-based rule ensures the indent is removed on Kindle. */
+        text-indent: 0;
+    }
+}

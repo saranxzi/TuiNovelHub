@@ -1,0 +1,305 @@
+# NovelBin Provider Configuration
+# This file contains the configuration for scraping novels from NovelBin (novelbin.com)
+
+provider:
+  name: "NovelBin"
+  base_url: "https://novelbin.com"
+  description: "Web novel provider for novelbin.com"
+
+# CSS selectors for extracting content
+selectors:
+  # Novel metadata selectors
+  title: "h3.title[itemprop='name']"
+  author: ".info-meta a[href*='/a/']"
+  description: ".desc-text[itemprop='description']"
+  cover_image: "meta[property='og:image']"
+  genres: ".info-meta a[href*='/genre/']"
+  tags: ".tag-container a"
+  status: ".info-meta a[href*='/sort/']"
+  rating: "[itemprop='ratingValue']"
+  rating_count: "[itemprop='reviewCount']"
+  alternative_names: ".info-meta li:-soup-contains('Alternative names:')"
+
+  # Chapter discovery selectors
+  chapter_list: "#list-chapter ul.list-chapter li a"
+  chapter_list_alt: "#tab-chapters a[href*='/chapter-']"
+  latest_chapter: ".l-chapter .chapter-title"
+
+  # Chapter content selectors
+  chapter_title: "a.chr-title"
+  chapter_content: "#chr-content"
+  prev_chapter: "#prev_chap"
+  next_chapter: "#next_chap"
+
+  # Navigation and metadata
+  breadcrumb: ".breadcrumb"
+  novel_link: ".novel-link"
+
+# Request settings
+request:
+  rate_limit: 2 # Seconds between requests (increased for stability)
+  max_retries: 5 # Maximum retry attempts (increased for reliability)
+  timeout: 45 # Request timeout in seconds (increased for slow responses)
+  user_agent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+
+  # Headers to send with requests
+  headers:
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8"
+    "Accept-Language": "en-US,en;q=0.5"
+    "Accept-Encoding": "gzip, deflate"
+    "Connection": "keep-alive"
+    "Upgrade-Insecure-Requests": "1"
+    "Cache-Control": "no-cache"
+    "Pragma": "no-cache"
+
+# Content cleaning configuration
+content_cleaning:
+  # Use markdownify for better HTML to markdown conversion
+  use_markdownify: true
+
+  # Selectors for elements to remove
+  remove_selectors:
+    - "div[id^='pf-']" # Advertisement containers
+    - "script" # JavaScript code
+    - "style" # CSS styles
+    - ".chr-nav" # Chapter navigation
+    - ".breadcrumb" # Breadcrumb navigation
+    - ".advertisement" # Ad containers
+    - "[class*='ad-']" # Ad-related classes
+    - "[id*='ad-']" # Ad-related IDs
+    - "iframe" # Embedded frames
+    - "noscript" # No-script content
+
+  # Elements to preserve formatting
+  preserve_selectors:
+    - "p" # Paragraphs
+    - "h1" # Headers level 1
+    - "h2" # Headers level 2
+    - "h3" # Headers level 3
+    - "h4" # Headers level 4
+    - "h5" # Headers level 5
+    - "h6" # Headers level 6
+    - "strong" # Strong emphasis
+    - "em" # Emphasis
+    - "i" # Italic
+    - "b" # Bold
+    - "br" # Line breaks
+    - "blockquote" # Block quotes
+    - "ul" # Unordered lists
+    - "ol" # Ordered lists
+    - "li" # List items
+
+  # Text processing options
+  text_processing:
+    remove_empty_lines: true
+    normalize_whitespace: true
+    preserve_paragraph_breaks: true
+    convert_html_entities: true
+    remove_extra_spaces: true
+
+    # Content-based title extraction
+    enhance_titles_from_content: true # Extract better titles from chapter content
+    title_search_paragraphs: 3 # Number of paragraphs to search for titles
+
+    # Intelligent title merging (prevents "no HTML content" warnings)
+    intelligent_title_merging: true # Merge duplicate chapter headings intelligently
+    remove_redundant_headings: true # Remove redundant H2 headings from content
+    prefer_descriptive_titles: true # Choose more descriptive titles over simple ones
+
+# Cover image processing
+cover_processing:
+  enabled: true
+  target_size: [600, 800] # Width x Height in pixels
+  quality: 85 # JPEG quality (1-100)
+  format: "JPEG" # Output format (JPEG, PNG, WEBP)
+  create_placeholder: true # Create placeholder if download fails
+  placeholder_color: "#2c3e50" # Background color for placeholder
+  placeholder_text_color: "#ecf0f1" # Text color for placeholder
+
+# Chapter discovery settings
+chapter_discovery:
+  # Method for finding chapters
+  discovery_method: "tab_content" # Options: tab_content, ajax, pagination
+
+  # Tab-based discovery settings
+  tab_selector: "#tab-chapters"
+  tab_trigger: "a[href='#tab-chapters']"
+
+  # Pagination settings (if needed)
+  pagination:
+    enabled: false
+    next_page_selector: ".pagination .next"
+    max_pages: 100
+
+  # Chapter URL patterns
+  url_patterns:
+    - "/b/{novel_slug}/chapter-{number}"
+    - "/b/{novel_slug}/chapter-{number}-{title}"
+
+# Chapter downloading settings (conservative for NovelBin)
+chapter_downloading:
+  max_concurrent: 4 # Very low concurrency to avoid overwhelming server
+  chunk_size: 10 # Small chunks to reduce memory usage and server load
+  retry_failed: true # Retry failed chapter downloads
+  max_retries: 5 # More retries for reliability
+  delay_between_chunks: 3 # Longer delay between chunks (seconds)
+  delay_between_requests: 1 # Additional delay between individual requests
+  respect_rate_limit: true # Strictly follow rate limiting
+
+# Error handling
+error_handling:
+  # Retry configuration (more conservative for NovelBin)
+  retry_delays: [2, 5, 10, 20, 40] # Longer exponential backoff delays
+  retry_on_status: [429, 500, 502, 503, 504, 520, 521, 522, 524] # Extended status codes
+
+  # Circuit breaker configuration
+  circuit_breaker:
+    failure_threshold: 3 # Lower threshold to trigger circuit breaker faster
+    recovery_timeout: 120 # Longer recovery time (2 minutes)
+    half_open_max_calls: 1 # Only allow 1 test call when half-open
+
+  # Rate limiting configuration
+  rate_limiting:
+    requests_per_second: 0.5 # Very conservative rate (1 request every 2 seconds)
+    burst_size: 1 # No burst allowed
+    adaptive: true # Adapt based on server responses
+    backoff_on_429: true # Back off when rate limited
+
+  # Fallback strategies
+  fallback_selectors:
+    title: ["h1.title", ".novel-title", "h1"]
+    author: [".author", ".novel-author", "[itemprop='author']"]
+    description: [".description", ".summary", ".synopsis"]
+    chapter_title:
+      ["h1", "h2", "h3", ".chapter-title", ".title", "[class*='title']"]
+    chapter_content: [
+        "#chr-content", # Primary selector
+        ".chr-content", # Alternative class
+        "#chapter-content", # Common alternative
+        ".chapter-content", # Class variant
+        ".content", # Generic content
+        "#content", # Generic content ID
+        ".post-content", # Blog-style content
+        ".entry-content", # Entry content
+        "article", # Article tag
+        ".article-content", # Article content class
+        "main", # Main content area
+        "[role='main']", # Main role attribute
+      ]
+
+  # Missing content handling
+  missing_content:
+    skip_chapter: true # Skip chapters that can't be extracted
+    placeholder_content: "Chapter content unavailable"
+    log_missing: true # Log missing chapters
+
+  # Content quality validation
+  content_validation:
+    min_content_length: 100 # Minimum characters for valid content
+    min_word_count: 20 # Minimum words for valid content
+    max_content_length: 500000 # Maximum characters (prevent memory issues)
+    required_patterns: [] # Regex patterns that content must match
+    forbidden_patterns: # Patterns that indicate invalid content
+      [
+        "404.*not.*found",
+        "page\\s+not\\s+found",  # More specific: "page not found" with whitespace
+        "this\\s+page.*not.*found",  # More specific: "this page ... not found"
+        "chapter.*not.*available",
+        "content.*unavailable",
+        "access.*denied",
+        "subscription.*required",
+        "error.*404",
+        "not\\s+found.*error",
+      ]
+
+  # Content extraction strategies
+  extraction_strategies:
+    # Strategy 1: Primary selector with cleaning
+    primary:
+      enabled: true
+      use_primary_selector: true
+      apply_content_cleaning: true
+
+    # Strategy 2: Fallback selectors
+    fallback:
+      enabled: true
+      use_fallback_selectors: true
+      apply_content_cleaning: true
+
+    # Strategy 3: Text-based extraction
+    text_based:
+      enabled: true
+      min_paragraph_length: 50
+      extract_by_paragraphs: true
+
+    # Strategy 4: Partial content recovery
+    partial_recovery:
+      enabled: true
+      min_partial_length: 200
+      combine_fragments: true
+
+# Output formatting
+output:
+  # Markdown formatting
+  markdown:
+    chapter_heading_level: 2 # H2 for chapters
+    include_chapter_numbers: true
+    include_word_count: false
+    add_page_breaks: true
+
+  # EPUB specific settings
+  epub:
+    chapter_level: 2 # Chapter break level for Pandoc
+    include_toc: true # Include table of contents
+    toc_depth: 2 # TOC depth
+    # Chapter title formatting options
+    chapter_title_format: "title_only" # Options: title_only, number_title, chapter_number_title, number_only
+    chapter_number_format: "arabic" # Options: arabic, roman, roman_upper
+
+    # EbookLib backup generator settings
+    use_ebooklib: false # Force use of EbookLib instead of Pandoc
+    ebooklib_fallback: true # Enable automatic fallback to EbookLib when Pandoc fails
+    ebooklib_compression: true # Enable EPUB compression for smaller file sizes
+    ebooklib_validation: true # Enable EPUB structure validation
+
+    # Pandoc-specific settings (when not using EbookLib)
+    custom_css: true # Include custom CSS styling
+    pandoc_args: [] # Additional Pandoc command line arguments
+
+# Validation rules
+validation:
+  # Minimum content requirements
+  min_title_length: 1
+  min_author_length: 1
+  min_description_length: 10
+  min_chapter_content_length: 50
+
+  # Content validation patterns
+  title_patterns:
+    - "^.{1,200}$" # Title length limit
+
+  chapter_patterns:
+    - "chapter\\s+\\d+" # Must contain "chapter" and number
+
+# Debugging and logging
+debug:
+  save_raw_html: false # Save raw HTML for debugging
+  log_selectors: false # Log selector matches
+  verbose_errors: true # Detailed error messages
+
+# Site-specific quirks and workarounds
+quirks:
+  # Handle dynamic content loading
+  wait_for_content: 2 # Seconds to wait for content to load
+
+  # Handle different novel layouts
+  layout_variants:
+    - "standard" # Standard layout
+    - "mobile" # Mobile-optimized layout
+
+  # Special handling for certain novels
+  special_cases:
+    # Example: novels with different chapter list structure
+    different_chapter_list:
+      pattern: "/b/special-novel-*"
+      chapter_selector: ".special-chapter-list a"

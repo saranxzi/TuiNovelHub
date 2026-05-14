@@ -1,0 +1,237 @@
+# Wuxiaworld Provider Configuration
+# This file contains the configuration for scraping novels from Wuxiaworld (wuxiaworld.site)
+
+provider:
+  name: "Wuxiaworld"
+  base_url: "https://wuxiaworld.site"
+  description: "Web novel provider for wuxiaworld.site"
+
+# CSS selectors for extracting content
+selectors:
+  # Novel metadata selectors (WordPress/Madara theme)
+  title: ".post-title h1"
+  author: ".author-content a"
+  description: ".description-summary .summary__content"
+  cover_image: ".summary_image img"
+  genres: ".genres-content a"
+  tags: ".tags-content a"
+  status: ".post-status .summary-content"
+  rating: ".post-total-rating .score"
+  rating_count: ".post-total-rating .total"
+  alternative_names: ".post-content_item:-soup-contains('Alternative') .summary-content"
+
+  # Chapter discovery selectors (AJAX-based)
+  chapter_list: ".wp-manga-chapter a"
+  chapter_list_container: ".version-chap"
+  latest_chapter: ".chapter-item .chapter a"
+
+  # Chapter content selectors
+  chapter_title: ".c-breadcrumb li.active"
+  chapter_content: ".reading-content .text-left"
+  prev_chapter: ".nav-previous a"
+  next_chapter: ".nav-next a"
+
+  # Navigation and metadata
+  breadcrumb: ".breadcrumb"
+  novel_link: ".breadcrumb a[href*='/novel/']"
+
+# Request settings
+request:
+  rate_limit: 2 # Seconds between requests
+  max_retries: 5 # Maximum retry attempts
+  timeout: 45 # Request timeout in seconds
+  user_agent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+
+  # Headers to send with requests
+  headers:
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8"
+    "Accept-Language": "en-US,en;q=0.5"
+    "Accept-Encoding": "gzip, deflate"
+    "Connection": "keep-alive"
+    "Upgrade-Insecure-Requests": "1"
+    "Cache-Control": "no-cache"
+    "Pragma": "no-cache"
+
+  # AJAX-specific headers for chapter list requests
+  ajax_headers:
+    "X-Requested-With": "XMLHttpRequest"
+    "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8"
+    "Accept": "text/html, */*; q=0.01"
+
+# Content cleaning configuration
+content_cleaning:
+  # Use markdownify for better HTML to markdown conversion
+  use_markdownify: true
+
+  # Selectors for elements to remove
+  remove_selectors:
+    - "script" # JavaScript code
+    - "style" # CSS styles
+    - ".wp-block-group" # WordPress blocks
+    - ".advertisement" # Ad containers
+    - "[class*='ad-']" # Ad-related classes
+    - "[id*='ad-']" # Ad-related IDs
+    - "iframe" # Embedded frames
+    - "noscript" # No-script content
+    - ".chapter-nav" # Chapter navigation
+    - ".breadcrumb" # Breadcrumb navigation
+    - ".social-share" # Social sharing buttons
+
+  # Elements to preserve formatting
+  preserve_selectors:
+    - "p" # Paragraphs
+    - "h1" # Headers level 1
+    - "h2" # Headers level 2
+    - "h3" # Headers level 3
+    - "h4" # Headers level 4
+    - "h5" # Headers level 5
+    - "h6" # Headers level 6
+    - "strong" # Strong emphasis
+    - "em" # Emphasis
+    - "i" # Italic
+    - "b" # Bold
+    - "br" # Line breaks
+    - "blockquote" # Block quotes
+    - "ul" # Unordered lists
+    - "ol" # Ordered lists
+    - "li" # List items
+
+  # Text processing options
+  text_processing:
+    remove_empty_lines: true
+    normalize_whitespace: true
+    preserve_paragraph_breaks: true
+    convert_html_entities: true
+    remove_extra_spaces: true
+
+    # Content-based title extraction
+    enhance_titles_from_content: true # Extract better titles from chapter content
+    title_search_paragraphs: 3 # Number of paragraphs to search for titles
+
+    # Intelligent title merging (prevents "no HTML content" warnings)
+    intelligent_title_merging: true # Merge duplicate chapter headings intelligently
+    remove_redundant_headings: true # Remove redundant H2 headings from content
+    prefer_descriptive_titles: true # Choose more descriptive titles over simple ones
+
+# Cover image processing
+cover_processing:
+  enabled: true
+  target_size: [600, 800] # Width x Height in pixels
+  quality: 85 # JPEG quality (1-100)
+  format: "JPEG" # Output format (JPEG, PNG, WEBP)
+  create_placeholder: true # Create placeholder if download fails
+  placeholder_color: "#2c3e50" # Background color for placeholder
+  placeholder_text_color: "#ecf0f1" # Text color for placeholder
+
+# Chapter discovery settings
+chapter_discovery:
+  # Method for finding chapters (AJAX for wuxiaworld)
+  discovery_method: "ajax" # Options: tab_content, ajax, pagination
+
+  # AJAX discovery settings
+  ajax_endpoint: "/novel/{novel_slug}/ajax/chapters/"
+  ajax_method: "POST"
+  ajax_data:
+    action: "manga_get_chapters"
+
+  # Chapter URL patterns
+  url_patterns:
+    - "/novel/{novel_slug}/chapter-{number}/"
+    - "/novel/{novel_slug}/chapter-{number}-{title}/"
+
+# Chapter downloading settings (similar to novelbin for conservative approach)
+chapter_downloading:
+  max_concurrent: 3 # Conservative concurrency for server stability
+  chunk_size: 10 # Small chunks to reduce server load
+  retry_failed: true # Retry failed chapter downloads
+  max_retries: 5 # More retries for reliability
+  delay_between_chunks: 3 # Delay between chunks (seconds)
+  delay_between_requests: 2 # Additional delay between individual requests
+  respect_rate_limit: true # Strictly follow rate limiting
+
+# Error handling
+error_handling:
+  # Retry configuration
+  retry_delays: [2, 5, 10, 20, 40] # Exponential backoff delays
+  retry_on_status: [429, 500, 502, 503, 504, 520, 521, 522, 524] # Status codes to retry
+
+  # Circuit breaker configuration
+  circuit_breaker:
+    failure_threshold: 3 # Trigger circuit breaker after 3 failures
+    recovery_timeout: 120 # Recovery time (2 minutes)
+    half_open_max_calls: 1 # Only allow 1 test call when half-open
+
+  # Rate limiting configuration
+  rate_limiting:
+    requests_per_second: 0.5 # Conservative rate (1 request every 2 seconds)
+    burst_size: 1 # No burst allowed
+    adaptive: true # Adapt based on server responses
+    backoff_on_429: true # Back off when rate limited
+
+  # Fallback strategies
+  fallback_selectors:
+    title: [".post-title h1", "h1.entry-title", "h1"]
+    author: [".author-content a", ".post-author", "[rel='author']"]
+    description: [".description-summary .summary__content", ".summary", ".description"]
+    chapter_title: ["h1", "h2", "h3", ".entry-title", ".chapter-title"]
+    chapter_content: [
+        ".reading-content .text-left", # Primary selector
+        ".reading-content", # Alternative
+        ".chapter-content", # Common alternative
+        ".entry-content", # Entry content
+        ".post-content", # Post content
+        "article", # Article tag
+        ".content", # Generic content
+        "#content", # Generic content ID
+        "main", # Main content area
+      ]
+
+# Output formatting
+output:
+  # Markdown formatting
+  markdown:
+    chapter_heading_level: 2 # H2 for chapters
+    include_chapter_numbers: true
+    include_word_count: false
+    add_page_breaks: true
+
+  # EPUB specific settings
+  epub:
+    chapter_level: 2 # Chapter break level for Pandoc
+    include_toc: true # Include table of contents
+    toc_depth: 2 # TOC depth
+    chapter_title_format: "title_only" # Options: title_only, number_title, chapter_number_title, number_only
+    chapter_number_format: "arabic" # Options: arabic, roman, roman_upper
+
+    # EbookLib backup generator settings
+    use_ebooklib: false # Force use of EbookLib instead of Pandoc
+    ebooklib_fallback: true # Enable automatic fallback to EbookLib when Pandoc fails
+    ebooklib_compression: true # Enable EPUB compression for smaller file sizes
+    ebooklib_validation: true # Enable EPUB structure validation
+
+    # Pandoc-specific settings (when not using EbookLib)
+    custom_css: true # Include custom CSS styling
+    pandoc_args: [] # Additional Pandoc command line arguments
+
+# Validation rules
+validation:
+  # Minimum content requirements
+  min_title_length: 1
+  min_author_length: 1
+  min_description_length: 10
+  min_chapter_content_length: 50
+
+# Debugging and logging
+debug:
+  save_raw_html: false # Save raw HTML for debugging
+  log_selectors: false # Log selector matches
+  verbose_errors: true # Detailed error messages
+
+# Site-specific quirks and workarounds
+quirks:
+  # Handle dynamic content loading
+  wait_for_content: 2 # Seconds to wait for content to load
+
+  # WordPress/Madara theme specific handling
+  madara_theme: true # Enable Madara theme specific features
+  ajax_chapter_loading: true # Use AJAX for chapter list loading

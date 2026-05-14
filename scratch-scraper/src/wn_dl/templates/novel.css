@@ -1,0 +1,753 @@
+@charset "utf-8";
+
+/*
+================================================================================
+EPUB ENHANCED CSS FOR WEB NOVEL DOWNLOADS
+- Based on modern EPUB3 standards and accessibility best practices
+- Uses Bitter font for optimal readability (contemporary slab serif)
+- Optimized for novel reading (no monospace fonts needed)
+- Optimized for cross-platform e-reader compatibility
+================================================================================
+*/
+
+/*
+================================================================================
+1. EPUB MINIMAL CSS RESET
+   - Based on modern reset principles
+   - Neutralizes default e-reader styles for a consistent baseline
+   - Disables hyphenation globally; it will be enabled selectively later
+================================================================================
+*/
+html,
+body,
+div,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+em,
+strong,
+i,
+b,
+cite,
+code,
+sub,
+sup,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+figure,
+figcaption,
+footer,
+header,
+nav,
+section,
+article,
+aside,
+hr {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    /* Reset vendor-specific hyphenation by default */
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    -epub-hyphens: none;
+    hyphens: none;
+}
+
+/* Ensure HTML5 elements are treated as block-level for older readers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    /* Set a comfortable, accessible line-height. 1.6 to 1.8 is better for mobile reading.
+       Using a unitless value is crucial for scalability */
+    line-height: 1.7;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+/*
+================================================================================
+2. FONT EMBEDDING (@font-face)
+   - Embeds Bitter for main text (contemporary slab serif for excellent readability)
+   - Optimized for novel text (no monospace fonts needed)
+   - Ensure you have the legal right to embed the font (both are open source)
+================================================================================
+*/
+@font-face {
+    font-family: "Bitter";
+    font-weight: 400;
+    font-style: normal;
+    src: url('fonts/Bitter-Regular.ttf');
+}
+
+@font-face {
+    font-family: "Bitter";
+    font-weight: 400;
+    font-style: italic;
+    src: url('fonts/Bitter-Italic.ttf');
+}
+
+@font-face {
+    font-family: "Bitter";
+    font-weight: 700;
+    font-style: normal;
+    src: url('fonts/Bitter-Bold.ttf');
+}
+
+@font-face {
+    font-family: "Bitter";
+    font-weight: 700;
+    font-style: italic;
+    src: url('fonts/Bitter-BoldItalic.ttf');
+}
+
+
+
+
+/*
+================================================================================
+3. CORE TYPOGRAPHY & LAYOUT
+   - Defines the fundamental look and feel of the book
+   - Uses relative units (em) to respect user font size settings
+================================================================================
+*/
+
+body {
+    /* Apply the embedded font with a generic fallback */
+    font-family: "Bitter", serif;
+    /* Prevent font synthesis - use only the actual font files */
+    font-synthesis: none;
+    /* Let the user's device set the base font size. 100% is equivalent to 1em */
+    font-size: 100%;
+    /* Add small margins to the body to prevent text from touching the screen edges.
+       Using percentages is better than em for horizontal margins */
+    margin-left: 2%;
+    margin-right: 2%;
+    /* Do NOT set a 'color' property here. This allows e-reader night modes to work correctly */
+}
+
+/* This rule helps fix a line-height bug on Kobo e-readers */
+body * {
+    line-height: inherit;
+}
+
+p {
+    /* Standard fiction formatting uses a first-line indent, not space between paragraphs.
+       1.5em is a common and comfortable indent size */
+    text-indent: 1.5em;
+    /* Add small margins for better mobile readability */
+    margin-top: 0;
+    margin-bottom: 0.5em;
+    /* Left-align is often more readable than justified text */
+    text-align: left;
+    /* Enable hyphenation for body paragraphs for a more even text block.
+       Include all vendor prefixes for maximum compatibility */
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    -epub-hyphens: auto;
+    hyphens: auto;
+}
+
+/* This is the magic for professional paragraph styling. It removes the indent
+   from the first paragraph immediately following a heading or a scene break */
+h1+p,
+h2+p,
+hr+p,
+.first-paragraph {
+    text-indent: 0;
+}
+
+
+/*
+================================================================================
+4. HEADINGS & BREAKS
+   - Styles for chapter titles and other divisions
+   - Includes rules to prevent awkward page breaks
+================================================================================
+*/
+
+h1,
+h2,
+h3 {
+    /* Use Georgia for elegant chapter titles with serif fallback */
+    font-family: "Georgia", "Times New Roman", serif;
+    text-align: center;
+    font-weight: bold;
+    /* Strong black color for maximum contrast and readability */
+    color: #000000 !important;
+    /* Ensure headings do not break from the content that follows them.
+       This group of properties provides the best compatibility across modern
+       e-readers that use different layout engines (e.g., multi-column) */
+    page-break-after: avoid;
+    -webkit-column-break-after: avoid;
+    break-after: avoid;
+    page-break-inside: avoid;
+    -webkit-column-break-inside: avoid;
+    break-inside: avoid;
+    /* Headings should not be hyphenated */
+    hyphens: none;
+    /* Add subtle text shadow for better visual impact and readability */
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    /* Better letter spacing for titles */
+    letter-spacing: 0.02em;
+}
+
+h1 {
+    font-size: 2.2em;
+    margin-top: 2.5em;
+    margin-bottom: 2em;
+    /* Improved line-height for better mobile readability.
+       Must be >= 1.2 for Kindle compatibility */
+    line-height: 1.3;
+    /* Add more visual weight for main titles */
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 1.8em;
+    margin-top: 2em;
+    margin-bottom: 1.5em;
+    line-height: 1.35;
+    /* Chapter titles should be prominent */
+    font-weight: 600;
+}
+
+h3 {
+    font-size: 1.4em;
+    margin-top: 1.5em;
+    margin-bottom: 1em;
+    line-height: 1.4;
+    font-weight: 600;
+}
+
+/* Style for semantic scene breaks (<hr>). This creates a simple, centered
+   ornament. An SVG background image could also be used for a more graphical
+   break */
+hr.scene-break {
+    border: 0;
+    border-top: 1px solid #888;
+    width: 20%;
+    margin: 2em auto;
+}
+
+
+/*
+================================================================================
+5. TEXT FORMATTING & EMPHASIS
+   - Styles for emphasis, strong text, and inline formatting
+================================================================================
+*/
+
+/* Emphasis */
+em,
+i {
+    font-style: italic;
+    font-synthesis: none;
+}
+
+strong,
+b {
+    font-weight: bold;
+    font-synthesis: none;
+}
+
+/* Links */
+a {
+    color: inherit;
+    text-decoration: underline;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+/* Code and monospace content (fallback to system fonts) */
+pre,
+code,
+.monospace {
+    font-family: "Courier New", monospace;
+    /* Use system monospace fonts for any code content */
+}
+
+code {
+    font-size: 0.9em;
+}
+
+pre {
+    margin: 1em 0;
+    padding: 1em;
+    overflow-x: auto;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+/* Blockquotes */
+blockquote {
+    margin: 1.5em 0;
+    padding-left: 1.5em;
+    border-left: 3px solid #ccc;
+    font-style: italic;
+}
+
+/* Chapter breaks */
+.chapter {
+    /* Ensure chapters always start on a new page with maximum compatibility */
+    page-break-before: always;
+    -webkit-column-break-before: always;
+    break-before: page;
+    /* Prevent chapters from being split across pages */
+    page-break-inside: avoid;
+    -webkit-column-break-inside: avoid;
+    break-inside: avoid;
+}
+
+/* Scene breaks and dividers */
+hr {
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 2em 0;
+    text-align: center;
+}
+
+hr:not(.scene-break) {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/*
+================================================================================
+6. NAVIGATION & TABLE OF CONTENTS
+   - Styles for EPUB navigation and table of contents
+================================================================================
+*/
+
+/* Table of Contents */
+nav#TOC,
+.toc {
+    margin: 2em 0;
+    padding: 1em;
+}
+
+nav#TOC ul,
+.toc ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+nav#TOC li,
+.toc li {
+    margin: 0.5em 0;
+    padding-left: 1em;
+}
+
+nav#TOC a,
+.toc a {
+    text-decoration: none;
+    font-weight: normal;
+}
+
+nav#TOC a:hover,
+.toc a:hover {
+    text-decoration: underline;
+    border: 1px solid #ddd;
+}
+
+/* Lists */
+ul,
+ol {
+    margin: 1em 0;
+    padding-left: 2em;
+    list-style-position: outside;
+}
+
+ul {
+    list-style-type: disc;
+}
+
+ol {
+    list-style-type: decimal;
+}
+
+li {
+    margin: 0.5em 0;
+}
+
+/* Page breaks */
+.page-break {
+    page-break-after: always;
+}
+
+/* Title page styling */
+.title-page {
+    text-align: center;
+    page-break-after: always;
+}
+
+.title-page h1 {
+    font-size: 3.2em;
+    margin-top: 2em;
+    margin-bottom: 1.5em;
+    line-height: 1.2;
+    /* Make title page even more prominent */
+    font-weight: 700;
+    /* Add elegant styling for the main title */
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+    letter-spacing: 0.03em;
+}
+
+.title-page .author {
+    font-size: 1.3em;
+    font-style: italic;
+    margin-bottom: 2em;
+}
+
+.title-page .description {
+    text-align: left;
+    margin: 2em auto;
+    max-width: 80%;
+    font-size: 1em;
+    line-height: 1.6;
+}
+
+
+/*
+================================================================================
+7. DARK MODE SUPPORT
+   - Provides proper color schemes for dark mode e-readers
+   - Ensures titles are visible in both light and dark themes
+   - Supports multiple dark mode detection methods for maximum compatibility
+================================================================================
+*/
+
+/* Primary dark mode styles using prefers-color-scheme media query */
+@media (prefers-color-scheme: dark) {
+    h1,
+    h2,
+    h3 {
+        /* Bright white color for dark mode - maximum contrast */
+        color: #ffffff !important;
+        /* Adjust text shadow for dark mode - subtle white glow */
+        text-shadow: 0 1px 2px rgba(255, 255, 255, 0.2) !important;
+    }
+
+    .title-page h1 {
+        /* Ensure title page heading is also bright in dark mode */
+        color: #ffffff !important;
+        text-shadow: 0 2px 4px rgba(255, 255, 255, 0.2) !important;
+    }
+
+    /* Adjust other elements for dark mode if needed */
+    hr.scene-break {
+        border-top-color: #666 !important;
+    }
+
+    hr:not(.scene-break) {
+        border-top-color: #555 !important;
+    }
+
+    blockquote {
+        border-left-color: #666 !important;
+    }
+
+    nav#TOC a:hover,
+    .toc a:hover {
+        border-color: #555 !important;
+    }
+}
+
+/* Color inversion detection - for e-readers that invert colors */
+@media (inverted-colors: inverted) {
+    h1,
+    h2,
+    h3 {
+        color: #ffffff !important;
+        text-shadow: 0 1px 2px rgba(255, 255, 255, 0.2) !important;
+    }
+
+    .title-page h1 {
+        color: #ffffff !important;
+        text-shadow: 0 2px 4px rgba(255, 255, 255, 0.2) !important;
+    }
+}
+
+/* Alternative dark mode detection for e-readers that don't support prefers-color-scheme */
+@media screen and (background-color: dark) {
+    h1,
+    h2,
+    h3 {
+        color: #ffffff !important;
+        text-shadow: 0 1px 2px rgba(255, 255, 255, 0.2) !important;
+    }
+
+    .title-page h1 {
+        color: #ffffff !important;
+        text-shadow: 0 2px 4px rgba(255, 255, 255, 0.2) !important;
+    }
+}
+
+/* Fallback for e-readers with dark backgrounds (detected by CSS custom properties) */
+@supports (color: env(background-color)) {
+    @media (environment-blending: dark) {
+        h1,
+        h2,
+        h3 {
+            color: #ffffff !important;
+            text-shadow: 0 1px 2px rgba(255, 255, 255, 0.2) !important;
+        }
+
+        .title-page h1 {
+            color: #ffffff !important;
+            text-shadow: 0 2px 4px rgba(255, 255, 255, 0.2) !important;
+        }
+    }
+}
+
+/* Universal contrast enhancement using CSS custom properties */
+/* This creates a robust fallback system for maximum e-reader compatibility */
+:root {
+    --heading-color-light: #000000;
+    --heading-color-dark: #ffffff;
+    --heading-shadow-light: 0 1px 2px rgba(0, 0, 0, 0.2);
+    --heading-shadow-dark: 0 1px 2px rgba(255, 255, 255, 0.2);
+}
+
+/* Enhanced heading styles with multiple contrast methods */
+h1,
+h2,
+h3 {
+    /* Multiple color declarations for maximum compatibility */
+    color: var(--heading-color-light) !important;
+    color: #000000 !important;
+    text-shadow: var(--heading-shadow-light) !important;
+
+    /* Add text stroke for additional contrast (WebKit browsers) */
+    -webkit-text-stroke: 0.5px #000000;
+
+    /* Ensure high contrast in all scenarios */
+    font-weight: 900 !important;
+
+    /* Add a subtle border for additional definition */
+    border: 1px solid transparent;
+    border-radius: 0.2em;
+    padding: 0.1em 0.3em;
+}
+
+/* High contrast mode detection */
+@media (prefers-contrast: high) {
+    h1,
+    h2,
+    h3 {
+        color: #000000 !important;
+        background-color: #ffffff !important;
+        padding: 0.2em 0.5em !important;
+        border-radius: 0.2em !important;
+        text-shadow: none !important;
+        border: 2px solid #000000 !important;
+    }
+
+    .title-page h1 {
+        color: #000000 !important;
+        background-color: #ffffff !important;
+        padding: 0.3em 0.6em !important;
+        border-radius: 0.3em !important;
+        text-shadow: none !important;
+        border: 2px solid #000000 !important;
+    }
+}
+
+/* Class-based dark mode support - works regardless of media query support */
+/* E-readers can add these classes to enable dark mode */
+.dark-mode h1,
+.dark-mode h2,
+.dark-mode h3,
+.night-mode h1,
+.night-mode h2,
+.night-mode h3,
+.inverted h1,
+.inverted h2,
+.inverted h3 {
+    color: #ffffff !important;
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.2) !important;
+    -webkit-text-stroke: 0.5px #ffffff;
+}
+
+.dark-mode .title-page h1,
+.night-mode .title-page h1,
+.inverted .title-page h1 {
+    color: #ffffff !important;
+    text-shadow: 0 2px 4px rgba(255, 255, 255, 0.2) !important;
+    -webkit-text-stroke: 0.5px #ffffff;
+}
+
+/* Force high contrast for problematic e-readers */
+/* This creates a background box to ensure visibility */
+@media screen and (max-device-width: 1024px) {
+    h1,
+    h2,
+    h3 {
+        background-color: rgba(255, 255, 255, 0.9) !important;
+        color: #000000 !important;
+        padding: 0.3em 0.6em !important;
+        border-radius: 0.3em !important;
+        border: 1px solid #000000 !important;
+        margin: 1em auto !important;
+        display: inline-block !important;
+        width: auto !important;
+        text-shadow: none !important;
+    }
+
+    .title-page h1 {
+        background-color: rgba(255, 255, 255, 0.95) !important;
+        color: #000000 !important;
+        padding: 0.4em 0.8em !important;
+        border: 2px solid #000000 !important;
+    }
+}
+
+
+/*
+================================================================================
+8. PLATFORM-SPECIFIC OVERRIDES
+   - Contains targeted fixes for specific e-reader ecosystems
+   - This is a key part of "defensive design"
+================================================================================
+*/
+
+/* Kindle (KF8) does not support the adjacent sibling selector (+).
+   Therefore, we must rely on the .first-paragraph class we added in the HTML
+   to remove the first-line indent. We place this inside a Kindle-specific
+   media query. Do not leave these queries empty. */
+@media amzn-kf8 {
+
+    h1+p,
+    h2+p,
+    hr+p {
+        /* This rule won't work on Kindle, but we leave it for other readers. */
+        text-indent: 0;
+    }
+
+    .first-paragraph {
+        /* This class-based rule ensures the indent is removed on Kindle. */
+        text-indent: 0;
+    }
+}
+
+/* Responsive design for different screen sizes */
+@media screen and (max-width: 600px) {
+    body {
+        margin-left: 1%;
+        margin-right: 1%;
+    }
+
+    h1 {
+        font-size: 1.8em;
+        margin-top: 1.5em;
+        margin-bottom: 1em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+        margin-top: 1.2em;
+        margin-bottom: 0.8em;
+    }
+
+    h3 {
+        font-size: 1.2em;
+        margin-top: 1em;
+        margin-bottom: 0.6em;
+    }
+
+    p {
+        text-indent: 1em;
+    }
+
+    .title-page h1 {
+        font-size: 2.5em;
+    }
+
+    .title-page .author {
+        font-size: 1.1em;
+    }
+}
+
+/* Print styles */
+@media print {
+    body {
+        font-size: 12pt;
+        line-height: 1.4;
+        margin: 0;
+    }
+
+    h1,
+    h2,
+    h3 {
+        page-break-after: avoid;
+        page-break-inside: avoid;
+    }
+
+    p {
+        orphans: 3;
+        widows: 3;
+    }
+
+    .chapter {
+        page-break-before: always;
+    }
+
+    .title-page {
+        page-break-after: always;
+    }
+}

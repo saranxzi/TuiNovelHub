@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+        content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="csrf-param" content="_csrf">
+    <meta name="csrf-token"
+        content="NjM2NGQzZjBmNDk1YjZhYjlkY2Y4ZDNiNWM2ZTBiMDEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==">
+    <!-- TODO: Meta -->
+    <meta name="title" content="Read I Am the Fated Villain online free - Novelfull">
+    <meta name="description"
+        content="Read I Am the Fated Villain online free from your Mobile, Table, PC...I Am the Fated Villain is genre Harem novel by author Fated Villain">
+    <meta name="image"
+        content="https://novelfull.com/uploads/thumbs/i-am-the-fated-villain-70a624e0e6-a403a8cb83c4db3fd3ef4ff6dd3c8a5c.jpg">
+    <meta name="keywords"
+        content="I Am the Fated Villain,I Am the Fated Villain full chapters,I Am the Fated Villain latest chapter, author Fated Villain">
+    <title>Read I Am the Fated Villain online free - Novelfull</title>
+    <script type="text/javascript" nonce="7d5ca518b8e2427cb03da552833"
+        src="//local.adguard.org?ts=1751592742934&amp;type=content-script&amp;dmn=novelfull.com&amp;url=https%3A%2F%2Fnovelfull.com%2Fi-am-the-fated-villain.html&amp;app=brave.exe&amp;css=3&amp;js=1&amp;rel=1&amp;rji=1&amp;sbe=1"></script>
+    <script type="text/javascript" nonce="7d5ca518b8e2427cb03da552833"
+        src="//local.adguard.org?ts=1751592742934&amp;name=AdGuard%20Assistant&amp;name=AdGuard%20Extra&amp;name=AdGuard%20Popup%20Blocker&amp;type=user-script"></script>
+    <link rel="preload" href="/web/fonts/RobotoCondensed-Regular.woff" as="font" crossorigin="anonymous" />
+    <link rel="preload" href="/web/fonts/glyphicons-halflings-regular.woff2" as="font" crossorigin="anonymous" />
+    <link rel="shortcut icon" href="/web/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/web/images/favicon.ico" type="image/x-icon">
+    <!--[if lt IE 9]><link rel="stylesheet" href="/web/css/iefix.css"><script defer src="/web/js/html5shiv.min.js"></script><script defer src="/web/js/respond.min.js"></script><![endif]-->
+    <script type="34625cd8cb7affe7a6f1da71-text/javascript">
+            var adblock = true;
+            var ajaxSearchUrl = 'https://novelfull.com/ajax-search';
+            var ajaxNovelRateUrl = 'https://novelfull.com/ajax-novel-rate';
+            var ajaxReportChapterUrl = 'https://novelfull.com/ajax-report-chapter';
+            var ajaxUserSettingsUrl = 'https://novelfull.com/ajax-user-settings';
+            var ajaxChapterOptionUrl = 'https://novelfull.com/ajax-chapter-option';
+        </script><!-- <script type="text/javascript" src="/web/js/adframe.js?v=1"></script> -->
+    <script type="34625cd8cb7affe7a6f1da71-text/javascript" src="/web/js/plugins.js"></script>
+    <script type="34625cd8cb7affe7a6f1da71-text/javascript" src="/web/js/scripts.js"></script><!-- TODO: ExtraScript -->
+    <script type="34625cd8cb7affe7a6f1da71-text/javascript">
+        $(document).ready(function() {
+            $('.showmore a').on('click', function(e) {
+                e.preventDefault();
+                var _this = $(this);
+                _this.parent().css({
+                    height: 0
+                });
+                $('.desc-text').css({
+                    'max-height': '2000px'
+                });
+            });
+
+            //TODO: Rating
+            var novels = $.cookie("novels_rating");
+            if (novels) novels = JSON.parse(novels);
+            else novels = [];
+
+            $rating = $('#rating');
+            $rating.rateit({
+                max: 10,
+                step: 1,
+                backingfld: '#rateVal'
+            });
+
+            var tooltipvalues = [
+                'Nothing to say...', 'WTF', 'What the hell is this ?!',
+                'Lolz', 'Normal', 'Not bad', 'Uhm... Good',
+                'Good', 'Best', 'Wonderful'];
+            $rating.bind('over', function (event, value) {
+                $(this).attr('title', tooltipvalues[value - 1]);
+                $('#text__rating').html(tooltipvalues[value - 1]);
+            });
+            $rating.bind('mouseleave', function () {
+                $('#text__rating').html('');
+            });
+
+            var novelID = $rating.data('novel-id');
+
+            if (isRated(novelID)) {
+                $rating.rateit('readonly', true);
+            } else {
+                $rating.bind('rated', function (e) {
+                    var ri = $(this);
+
+                    var value = ri.rateit('value');
+                    saveRating(novelID);
+
+                    ri.rateit('readonly', true);
+
+                    $.ajax({
+                        url: ajaxNovelRateUrl,
+                        data: { id: novelID, value: value },
+                        type: 'POST',
+                        success: function (data) {
+                            $('#response').append('<li>' + data + '</li>');
+                        },
+                        error: function (jxhr, msg, err) {
+                            $('#response').append('<li style="color:red">' + msg + '</li>');
+                        }
+                    });
+                });
+            }
+
+            function isRated(id) {
+                for (var i in novels) {
+                    var nv = novels[i];
+                    if (nv.id == id) {
+                        return true;
+                    }
+                }
+                return false;
+            }
+
+            function saveRating(id) {
+                var novel = {
+                    id: id
+                };
+
+                var found = false;
+                for (var i in novels) {
+                    var nv = novels[i];
+                    if (nv.id == novel.id) {
+                        found = true;
+                        break;
+                    }
+                }
+
+                if (!found) {
+                    novels.push(novel);
+                }
+
+                var expDate = new Date();
+                expDate.setTime(expDate.getTime() + (7 * 24 * 60 * 60 * 1000));
+                $.cookie("novels_rating", JSON.stringify(novels), {path: '/', expires: expDate});
+            }
+        });
+    </script>
+    <link rel="stylesheet" href="/web/css/style.css">
+    <link rel="stylesheet" href="/web/css/rateit.css">
+    <link rel="stylesheet" href="/web/css/custom.css">
+    <link rel="stylesheet" href="/web/css/responsive.css"><!-- Google tag (gtag.js) -->
+    <script type="34625cd8cb7affe7a6f1da71-text/javascript">
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-N21ZE93RM1');
+</script>
+</head>
+
+<body>
+    <div id="wrapper">
+        <header class="header" style="display: block">
+            <div class="navbar navbar-default navbar-static-top" role="navigation" id="nav">
+                <div class="container">
+                    <div class="navbar-header"><button type="button" class="navbar-toggle" data-toggle="collapse"
+                            data-target=".navbar-collapse"><span class="sr-only">Show menu</span><span
+                                class="icon-bar"></span><span class="icon-bar"></span><span
+                                class="icon-bar"></span></button>
+                        <h5><a class="header-logo" href="/" title="Read novel online"><img
+                                    src="/uploads/thumbs/banner-75b2b7a774-bf0efeba81-e12fa8e3e6dd74587f2bc6ada7256742.png"></a>
+                        </h5>
+                    </div>
+                    <div class="navbar-collapse collapse">
+                        <ul class="control nav navbar-nav ">
+                            <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"
+                                    title=""><span class="glyphicon glyphicon-list"></span> Novel List <span
+                                        class="caret"></span></a>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a href="/latest-release-novel" title="Latest Release">Latest Release</a></li>
+                                    <li><a href="/hot-novel" title="Hot Novel">Hot Novel</a></li>
+                                    <li><a href="/completed-novel" title="Completed Novel">Completed Novel</a></li>
+                                    <li><a href="/most-popular" title="Most Popular">Most Popular</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"
+                                    title=""><span class="glyphicon glyphicon-list"></span> Genre <span
+                                        class="caret"></span></a>
+                                <div class="dropdown-menu multi-column">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <ul class="dropdown-menu">
+                                                <li><a href="/genre/Shounen" title="Shounen">Shounen</a></li>
+                                                <li><a href="/genre/Harem" title="Harem">Harem</a></li>
+                                                <li><a href="/genre/Comedy" title="Comedy">Comedy</a></li>
+                                                <li><a href="/genre/Martial+Arts" title="Martial Arts">Martial Arts</a>
+                                                </li>
+                                                <li><a href="/genre/School+Life" title="School Life">School Life</a>
+                                                </li>
+                                                <li><a href="/genre/Mystery" title="Mystery">Mystery</a></li>
+                                                <li><a href="/genre/Shoujo" title="Shoujo">Shoujo</a></li>
+                                                <li><a href="/genre/Romance" title="Romance">Romance</a></li>
+                                                <li><a href="/genre/Sci-fi" title="Sci-fi">Sci-fi</a></li>
+                                                <li><a href="/genre/Gender+Bender" title="Gender Bender">Gender
+                                                        Bender</a></li>
+                                                <li><a href="/genre/Mature" title="Mature">Mature</a></li>
+                                                <li><a href="/genre/Fantasy" title="Fantasy">Fantasy</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <ul class="dropdown-menu">
+                                                <li><a href="/genre/Horror" title="Horror">Horror</a></li>
+                                                <li><a href="/genre/Drama" title="Drama">Drama</a></li>
+                                                <li><a href="/genre/Tragedy" title="Tragedy">Tragedy</a></li>
+                                                <li><a href="/genre/Supernatural" title="Supernatural">Supernatural</a>
+                                                </li>
+                                                <li><a href="/genre/Ecchi" title="Ecchi">Ecchi</a></li>
+                                                <li><a href="/genre/Xuanhuan" title="Xuanhuan">Xuanhuan</a></li>
+                                                <li><a href="/genre/Adventure" title="Adventure">Adventure</a></li>
+                                                <li><a href="/genre/Action" title="Action">Action</a></li>
+                                                <li><a href="/genre/Psychological"
+                                                        title="Psychological">Psychological</a></li>
+                                                <li><a href="/genre/Xianxia" title="Xianxia">Xianxia</a></li>
+                                                <li><a href="/genre/Wuxia" title="Wuxia">Wuxia</a></li>
+                                                <li><a href="/genre/Historical" title="Historical">Historical</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <ul class="dropdown-menu">
+                                                <li><a href="/genre/Slice+of+Life" title="Slice of Life">Slice of
+                                                        Life</a></li>
+                                                <li><a href="/genre/Seinen" title="Seinen">Seinen</a></li>
+                                                <li><a href="/genre/Lolicon" title="Lolicon">Lolicon</a></li>
+                                                <li><a href="/genre/Adult" title="Adult">Adult</a></li>
+                                                <li><a href="/genre/Josei" title="Josei">Josei</a></li>
+                                                <li><a href="/genre/Sports" title="Sports">Sports</a></li>
+                                                <li><a href="/genre/Smut" title="Smut">Smut</a></li>
+                                                <li><a href="/genre/Mecha" title="Mecha">Mecha</a></li>
+                                                <li><a href="/genre/Yaoi" title="Yaoi">Yaoi</a></li>
+                                                <li><a href="/genre/Shounen+Ai" title="Shounen Ai">Shounen Ai</a></li>
+                                                <li><a href="/genre/History" title="History">History</a></li>
+                                                <li><a href="/genre/Martial" title="Martial">Martial</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="dropdown" id="options"><a href="javascript:void(0)" class="dropdown-toggle"
+                                    data-toggle="dropdown" aria-expanded="false"><span
+                                        class="glyphicon glyphicon-cog"></span> Options <span class="caret"></span></a>
+                                <div class="dropdown-menu dropdown-menu-right settings">
+                                    <form class="form-horizontal">
+                                        <div class="form-group form-group-sm"><label
+                                                class="col-sm-2 col-md-5 control-label"
+                                                for="truyen-background">Background</label>
+                                            <div class="col-sm-5 col-md-7"><select class="form-control"
+                                                    id="option-background">
+                                                    <option value="#F4F4F4">Light gray</option>
+                                                    <option value="#E9EBEE">Light blue</option>
+                                                    <option value="#F4F4E4">Light yellow</option>
+                                                    <option value="#EAE4D3">Sepia</option>
+                                                    <option value="#D5D8DC">Dark blue</option>
+                                                    <option value="#FAFAC8">Dark yellow</option>
+                                                    <option value="#EFEFAB">Wood grain</option>
+                                                    <option value="#FFF">White</option>
+                                                    <option value="#232323">Dark</option>
+                                                </select></div>
+                                        </div>
+                                        <div class="form-group form-group-sm"><label
+                                                class="col-sm-2 col-md-5 control-label" for="font-chu">Font
+                                                family</label>
+                                            <div class="col-sm-5 col-md-7"><select class="form-control"
+                                                    id="option-font-family">
+                                                    <option value="'Palatino Linotype', serif">Palatino Linotype
+                                                    </option>
+                                                    <option value="Bookerly, serif">Bookerly</option>
+                                                    <option value="Minion, serif">Minion</option>
+                                                    <option value="'Segoe UI', sans-serif">Segoe UI</option>
+                                                    <option value="Roboto, sans-serif">Roboto</option>
+                                                    <option value="'Roboto Condensed', sans-serif">Roboto Condensed
+                                                    </option>
+                                                    <option value="'Patrick Hand', sans-serif">Patrick Hand</option>
+                                                    <option value="'Noticia Text', sans-serif">Noticia Text</option>
+                                                    <option value="'Times New Roman', serif">Times New Roman</option>
+                                                    <option value="Verdana, sans-serif">Verdana</option>
+                                                    <option value="Tahoma, sans-serif">Tahoma</option>
+                                                    <option value="Arial, sans-serif">Arial</option>
+                                                </select></div>
+                                        </div>
+                                        <div class="form-group form-group-sm"><label
+                                                class="col-sm-2 col-md-5 control-label" for="size-chu">Font size</label>
+                                            <div class="col-sm-5 col-md-7"><select class="form-control"
+                                                    id="option-font-size">
+                                                    <option value="16px">16</option>
+                                                    <option value="18px">18</option>
+                                                    <option value="20px">20</option>
+                                                    <option value="22px">22</option>
+                                                    <option value="24px">24</option>
+                                                    <option value="26px">26</option>
+                                                    <option value="28px">28</option>
+                                                    <option value="30px">30</option>
+                                                    <option value="32px">32</option>
+                                                    <option value="34px">34</option>
+                                                    <option value="36px">36</option>
+                                                    <option value="38px">38</option>
+                                                    <option value="40px">40</option>
+                                                </select></div>
+                                        </div>
+                                        <div class="form-group form-group-sm"><label
+                                                class="col-sm-2 col-md-5 control-label" for="line-height">Line
+                                                height</label>
+                                            <div class="col-sm-5 col-md-7"><select class="form-control"
+                                                    id="option-line-height">
+                                                    <option value="100%">100%</option>
+                                                    <option value="120%">120%</option>
+                                                    <option value="140%">140%</option>
+                                                    <option value="160%">160%</option>
+                                                    <option value="180%">180%</option>
+                                                    <option value="200%">200%</option>
+                                                </select></div>
+                                        </div>
+                                        <div class="form-group form-group-sm"><label
+                                                class="col-sm-2 col-md-5 control-label">Full frame</label>
+                                            <div class="col-sm-5 col-md-7"><label class="radio-inline"
+                                                    for="fluid-yes"><input type="radio" name="fluid-switch"
+                                                        id="fluid-yes" value="yes"> Yes</label><label
+                                                    class="radio-inline" for="fluid-no"><input type="radio"
+                                                        name="fluid-switch" id="fluid-no" value="no" checked="">
+                                                    No</label></div>
+                                        </div>
+                                        <div class="form-group form-group-sm"><label
+                                                class="col-sm-2 col-md-5 control-label">No line break</label>
+                                            <div class="col-sm-5 col-md-7"><label class="radio-inline"
+                                                    for="onebreak-yes"><input type="radio" name="onebreak-switch"
+                                                        id="onebreak-yes" value="yes"> Yes</label><label
+                                                    class="radio-inline" for="onebreak-no"><input type="radio"
+                                                        name="onebreak-switch" id="onebreak-no" value="no" checked="">
+                                                    No</label></div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </li>
+                        </ul>
+                        <form class="navbar-form navbar-right" action="/search">
+                            <div class="input-group search-holder"><input class="form-control" id="search-input"
+                                    type="search" name="keyword" placeholder="Search..." value="">
+                                <div class="input-group-btn"><button class="btn btn-default" type="submit"><span
+                                            class="glyphicon glyphicon-search"></span></button></div>
+                            </div>
+                            <div class="list-group list-search-res hide"></div>
+                        </form>
+                        <div id="login-status" class="hide"></div>
+                    </div><!--/.nav-collapse -->
+                </div>
+            </div>
+        </header>
+        <main id="container" class="" style="">
+            <div class="navbar-breadcrumb" style="display: block">
+                <div class="container breadcrumb-container">
+                    <ol class="breadcrumb">
+                        <li><a href=""><span class="glyphicon glyphicon-home"></span></a><a href="/"
+                                title="Read novel online"><span>Novel</span></a></li>
+                        <li class="active">
+                            <h1><a href="/genre/Harem" title="Harem"><span>Harem</span></a></h1>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+            <div class="container" id="truyen">
+                <div class="csstransforms3d">
+                    <div class="col-xs-12 col-sm-12 col-md-9 col-truyen-main">
+                        <div class="col-xs-12 col-info-desc">
+                            <div class="title-list">
+                                <h2>Novel info</h2>
+                            </div>
+                            <div class="col-xs-12 col-sm-4 col-md-4 info-holder">
+                                <div class="books">
+                                    <div class="desc">
+                                        <h3 class="title">I Am the Fated Villain</h3>
+                                    </div>
+                                    <div class="book"><img
+                                            src="/uploads/thumbs/i-am-the-fated-villain-70a624e0e6-a403a8cb83c4db3fd3ef4ff6dd3c8a5c.jpg"
+                                            alt="I Am the Fated Villain"></div>
+                                </div>
+                                <div class="info">
+                                    <div>
+                                        <h3>Author:</h3><a href="/author/Fated+Villain">Fated Villain</a>, <a
+                                            href="/author/%E5%A4%A9%E5%91%BD%E5%8F%8D%E6%B4%BE">天命反派</a>
+                                    </div>
+                                    <div>
+                                        <h3>Alternative names:</h3>Me! The Heavenly Destined Villain, The Villain of
+                                        Destiny, 我！天命大反派
+                                    </div>
+                                    <div>
+                                        <h3>Genre:</h3><a href="/genre/Harem">Harem</a>, <a
+                                            href="/genre/Xuanhuan">Xuanhuan</a>, <a
+                                            href="/genre/Psychological">Psychological</a>
+                                    </div>
+                                    <div>
+                                        <h3>Source:</h3>faloo
+                                    </div>
+                                    <div>
+                                        <h3>Status:</h3><a href="/status/Ongoing">Ongoing</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-8 col-md-8 desc">
+                                <h3 class="title">I Am the Fated Villain</h3>
+                                <div class="rate"><input type="hidden" id="rateVal" value="8.2">
+                                    <div id="rating" data-novel-id="1591"></div>
+                                    <div id="text__rating"></div>
+                                </div>
+                                <div class="small"><em>Rating: <strong><span>8.2</span></strong>/<span
+                                            class="text-muted">10</span> from
+                                        <strong><span>63</span> ratings</strong></em></div>
+                                <div class="desc-text">
+                                    <p>Immediately after Gu Changge realized he had transgressed into a fantasy world,
+                                        the world’s protagonist, and fortune’s chosen, vowed to take revenge on him.
+                                        Envied by all, he not only has the female lead head over heels for him but he’s
+                                        also treated as a distinguished guest wherever he goes. Fortunately, Gu
+                                        Changge’s prestige and power are superior to everyone else’s, so shouldn’t it be
+                                        easy to trample on a mere fortune’s chosen?</p>
+                                    <p>Hold on&hellip; There’s a system dedicated to milking and harvesting from the
+                                        protagonist? Gu Change smirked. “Seems like even fate wants me to fulfill my
+                                        destiny as the Villain of this world!”</p>
+                                </div>
+                                <div class="showmore"><a class="btn btn-default btn-xs">See more »</a></div>
+                                <div class="l-chapter">
+                                    <div class="l-title">
+                                        <h3>Latest chapters</h3>
+                                    </div>
+                                    <ul class="l-chapters">
+                                        <li><span class="glyphicon glyphicon-certificate"></span><a
+                                                href="/i-am-the-fated-villain/chapter-1499.html"
+                                                title="Chapter 1499"><span class="chapter-text">Chapter 1499</span></a>
+                                        </li>
+                                        <li><span class="glyphicon glyphicon-certificate"></span><a
+                                                href="/i-am-the-fated-villain/chapter-1498.html"
+                                                title="Chapter 1498"><span class="chapter-text">Chapter 1498</span></a>
+                                        </li>
+                                        <li><span class="glyphicon glyphicon-certificate"></span><a
+                                                href="/i-am-the-fated-villain/chapter-1497.html"
+                                                title="Chapter 1497"><span class="chapter-text">Chapter 1497</span></a>
+                                        </li>
+                                        <li><span class="glyphicon glyphicon-certificate"></span><a
+                                                href="/i-am-the-fated-villain/chapter-1496.html"
+                                                title="Chapter 1496"><span class="chapter-text">Chapter 1496</span></a>
+                                        </li>
+                                        <li><span class="glyphicon glyphicon-certificate"></span><a
+                                                href="/i-am-the-fated-villain/chapter-1495.html"
+                                                title="Chapter 1495"><span class="chapter-text">Chapter 1495</span></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12" id="list-chapter">
+                            <div class="title-list">
+                                <h2>Chapter List</h2>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-6 col-md-6">
+                                    <ul class="list-chapter">
+                                        <li><span class="glyphicon glyphicon-certificate"></span><a
+                                                href="/i-am-the-fated-villain/chapter-1-young-lord-gu-changge.html"
+                                                title="Chapter 1: Young Lord, Gu Changge"><span
+                                                    class="chapter-text">Chapter 1: Young Lord, Gu Changge</span></a>
+                                        </li>
+                                        <li><span class="glyphicon glyphicon-certificate"></span><a
+                                                href="/i-am-the-fated-villain/chapter-2-thrust-into-a-world-of-fantasy-the-villain-of-destiny.html"
+                                                title="Chapter 2: Thrust Into A World of Fantasy; The Villain of Destiny!"><span
+                                                    class="chapter-text">Chapter 2: Thrust Into A World of Fantasy; The
+                                                    Villain of Destiny!</span></a></li>
+                                        <li><span class="glyphicon glyphicon-certificate"></span><a
+                                                href="/i-am-the-fated-villain/chapter-3-posturing-i-can-do-that-too.html"
+                                                title="Chapter 3: Posturing? I Can Do That Too!"><span
+                                                    class="chapter-text">Chapter 3: Posturing? I Can Do That
+                                                    Too!</span></a></li>
+                                        <li><span class="glyphicon glyphicon-certificate"></span><a
+                                                href="/i-am-the-fated-villain/chapter-4-dark-fortune-slowly-stomp-him-to-death.html"
+                                                title="Chapter 4: Dark Fortune; Slowly Stomp Him To Death!"><span
+                                                    class="chapter-text">Chapter 4: Dark Fortune; Slowly Stomp Him To
+                                                    Death!</span></a></li>
+                                        <li><span class="glyphicon glyphicon-certificate"></span><a
+                                                href="/i-am-the-fated-villain/chapter-5-beautiful-moon-easy-destiny-points.html"
+                                                title="Chapter 5: Beautiful Moon; Easy Destiny Points!"><span
+                                                    class="chapter-text">Chapter 5: Beautiful Moon; Easy Destiny
+                                                    Points!</span></a></li>
+                                        <li><span class="glyphicon glyphicon-certificate"></span><a
+                                                href="/i-am-the-fated-villain/chapter-6-one-body-two-souls-taixuan-holy-lords-considerations.html"
+                                                title="Chapter 6: One Body, Two Souls; Taixuan Holy Lords Considerations!"><span
+                                                    class="chapter-text">Chapter 6: One Body, Two Souls; Taixuan Holy
+                                                    Lords Considerations!</span></a></li>
+                                        <li><span class="glyphicon glyphicon-certificate"></span><a
+                                                href="/i-am-the-fated-villain/chapter-7-novice-gift-pack-system-upgrade.html"
+                                                title="Chapter 7: Novice Gift Pack; System, Upgrade!"><span
+                                                    class="chapter-text">Chapter 7: Novice Gift Pack; System,
+                                                    Upgrade!</span></a></li>
+                                        <li><span class="glyphicon glyphicon-certificate"></span><a
+                                                href="/i-am-the-fated-villain/chapter-8-cutting-leeks-ye-chens-hidden-grandpa.html"
+                                                title="Chapter 8: Cutting Leeks; Ye Chens Hidden Grandpa!"><span
+                                                    class="chapter-text">Chapter 8: Cutting Leeks; Ye Chens Hidden
+                                                    Grandpa!</span></a></li>
+                                        <li><span class="glyphicon glyphicon-certificate"></span><a
+                                                href="/i-am-the-fated-villain/chapter-9-yan-ji-in-order-to-capture-one-must-let-loose.html"
+                                                title="Chapter 9: Yan Ji; In Order to Capture, One Must Let Loose!"><span
+                                                    class="chapter-text">Chapter 9: Yan Ji; In Order to Capture, One
+                                                    Must Let Loose!</span></a></li>
+                                        <li><span class="glyphicon glyphicon-certificate"></span><a
+                                                href="/i-am-the-fated-villain/chapter-10-attacking-the-heart-the-heroine-begins-to-surrender.html"
+                                                title="Chapter 10: Attacking the Heart; The Heroine Begins to Surrender!"><span
+                                                    class="chapter-text">Chapter 10: Attacking the Heart; The Heroine
+                                                    Begins to Surrender!</span></a></li>
+                                        <li><span class="glyphicon glyphicon-certificate"></span><a
+                                                href="/i-am-the-fated-villain/chapter-11-believing-in-the-young-lords-character-self-correction-is-good-too.html"
+                                                title="Chapter 11: Believing in the Young Lords Character; Self-Correction is Good, Too!"><span
+                                                    class="chapter-text">Chapter 11: Believing in the Young Lords
+                                                    Character; Self-Correction is Good, Too!</span></a></li>
+                                        <li><span class="glyphicon glyphicon-certificate"></span><a
+                                                href="/i-am-the-fated-villain/chapter-12-instigating-discord-the-dumb-protagonist.html"
+                                                title="Chapter 12: Instigating Discord; The Dumb Protagonist!"><span
+                                                    class="chapter-text">Chapter 12: Instigating Discord; The Dumb
+                                                    Protagonist!</span></a></li>
+                                        <li><span class="glyphicon glyphicon-certificate"></span><a
+                                                href="/i-am-the-fated-villain/chapter-13-the-final-act-the-immortal-spirit-gathering-pill.html"
+                                                title="Chapter 13: The Final Act; The Immortal Spirit-Gathering Pill!"><span
+                                                    class="chapter-text">Chapter 13: The Final Act; The Immortal
+                                                    Spirit-Gathering Pill!</span></a></li>
+                                        <li><span class="glyphicon glyphicon-certificate"></span><a
+                                                href="/i-am-the-fated-villain/chapter-14-the-purpose-of-descent-bias-against-young-lord-gu.html"
+                                                title="Chapter 14: The Purpose of Descent; Bias Against Young Lord Gu?"><span
+                                                    class="chapter-text">Chapter 14: The Purpose of Descent; Bias
+                                                    Against Young Lord Gu?</span></a></li>
+                                        <li><span class="glyphicon glyphicon-certificate"></span><a
+                                                href="/i-am-the-fated-villain/chapter-15-rift-between-the-master-and-disciple-walking-further-down-the-road-of-villainy.html"
+                                                title="Chapter 15: Rift Between the Master and Disciple; Walking Further Down the Road of Villainy!"><span
+                                                    class="chapter-text">Chapter 15: Rift Between the Master and
+                                                    Disciple; Walking Further Down the Road of Villainy!</span></a></li>
+                                        <li><span class="glyphicon glyphicon-certificate"></span><a
+                                                href="/i-am-the-fated-villain/chapter-16-innate-gods-spirit-temple-attack-of-the-sacred-lands.html"
+                                                title="Chapter 16: Innate Gods Spirit Temple; Attack of the Sacred Lands!"><span
+                                                    class="chapter-text">Chapter 16: Innate Gods Spirit Temple; Attack
+                                                    of the Sacred Lands!</span></a></li>
+                                        <li><span class="glyphicon glyphicon-certificate"></span><a
+                                                href="/i-am-the-fated-villain/chapter-17-thats-it-no-need-to-panic-the-perfect-dream-husband.html"
+                                                title="Chapter 17: Thats it? No Need To Panic; The Perfect Dream Husband!"><span
+                                                    class="chapter-text">Chapter 17: Thats it? No Need To Panic; The
+                                                    Perfect Dream Husband!</span></a></li>
+                                        <li><span class="glyphicon glyphicon-certificate"></span><a
+                                                href="/i-am-the-fated-villain/chapter-18-tigers-accompany-monarchs-paying-respects-to-young-lord-gu.html"
+                                                title="Chapter 18: Tigers Accompany Monarchs; Paying Respects to Young Lord Gu?"><span
+                                                    class="chapter-text">Chapter 18: Tigers Accompany Monarchs; Paying
+                                                    Respects to Young Lord Gu?</span></a></li>
+                                        <li><span class="glyphicon glyphicon-certificate"></span><a
+                                                href="/i-am-the-fated-villain/chapter-19-ant-wishing-to-get-a-glimpse-of-heaven-sudden-change-of-attitude.html"
+                                                title="Chapter 19: Ant Wishing To Get A Glimpse Of Heaven; Sudden Change Of Attitude!"><span
+                                                    class="chapter-text">Chapter 19: Ant Wishing To Get A Glimpse Of
+                                                    Heaven; Sudden Change Of Attitude!</span></a></li>
+                                        <li><span class="glyphicon glyphicon-certificate"></span><a
+                                                href="/i-am-the-fated-villain/chapter-20-fox-exploiting-the-tigers-might-good-show-to-watch.html"
+                                                title="Chapter 20: Fox Exploiting The Tigers Might; Good Show To Watch!"><span
+                                                    class="chapter-text">Chapter 20: Fox Exploiting The Tigers Might;
+                                                    Good Show To Watch!</span></a></li>
+                                        <li><span class="glyphicon glyphicon-certificate"></span><a
+                                                href="/i-am-the-fated-villain/chapter-21-the-shattered-relationship-of-the-protagonist-and-the-heroine-impure-intentions-to-gain-some-love.html"
+                                                title="Chapter 21: The Shattered Relationship of the Protagonist and the Heroine; Impure Intentions To Gain Some Love!"><span
+                                                    class="chapter-text">Chapter 21: The Shattered Relationship of the
+                                                    Protagonist and the Heroine; Impure Intentions To Gain Some
+                                                    Love!</span></a></li>
+                                        <li><span class="glyphicon glyphicon-certificate"></span><a
+                                                href="/i-am-the-fated-villain/chapter-22-the-cruel-beauty-carrot-and-the-stick.html"
+                                                title="Chapter 22: The Cruel Beauty; Carrot and the Stick!"><span
+                                                    class="chapter-text">Chapter 22: The Cruel Beauty; Carrot and the
+                                                    Stick!</span></a></li>
+                                        <li><span class="glyphicon glyphicon-certificate"></span><a
+                                                href="/i-am-the-fated-villain/chapter-23-familiarity-breeds-fondness-the-one-who-conquers-the-favored.html"
+                                                title="Chapter 23: Familiarity Breeds Fondness; The One Who Conquers The Favored!"><span
+                                                    class="chapter-text">Chapter 23: Familiarity Breeds Fondness; The
+                                                    One Who Conquers The Favored!</span></a></li>
+                                        <li><span class="glyphicon glyphicon-certificate"></span><a
+                                                href="/i-am-the-fated-villain/chapter-24-the-treasure-hunting-tool-compelling-temperament.html"
+                                                title="Chapter 24: The Treasure Hunting Tool; Compelling Temperament!"><span
+                                                    class="chapter-text">Chapter 24: The Treasure Hunting Tool;
+                                                    Compelling Temperament!</span></a></li>
+                                        <li><span class="glyphicon glyphicon-certificate"></span><a
+                                                href="/i-am-the-fated-villain/chapter-25-time-to-move-to-another-map-a-leeks-ambition.html"
+                                                title="Chapter 25: Time To Move To Another Map; A Leeks Ambition!"><span
+                                                    class="chapter-text">Chapter 25: Time To Move To Another Map; A
+                                                    Leeks Ambition!</span></a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-xs-12 col-sm-6 col-md-6">
+                                    <ul class="list-chapter">
+                                        <li><span class="glyphicon glyphicon-certificate"></span><a
+                                                href="/i-am-the-fated-villain/chapter-26-ancestor-cum-miner-going-to-middle-state.html"
+                                                title="Chapter 26: Ancestor-cum-Miner; Going to Middle State!"><span
+                                                    class="chapter-text">Chapter 26: Ancestor-cum-Miner; Going to Middle
+                                                    State!</span></a></li>
+                                        <li><span class="glyphicon glyphicon-certificate"></span><a
+                                                href="/i-am-the-fated-villain/chapter-27-old-monster-taking-over-surnamed-lin.html"
+                                                title="Chapter 27: Old Monster Taking Over; Surnamed Lin!"><span
+                                                    class="chapter-text">Chapter 27: Old Monster Taking Over; Surnamed
+                                                    Lin!</span></a></li>
+                                        <li><span class="glyphicon glyphicon-certificate"></span><a
+                                                href="/i-am-the-fated-villain/chapter-28-comforted-at-once-benefits-of-increased-fortune-value.html"
+                                                title="Chapter 28: Comforted at Once; Benefits of Increased Fortune Value!"><span
+                                                    class="chapter-text">Chapter 28: Comforted at Once; Benefits of
+                                                    Increased Fortune Value!</span></a></li>
+                                        <li><span class="glyphicon glyphicon-certificate"></span><a
+                                                href="/i-am-the-fated-villain/chapter-29-more-than-wonderful-ancestor-returns.html"
+                                                title="Chapter 29: More than Wonderful; Ancestor Returns!"><span
+                                                    class="chapter-text">Chapter 29: More than Wonderful; Ancestor
+                                                    Returns!</span></a></li>
+                                        <li><span class="glyphicon glyphicon-certificate"></span><a
+                                                href="/i-am-the-fated-villain/chapter-30-tremors-in-the-middle-state-god-kings-misfortune.html"
+                                                title="Chapter 30: Tremors in the Middle State; God King’s Misfortune!"><span
+                                                    class="chapter-text">Chapter 30: Tremors in the Middle State; God
+                                                    King’s Misfortune!</span></a></li>
+                                        <li><span class="glyphicon glyphicon-certificate"></span><a
+                                                href="/i-am-the-fated-villain/chapter-31-respect-without-a-show-of-might-the-ancestor-calling-himself-an-old-slave.html"
+                                                title="Chapter 31: Respect Without a Show of Might; The Ancestor Calling Himself an Old Slave!"><span
+                                                    class="chapter-text">Chapter 31: Respect Without a Show of Might;
+                                                    The Ancestor Calling Himself an Old Slave!</span></a></li>
+                                        <li><span class="glyphicon glyphicon-certificate"></span><a
+                                                href="/i-am-the-fated-villain/chapter-32-pillows-when-you-think-about-sleep-the-young-lords-identity.html"
+                                                title="Chapter 32: Pillows When You Think About Sleep; The Young Lord’s Identity?"><span
+                                                    class="chapter-text">Chapter 32: Pillows When You Think About Sleep;
+                                                    The Young Lord’s Identity?</span></a></li>
+                                        <li><span class="glyphicon glyphicon-certificate"></span><a
+                                                href="/i-am-the-fated-villain/chapter-33-little-beauty-falling-at-first-sight-good-face-takes-you-far.html"
+                                                title="Chapter 33: Little Beauty Falling at First Sight; Good Face Takes You Far!"><span
+                                                    class="chapter-text">Chapter 33: Little Beauty Falling at First
+                                                    Sight; Good Face Takes You Far!</span></a></li>
+                                        <li><span class="glyphicon glyphicon-certificate"></span><a
+                                                href="/i-am-the-fated-villain/chapter-34-coveting-others-women-is-a-villains-duty-leeks-should-have-a-leeks-self-awareness.html"
+                                                title="Chapter 34: Coveting Other’s Women Is a Villain’s Duty; Leeks Should Have a Leek’s Self-Awareness!"><span
+                                                    class="chapter-text">Chapter 34: Coveting Other’s Women Is a
+                                                    Villain’s Duty; Leeks Should Have a Leek’s
+                                                    Self-Awareness!</span></a></li>
+                                        <li><span class="glyphicon glyphicon-certificate"></span><a
+                                                href="/i-am-the-fated-villain/chapter-35-death-be-thy-fate-when-fortune-favors-thee-no-more-young-lord-gu-the-sinister-man.html"
+                                                title="Chapter 35: Death Be Thy Fate When Fortune Favors Thee No More; Young Lord Gu, The Sinister Man!"><span
+                                                    class="chapter-text">Chapter 35: Death Be Thy Fate When Fortune
+                                                    Favors Thee No More; Young Lord Gu, The Sinister Man!</span></a>
+                                        </li>
+                                        <li><span class="glyphicon glyphicon-certificate"></span><a
+                                                href="/i-am-the-fated-villain/chapter-36-everything-under-control-lin-tians-forbidden-technique.html"
+                                                title="Chapter 36: Everything Under Control; Lin Tian’s Forbidden Technique!"><span
+                                                    class="chapter-text">Chapter 36: Everything Under Control; Lin
+                                                    Tian’s Forbidden Technique!</span></a></li>
+                                        <li><span class="glyphicon glyphicon-certificate"></span><a
+                                                href="/i-am-the-fated-villain/chapter-37-the-demons-horror-playing-himself-to-death.html"
+                                                title="Chapter 37: The Demon’s Horror; Playing Himself to Death!"><span
+                                                    class="chapter-text">Chapter 37: The Demon’s Horror; Playing Himself
+                                                    to Death!</span></a></li>
+                                        <li><span class="glyphicon glyphicon-certificate"></span><a
+                                                href="/i-am-the-fated-villain/chapter-38-the-golden-cicada-escapes-its-shell-truly-familiarity-breeds-fondness.html"
+                                                title="Chapter 38: The Golden Cicada Escapes its Shell; Truly, Familiarity Breeds Fondness!"><span
+                                                    class="chapter-text">Chapter 38: The Golden Cicada Escapes its
+                                                    Shell; Truly, Familiarity Breeds Fondness!</span></a></li>
+                                        <li><span class="glyphicon glyphicon-certificate"></span><a
+                                                href="/i-am-the-fated-villain/chapter-39-feigned-death-awaited-resurrection.html"
+                                                title="Chapter 39: Feigned Death; Awaited Resurrection!"><span
+                                                    class="chapter-text">Chapter 39: Feigned Death; Awaited
+                                                    Resurrection!</span></a></li>
+                                        <li><span class="glyphicon glyphicon-certificate"></span><a
+                                                href="/i-am-the-fated-villain/chapter-40-value-in-keeping-around-ultimate-alchemy-talent.html"
+                                                title="Chapter 40: Value In Keeping Around; Ultimate Alchemy Talent!"><span
+                                                    class="chapter-text">Chapter 40: Value In Keeping Around; Ultimate
+                                                    Alchemy Talent!</span></a></li>
+                                        <li><span class="glyphicon glyphicon-certificate"></span><a
+                                                href="/i-am-the-fated-villain/chapter-41-eastern-wildernesss-mysterious-genius-holy-son-of-the-buddhist-holy-land.html"
+                                                title="Chapter 41: Eastern Wilderness’s Mysterious Genius; Holy Son of the Buddhist Holy Land!"><span
+                                                    class="chapter-text">Chapter 41: Eastern Wilderness’s Mysterious
+                                                    Genius; Holy Son of the Buddhist Holy Land!</span></a></li>
+                                        <li><span class="glyphicon glyphicon-certificate"></span><a
+                                                href="/i-am-the-fated-villain/chapter-42-long-term-plan-kneeling-and-licking-the-young-lords-boots.html"
+                                                title="Chapter 42: Long Term Plan; Kneeling and Licking the Young Lord’s Boots!"><span
+                                                    class="chapter-text">Chapter 42: Long Term Plan; Kneeling and
+                                                    Licking the Young Lord’s Boots!</span></a></li>
+                                        <li><span class="glyphicon glyphicon-certificate"></span><a
+                                                href="/i-am-the-fated-villain/chapter-43-strings-of-fate-systems-random-task.html"
+                                                title="Chapter 43: Strings of Fate; System’s Random Task!"><span
+                                                    class="chapter-text">Chapter 43: Strings of Fate; System’s Random
+                                                    Task!</span></a></li>
+                                        <li><span class="glyphicon glyphicon-certificate"></span><a
+                                                href="/i-am-the-fated-villain/chapter-44-questioning-you-is-your-honor-perfect-suppression.html"
+                                                title="Chapter 44: Questioning You Is Your Honor; Perfect Suppression!"><span
+                                                    class="chapter-text">Chapter 44: Questioning You Is Your Honor;
+                                                    Perfect Suppression!</span></a></li>
+                                        <li><span class="glyphicon glyphicon-certificate"></span><a
+                                                href="/i-am-the-fated-villain/chapter-45-gu-changges-real-face-not-even-god-will-shelter-you.html"
+                                                title="Chapter 45: Gu Changge’s Real Face; Not Even God Will Shelter You!"><span
+                                                    class="chapter-text">Chapter 45: Gu Changge’s Real Face; Not Even
+                                                    God Will Shelter You!</span></a></li>
+                                        <li><span class="glyphicon glyphicon-certificate"></span><a
+                                                href="/i-am-the-fated-villain/chapter-46-helping-your-sellers-count-their-money-lin-tian-resurrects.html"
+                                                title="Chapter 46: Helping Your Sellers Count Their Money; Lin Tian Resurrects!"><span
+                                                    class="chapter-text">Chapter 46: Helping Your Sellers Count Their
+                                                    Money; Lin Tian Resurrects!</span></a></li>
+                                        <li><span class="glyphicon glyphicon-certificate"></span><a
+                                                href="/i-am-the-fated-villain/chapter-47-killing-the-first-favored-son-of-heaven-the-taste-of-a-god-kings-remnant-soul.html"
+                                                title="Chapter 47: Killing the First Favored Son of Heaven; The Taste of a God King’s Remnant Soul!"><span
+                                                    class="chapter-text">Chapter 47: Killing the First Favored Son of
+                                                    Heaven; The Taste of a God King’s Remnant Soul!</span></a></li>
+                                        <li><span class="glyphicon glyphicon-certificate"></span><a
+                                                href="/i-am-the-fated-villain/chapter-48-first-kill-reward-chest-halo-of-the-destined-heavenly-villain.html"
+                                                title="Chapter 48: First Kill Reward Chest; Halo of the Destined Heavenly Villain!"><span
+                                                    class="chapter-text">Chapter 48: First Kill Reward Chest; Halo of
+                                                    the Destined Heavenly Villain!</span></a></li>
+                                        <li><span class="glyphicon glyphicon-certificate"></span><a
+                                                href="/i-am-the-fated-villain/chapter-49-unnamed-creatures-of-the-ancient-sacred-mountains.html"
+                                                title="Chapter 49: Unnamed; Creatures of the Ancient Sacred Mountains!"><span
+                                                    class="chapter-text">Chapter 49: Unnamed; Creatures of the Ancient
+                                                    Sacred Mountains!</span></a></li>
+                                        <li><span class="glyphicon glyphicon-certificate"></span><a
+                                                href="/i-am-the-fated-villain/chapter-50-ye-liuli-the-beauty-raised-in-the-lower-realm-childhood-friends.html"
+                                                title="Chapter 50: Ye Liuli, the Beauty Raised in the Lower Realm; Childhood Friends!"><span
+                                                    class="chapter-text">Chapter 50: Ye Liuli, the Beauty Raised in the
+                                                    Lower Realm; Childhood Friends!</span></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <ul class="pagination pagination-sm">
+                                <li class="first disabled"><span>« First</span></li>
+                                <li class="prev disabled"><span>
+                                        << /span>
+                                </li>
+                                <li class="active"><a href="/i-am-the-fated-villain.html" data-page="0">1</a></li>
+                                <li><a href="/i-am-the-fated-villain.html?page=2" data-page="1">2</a></li>
+                                <li><a href="/i-am-the-fated-villain.html?page=3" data-page="2">3</a></li>
+                                <li><a href="/i-am-the-fated-villain.html?page=4" data-page="3">4</a></li>
+                                <li><a href="/i-am-the-fated-villain.html?page=5" data-page="4">5</a></li>
+                                <li><a href="/i-am-the-fated-villain.html?page=6" data-page="5">6</a></li>
+                                <li><a href="/i-am-the-fated-villain.html?page=7" data-page="6">7</a></li>
+                                <li class="next"><a href="/i-am-the-fated-villain.html?page=2" data-page="1">></a></li>
+                                <li class="last"><a href="/i-am-the-fated-villain.html?page=29" data-page="28">Last
+                                        »</a></li>
+                            </ul>
+                            <ul class="pagination pagination-sm">
+                                <li class="dropup page-nav"><a href="javascript:void(0)" data-toggle="dropdown">Select
+                                        page <span class="caret"></span></a>
+                                    <div class="dropdown-menu dropdown-menu-right" role="menu">
+                                        <form action="/i-am-the-fated-villain.html" name="page_jump" id="page_jump"
+                                            method="get">
+                                            <div class="input-group"><input class="form-control" name="page"
+                                                    type="number" placeholder="Page..." value=""><span
+                                                    class="input-group-btn"><button class="btn btn-default"
+                                                        type="submit">Go</button></span></div>
+                                        </form>
+                                    </div>
+                                </li>
+                            </ul><input id="truyen-id" type="hidden" value="1591"><input id="total-page" type="hidden"
+                                value="10"><input name="truyen" type="hidden" value="i-am-the-fated-villain">
+                        </div>
+                        <div class="visible-md visible-lg">
+                            <div class="col-xs-12 comment-box"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="visible-md-block visible-lg-block col-md-3 text-center col-truyen-side">
+                    <div class="list list-truyen list-side col-xs-12">
+                        <div class="title-list">
+                            <h4>Hot Harem Novel</h4>
+                        </div>
+                        <div class="row top-item">
+                            <div class="col-xs-12">
+                                <div class="top-num top-1">1</div>
+                                <div class="s-title">
+                                    <h3><a href="/reincarnation-of-the-strongest-sword-god.html"
+                                            title="Reincarnation Of The Strongest Sword God">Reincarnation Of The
+                                            Strongest Sword God</a></h3>
+                                </div>
+                                <div class="genre nowrap"><a href="/genre/Action">Action</a>, <a
+                                        href="/genre/Adventure">Adventure</a>, <a href="/genre/Fantasy">Fantasy</a>, <a
+                                        href="/genre/Martial+Arts">Martial Arts</a>, <a
+                                        href="/genre/Xuanhuan">Xuanhuan</a></div>
+                            </div>
+                        </div>
+                        <div class="row top-item">
+                            <div class="col-xs-12">
+                                <div class="top-num top-2">2</div>
+                                <div class="s-title">
+                                    <h3><a href="/hidden-marriage.html" title="Hidden Marriage">Hidden Marriage</a></h3>
+                                </div>
+                                <div class="genre nowrap"><a href="/genre/Adult">Adult</a>, <a
+                                        href="/genre/Comedy">Comedy</a>, <a href="/genre/Drama">Drama</a>, <a
+                                        href="/genre/Josei">Josei</a>, <a href="/genre/Mature">Mature</a>, <a
+                                        href="/genre/Romance">Romance</a>, <a href="/genre/Slice+of+Life">Slice of
+                                        Life</a></div>
+                            </div>
+                        </div>
+                        <div class="row top-item">
+                            <div class="col-xs-12">
+                                <div class="top-num top-3">3</div>
+                                <div class="s-title">
+                                    <h3><a href="/martial-god-asura.html" title="Martial God Asura">Martial God
+                                            Asura</a></h3>
+                                </div>
+                                <div class="genre nowrap"><a href="/genre/Action">Action</a>, <a
+                                        href="/genre/Adventure">Adventure</a>, <a href="/genre/Drama">Drama</a>, <a
+                                        href="/genre/Fantasy">Fantasy</a>, <a href="/genre/Harem">Harem</a>, <a
+                                        href="/genre/Martial+Arts">Martial Arts</a>, <a href="/genre/Mature">Mature</a>,
+                                    <a href="/genre/Romance">Romance</a>, <a href="/genre/Tragedy">Tragedy</a>, <a
+                                        href="/genre/Xuanhuan">Xuanhuan</a></div>
+                            </div>
+                        </div>
+                        <div class="row top-item">
+                            <div class="col-xs-12">
+                                <div class="top-num top-4">4</div>
+                                <div class="s-title">
+                                    <h3><a href="/super-gene.html" title="Super Gene">Super Gene</a></h3>
+                                </div>
+                                <div class="genre nowrap"><a href="/genre/Sci-fi">Sci-fi</a>, <a
+                                        href="/genre/Comedy">Comedy</a>, <a href="/genre/Martial+Arts">Martial Arts</a>,
+                                    <a href="/genre/Action">Action</a>, <a href="/genre/Adventure">Adventure</a>, <a
+                                        href="/genre/Mecha">Mecha</a>, <a href="/genre/Xuanhuan">Xuanhuan</a></div>
+                            </div>
+                        </div>
+                        <div class="row top-item">
+                            <div class="col-xs-12">
+                                <div class="top-num top-5">5</div>
+                                <div class="s-title">
+                                    <h3><a href="/martial-peak.html" title="Martial Peak">Martial Peak</a></h3>
+                                </div>
+                                <div class="genre nowrap"><a href="/genre/Action">Action</a>, <a
+                                        href="/genre/Harem">Harem</a>, <a href="/genre/Martial+Arts">Martial Arts</a>,
+                                    <a href="/genre/Mature">Mature</a>, <a href="/genre/Romance">Romance</a>, <a
+                                        href="/genre/Xuanhuan">Xuanhuan</a></div>
+                            </div>
+                        </div>
+                        <div class="row top-item">
+                            <div class="col-xs-12">
+                                <div class="top-num top-6">6</div>
+                                <div class="s-title">
+                                    <h3><a href="/perfect-secret-love-the-bad-new-wife-is-a-little-sweet.html"
+                                            title="Perfect Secret Love: The Bad New Wife is a Little Sweet">Perfect
+                                            Secret Love: The Bad New Wife is a Little Sweet</a></h3>
+                                </div>
+                                <div class="genre nowrap"><a href="/genre/Comedy">Comedy</a>, <a
+                                        href="/genre/Romance">Romance</a>, <a href="/genre/Drama">Drama</a>, <a
+                                        href="/genre/Gender+Bender">Gender Bender</a>, <a href="/genre/Josei">Josei</a>,
+                                    <a href="/genre/Psychological">Psychological</a>, <a
+                                        href="/genre/Supernatural">Supernatural</a></div>
+                            </div>
+                        </div>
+                        <div class="row top-item">
+                            <div class="col-xs-12">
+                                <div class="top-num top-7">7</div>
+                                <div class="s-title">
+                                    <h3><a href="/library-of-heavens-path.html" title="Library of Heaven’s Path">Library
+                                            of Heaven’s Path</a></h3>
+                                </div>
+                                <div class="genre nowrap"><a href="/genre/Comedy">Comedy</a>, <a
+                                        href="/genre/Fantasy">Fantasy</a>, <a href="/genre/Martial+Arts">Martial
+                                        Arts</a>, <a href="/genre/Slice+of+Life">Slice of Life</a>, <a
+                                        href="/genre/Xuanhuan">Xuanhuan</a></div>
+                            </div>
+                        </div>
+                        <div class="row top-item">
+                            <div class="col-xs-12">
+                                <div class="top-num top-8">8</div>
+                                <div class="s-title">
+                                    <h3><a href="/war-sovereign-soaring-the-heavens.html"
+                                            title="War Sovereign Soaring The Heavens">War Sovereign Soaring The
+                                            Heavens</a></h3>
+                                </div>
+                                <div class="genre nowrap"><a href="/genre/Harem">Harem</a>, <a
+                                        href="/genre/Martial+Arts">Martial Arts</a>, <a href="/genre/Action">Action</a>,
+                                    <a href="/genre/Adventure">Adventure</a>, <a href="/genre/Mature">Mature</a>, <a
+                                        href="/genre/Romance">Romance</a>, <a href="/genre/Xuanhuan">Xuanhuan</a></div>
+                            </div>
+                        </div>
+                        <div class="row top-item">
+                            <div class="col-xs-12">
+                                <div class="top-num top-9">9</div>
+                                <div class="s-title">
+                                    <h3><a href="/trial-marriage-husband-need-to-work-hard.html"
+                                            title="Trial Marriage Husband: Need to Work Hard">Trial Marriage Husband:
+                                            Need to Work Hard</a></h3>
+                                </div>
+                                <div class="genre nowrap"><a href="/genre/Romance">Romance</a>, <a
+                                        href="/genre/Drama">Drama</a>, <a href="/genre/Josei">Josei</a></div>
+                            </div>
+                        </div>
+                        <div class="row top-item">
+                            <div class="col-xs-12">
+                                <div class="top-num top-10">10</div>
+                                <div class="s-title">
+                                    <h3><a href="/my-youth-began-with-him.html" title="My Youth Began With Him">My Youth
+                                            Began With Him</a></h3>
+                                </div>
+                                <div class="genre nowrap"><a href="/genre/Romance">Romance</a>, <a
+                                        href="/genre/Josei">Josei</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div align="left"></div>
+                </div>
+            </div>
+
+            ;
+        </main>
+        <footer class="footer">
+            <div class="container">
+                <div class="hidden-xs col-sm-5">
+                    <p>
+                        &copy; Copyright NovelFull&nbsp;. All Rights Reserved.</p>
+                </div>
+                <ul class="col-xs-12 col-sm-7 list-unstyled">
+                    <li class="text-right pull-right"><a href="/contact" title="Contact">Contact</a> -
+                        <a href="/tos" title="ToS">ToS</a> -
+                        <a href="/sitemap.xml" target="_blank">Sitemap</a><a class="backtop" href="#" rel="nofollow"
+                            title=""><span class="glyphicon glyphicon-upload"></span></a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+    <script src="/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js"
+        data-cf-settings="34625cd8cb7affe7a6f1da71-|49" defer></script>
+</body>
+
+</html>

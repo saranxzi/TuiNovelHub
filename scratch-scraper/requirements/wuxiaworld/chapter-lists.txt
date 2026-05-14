@@ -1,0 +1,1957 @@
+to get the chapter lists using ajax
+
+:authority
+wuxiaworld.site
+:method
+POST
+:path
+/novel/i-can-bring-in-game-items-out/ajax/chapters/
+:scheme
+https
+accept
+*/*
+accept-encoding
+gzip, deflate, br, zstd
+accept-language
+en-US,en;q=0.6
+content-length
+0
+cookie
+wpmanga-reading-history=W3siaWQiOjY0ODgyNiwiYyI6IjY1MjkwNCIsInAiOjEsImkiOiIiLCJ0IjoxNzUxODU4MzMxfV0%3D
+origin
+https://wuxiaworld.site
+priority
+u=1, i
+referer
+https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/
+sec-ch-ua
+"Not)A;Brand";v="8", "Chromium";v="138", "Brave";v="138"
+sec-ch-ua-mobile
+?0
+sec-ch-ua-platform
+"Windows"
+sec-fetch-dest
+empty
+sec-fetch-mode
+cors
+sec-fetch-site
+same-origin
+sec-gpc
+1
+user-agent
+Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36
+x-requested-with
+XMLHttpRequest
+
+This the response 
+
+<div class="c-blog__heading style-2 font-heading">
+	<h2 class="h4">
+		<i class="icon ion-ios-star"></i>
+		LATEST MANGA RELEASES	</h2>
+	<a href="#" title="Change Order" class="btn-reverse-order"><i class="icon ion-md-swap"></i></a>
+</div>
+<div class="page-content-listing single-page">
+	<div class="listing-chapters_wrap cols-1  show-more">
+
+		
+			
+			<ul class="main version-chap no-volumn">
+				
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-157/">
+									Chapter 157 - - 148: the choice of a confidant								</a>
+
+																	<span class="chapter-release-date">
+										<i>12 hours ago</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-156/">
+									Chapter 156 - - 147: riding high								</a>
+
+																	<span class="chapter-release-date">
+										<i>12 hours ago</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-155/">
+									Chapter 155 - - 146: a powerful enemy attacks?								</a>
+
+																	<span class="chapter-release-date">
+										<i>12 hours ago</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-154/">
+									Chapter 154 - - 145 complete seconds								</a>
+
+																	<span class="chapter-release-date">
+										<i>1 day ago</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-153/">
+									Chapter 153 - - 144: this witch is so insidious								</a>
+
+																	<span class="chapter-release-date">
+										<i>1 day ago</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-152/">
+									Chapter 152 - - 143: agent								</a>
+
+																	<span class="chapter-release-date">
+										<i>1 day ago</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-151/">
+									Chapter 151 - - 142 seizing the opportunity								</a>
+
+																	<span class="chapter-release-date">
+										<i>1 day ago</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-150/">
+									Chapter 150 - - 141: caravan mission first stop								</a>
+
+																	<span class="chapter-release-date">
+										<i>1 day ago</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-149/">
+									Chapter 149 - - 140: this grand elder is a bit wicked								</a>
+
+																	<span class="chapter-release-date">
+										<i>3 days ago</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-148/">
+									Chapter 148 - - 139: the grand elder is very special								</a>
+
+																	<span class="chapter-release-date">
+										<i>3 days ago</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-147/">
+									Chapter 147 - - 138: unlucky next-door wang ma								</a>
+
+																	<span class="chapter-release-date">
+										<i>3 days ago</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-146/">
+									Chapter 146 - - 137 treasures and great witch artifact (part 2)								</a>
+
+																	<span class="chapter-release-date">
+										<i>July 3, 2025</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-145/">
+									Chapter 145 - - 137: treasure and great witch artifact (part 1)								</a>
+
+																	<span class="chapter-release-date">
+										<i>July 3, 2025</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-144/">
+									Chapter 144 - - 136 secret witch dao								</a>
+
+																	<span class="chapter-release-date">
+										<i>July 3, 2025</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-143/">
+									Chapter 143 - - 135: evolution soldier type bar								</a>
+
+																	<span class="chapter-release-date">
+										<i>July 3, 2025</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-142/">
+									Chapter 142 - - 134: wildly gathering favorability_2								</a>
+
+																	<span class="chapter-release-date">
+										<i>July 3, 2025</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-141/">
+									Chapter 141 - - 134: wildly gaining favorability								</a>
+
+																	<span class="chapter-release-date">
+										<i>July 3, 2025</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-140/">
+									Chapter 140 - - 133 my subordinate is somewhat strong (additional thousand - s)_2								</a>
+
+																	<span class="chapter-release-date">
+										<i>July 3, 2025</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-139/">
+									Chapter 139 - - 133 my subordinate is somewhat strong (additional thousand - s)								</a>
+
+																	<span class="chapter-release-date">
+										<i>July 3, 2025</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-138/">
+									Chapter 138 - - 132: the first person in public beta_2								</a>
+
+																	<span class="chapter-release-date">
+										<i>July 3, 2025</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-137/">
+									Chapter 137 - - 132: the first person in public beta								</a>
+
+																	<span class="chapter-release-date">
+										<i>July 3, 2025</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-136/">
+									Chapter 136 - - 131: there’s sand in my eyes_2								</a>
+
+																	<span class="chapter-release-date">
+										<i>July 3, 2025</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-135/">
+									Chapter 135 - - 131: sand got into my eyes								</a>
+
+																	<span class="chapter-release-date">
+										<i>July 3, 2025</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-134/">
+									Chapter 134 - - 130 innate primordial martial body_2								</a>
+
+																	<span class="chapter-release-date">
+										<i>July 3, 2025</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-133/">
+									Chapter 133 - - 130: innate primordial martial body								</a>
+
+																	<span class="chapter-release-date">
+										<i>July 3, 2025</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-132/">
+									Chapter 132 - - 129: an unbelievable secret (ring guardian’s reward of 100 real coins for extra update)_2								</a>
+
+																	<span class="chapter-release-date">
+										<i>July 3, 2025</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-131/">
+									Chapter 131 - - 129: an unbelievable secret (ring guardian’s reward of 100 real coins for extra update)								</a>
+
+																	<span class="chapter-release-date">
+										<i>July 3, 2025</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-130/">
+									Chapter 130 - - 128 harvest and rewards_2								</a>
+
+																	<span class="chapter-release-date">
+										<i>July 3, 2025</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-129/">
+									Chapter 129 - - 128 harvest and rewards								</a>
+
+																	<span class="chapter-release-date">
+										<i>July 3, 2025</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-128/">
+									Chapter 128 - - 127 a veteran who took advantage								</a>
+
+																	<span class="chapter-release-date">
+										<i>July 3, 2025</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-127/">
+									Chapter 127 - : you can’t catch a wolf without giving up your child.								</a>
+
+																	<span class="chapter-release-date">
+										<i>July 3, 2025</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-126/">
+									Chapter 126 - - 125 suddenly, the sound of a gunshot was heard (additional update for 900 average subscriptions)								</a>
+
+																	<span class="chapter-release-date">
+										<i>July 3, 2025</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-125/">
+									Chapter 125 - - 124 witch bone resurrection skill								</a>
+
+																	<span class="chapter-release-date">
+										<i>July 3, 2025</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-124/">
+									Chapter 124 - - 123 deadly rock snake								</a>
+
+																	<span class="chapter-release-date">
+										<i>July 3, 2025</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-123/">
+									Chapter 123 - - 122 postnatal martial body, glazed martial body								</a>
+
+																	<span class="chapter-release-date">
+										<i>July 3, 2025</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-122/">
+									Chapter 122 - - 121 symbiosis								</a>
+
+																	<span class="chapter-release-date">
+										<i>July 3, 2025</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-121/">
+									Chapter 121 - - 120 cultivators’ imaginations are a bit wild (800 average subscriptions bonus - )								</a>
+
+																	<span class="chapter-release-date">
+										<i>July 3, 2025</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-120/">
+									Chapter 120 - - 119 even cultivators need to hold onto a golden leg								</a>
+
+																	<span class="chapter-release-date">
+										<i>July 3, 2025</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-119/">
+									Chapter 119 - - 118 is this king’s dominating qi?								</a>
+
+																	<span class="chapter-release-date">
+										<i>July 3, 2025</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-118/">
+									Chapter 118 - - 117 small cultivator (700 uniformly scheduled additional updates)								</a>
+
+																	<span class="chapter-release-date">
+										<i>July 3, 2025</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-117/">
+									Chapter 117 - - 116 heavy machine gun appears								</a>
+
+																	<span class="chapter-release-date">
+										<i>July 3, 2025</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-116/">
+									Chapter 116 - - 115 the situation is not right								</a>
+
+																	<span class="chapter-release-date">
+										<i>July 3, 2025</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-115/">
+									Chapter 115 - - 114 hunter								</a>
+
+																	<span class="chapter-release-date">
+										<i>July 3, 2025</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-114/">
+									Chapter 114 - - 113 little knife studio								</a>
+
+																	<span class="chapter-release-date">
+										<i>July 3, 2025</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-113/">
+									Chapter 113 - - 112 put yourself on the line (600 regular subscriptions added)								</a>
+
+																	<span class="chapter-release-date">
+										<i>July 3, 2025</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-112/">
+									Chapter 112 - - 111 just take a look (misty beast old brother hundred rewards add extra - )								</a>
+
+																	<span class="chapter-release-date">
+										<i>July 3, 2025</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-111/">
+									Chapter 111 - - 110 iron cloth shirt great perfection (thanks to the old brother guardian messenger for another generous reward)								</a>
+
+																	<span class="chapter-release-date">
+										<i>July 3, 2025</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-110/">
+									Chapter 110 - - 109 innate essence blood (guardian ring envoy 100 rewards extra update)								</a>
+
+																	<span class="chapter-release-date">
+										<i>July 3, 2025</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-109/">
+									Chapter 109 - - 108 this change is quite big								</a>
+
+																	<span class="chapter-release-date">
+										<i>July 3, 2025</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-108/">
+									Chapter 108 - - 107: men crying is not a sin (seeking first subscription)								</a>
+
+																	<span class="chapter-release-date">
+										<i>July 3, 2025</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-107/">
+									Chapter 107 - : listing remarks (happy new year)								</a>
+
+																	<span class="chapter-release-date">
+										<i>July 3, 2025</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-106/">
+									Chapter 106 - this temptation is a bit strong								</a>
+
+																	<span class="chapter-release-date">
+										<i>July 3, 2025</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-105/">
+									Chapter 105 - what to do when your brain isn’t enough								</a>
+
+																	<span class="chapter-release-date">
+										<i>July 3, 2025</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-104/">
+									Chapter 104 - iron cloth shirt								</a>
+
+																	<span class="chapter-release-date">
+										<i>July 3, 2025</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-103/">
+									Chapter 103 - the fire in the heart is burning								</a>
+
+																	<span class="chapter-release-date">
+										<i>July 3, 2025</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-102/">
+									Chapter 102 - no monopoly by one family								</a>
+
+																	<span class="chapter-release-date">
+										<i>July 3, 2025</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-101/">
+									Chapter 101 - should this money be given?								</a>
+
+																	<span class="chapter-release-date">
+										<i>July 3, 2025</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-100/">
+									Chapter 100 - courting death								</a>
+
+																	<span class="chapter-release-date">
+										<i>July 3, 2025</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-99/">
+									Chapter 99 - oh my god, another young master dai?								</a>
+
+																	<span class="chapter-release-date">
+										<i>July 3, 2025</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-98/">
+									Chapter 98 - : leopard cat good friend								</a>
+
+																	<span class="chapter-release-date">
+										<i>July 3, 2025</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-97/">
+									Chapter 97 - : a beautiful woman with great vision								</a>
+
+																	<span class="chapter-release-date">
+										<i>July 3, 2025</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-96/">
+									Chapter 96 - : the top reward in newbie village								</a>
+
+																	<span class="chapter-release-date">
+										<i>July 3, 2025</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-95/">
+									Chapter 95 - : discovered a great treasure								</a>
+
+																	<span class="chapter-release-date">
+										<i>July 3, 2025</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-94/">
+									Chapter 94 - : small knife’s backup plan								</a>
+
+																	<span class="chapter-release-date">
+										<i>July 3, 2025</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-93/">
+									Chapter 93 - : this reward is quite exciting								</a>
+
+																	<span class="chapter-release-date">
+										<i>July 3, 2025</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-92/">
+									Chapter 92 - courting death								</a>
+
+																	<span class="chapter-release-date">
+										<i>July 3, 2025</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-91/">
+									Chapter 91 - : truly fragrant								</a>
+
+																	<span class="chapter-release-date">
+										<i>July 3, 2025</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-90/">
+									Chapter 90 - surprise attack								</a>
+
+																	<span class="chapter-release-date">
+										<i>July 3, 2025</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-89/">
+									Chapter 89 - : i have no sense of security								</a>
+
+																	<span class="chapter-release-date">
+										<i>July 3, 2025</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-88/">
+									Chapter 88 - : even the person revealing their cards isn’t honest								</a>
+
+																	<span class="chapter-release-date">
+										<i>July 3, 2025</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-87/">
+									Chapter 87 - : i admit it, i’ve revealed everything								</a>
+
+																	<span class="chapter-release-date">
+										<i>July 3, 2025</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-86/">
+									Chapter 86 - : the consequences of flattery								</a>
+
+																	<span class="chapter-release-date">
+										<i>July 3, 2025</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-85/">
+									Chapter 85 - the mysterious phantom								</a>
+
+																	<span class="chapter-release-date">
+										<i>July 3, 2025</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-84/">
+									Chapter 84 - : young master wang’s confidence								</a>
+
+																	<span class="chapter-release-date">
+										<i>July 3, 2025</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-83/">
+									Chapter 83 - : shadow people?								</a>
+
+																	<span class="chapter-release-date">
+										<i>July 3, 2025</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-82/">
+									Chapter 82 - i have really defied heaven								</a>
+
+																	<span class="chapter-release-date">
+										<i>July 3, 2025</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-81/">
+									Chapter 81 - almost invincible								</a>
+
+																	<span class="chapter-release-date">
+										<i>July 3, 2025</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-80/">
+									Chapter 80 - : did you get your head caught in the door?								</a>
+
+																	<span class="chapter-release-date">
+										<i>July 3, 2025</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-79/">
+									Chapter 79 - : the boldness of next-door wang ma								</a>
+
+																	<span class="chapter-release-date">
+										<i>July 3, 2025</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-78/">
+									Chapter 78 - xiu’er is very cute								</a>
+
+																	<span class="chapter-release-date">
+										<i>July 3, 2025</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-77/">
+									Chapter 77 - : my witch residence is a bit big								</a>
+
+																	<span class="chapter-release-date">
+										<i>July 3, 2025</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-76/">
+									Chapter 76 - : secret exposed								</a>
+
+																	<span class="chapter-release-date">
+										<i>July 3, 2025</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-75/">
+									Chapter 75 - : xiu’er crying								</a>
+
+																	<span class="chapter-release-date">
+										<i>July 3, 2025</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-74/">
+									Chapter 74 - : wolf fang pass is under my command								</a>
+
+																	<span class="chapter-release-date">
+										<i>July 3, 2025</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-73/">
+									Chapter 73 - : great responsibility								</a>
+
+																	<span class="chapter-release-date">
+										<i>July 3, 2025</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-72/">
+									Chapter 72 - the malicious witch								</a>
+
+																	<span class="chapter-release-date">
+										<i>July 3, 2025</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-71/">
+									Chapter 71 - witch, black soul crow								</a>
+
+																	<span class="chapter-release-date">
+										<i>July 3, 2025</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-70/">
+									Chapter 70 - : this flaw is hard to pick up								</a>
+
+																	<span class="chapter-release-date">
+										<i>July 3, 2025</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-69/">
+									Chapter 69 - fierce beast								</a>
+
+																	<span class="chapter-release-date">
+										<i>July 3, 2025</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-68/">
+									Chapter 68 - wolf fang pass mission								</a>
+
+																	<span class="chapter-release-date">
+										<i>July 3, 2025</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-67/">
+									Chapter 67 - : bone hunting revival skill								</a>
+
+																	<span class="chapter-release-date">
+										<i>July 3, 2025</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-66/">
+									Chapter 66 - wolf pack								</a>
+
+																	<span class="chapter-release-date">
+										<i>July 3, 2025</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-65/">
+									Chapter 65 - : the overbearing next-door wang ma								</a>
+
+																	<span class="chapter-release-date">
+										<i>July 3, 2025</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-64/">
+									Chapter 64 - : steamed buns are not proper food								</a>
+
+																	<span class="chapter-release-date">
+										<i>July 3, 2025</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-63/">
+									Chapter 63 - : comprehending blood qi								</a>
+
+																	<span class="chapter-release-date">
+										<i>July 3, 2025</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-62/">
+									Chapter 62 - new favorite blood vine								</a>
+
+																	<span class="chapter-release-date">
+										<i>July 3, 2025</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-61/">
+									Chapter 61 - : ah, the helpless face-slapping								</a>
+
+																	<span class="chapter-release-date">
+										<i>July 3, 2025</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-60/">
+									Chapter 60 - : helpless, i don’t want to show off								</a>
+
+																	<span class="chapter-release-date">
+										<i>July 3, 2025</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-59/">
+									Chapter 59 - : the black fog stranger’s deal								</a>
+
+																	<span class="chapter-release-date">
+										<i>July 3, 2025</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-58/">
+									Chapter 58 - : the legendary brother immortal								</a>
+
+																	<span class="chapter-release-date">
+										<i>July 3, 2025</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-57/">
+									Chapter 57 - : pet black king								</a>
+
+																	<span class="chapter-release-date">
+										<i>July 3, 2025</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-56/">
+									Chapter 56 - : i, next-door wang ma, am not short of money								</a>
+
+																	<span class="chapter-release-date">
+										<i>July 3, 2025</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-55/">
+									Chapter 55 - : who is the tycoon								</a>
+
+																	<span class="chapter-release-date">
+										<i>July 3, 2025</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-54/">
+									Chapter 54 - : hidden danger								</a>
+
+																	<span class="chapter-release-date">
+										<i>July 3, 2025</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-53/">
+									Chapter 53 - the stick’s emotion								</a>
+
+																	<span class="chapter-release-date">
+										<i>July 3, 2025</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-52/">
+									Chapter 52 - : after modification - 52 flying sword acquired								</a>
+
+																	<span class="chapter-release-date">
+										<i>July 3, 2025</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-51/">
+									Chapter 51 - : the temptation of money								</a>
+
+																	<span class="chapter-release-date">
+										<i>July 3, 2025</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-50/">
+									Chapter 50 - playing bone								</a>
+
+																	<span class="chapter-release-date">
+										<i>July 3, 2025</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-49/">
+									Chapter 49 - : the function of merit								</a>
+
+																	<span class="chapter-release-date">
+										<i>July 3, 2025</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-48/">
+									Chapter 48 - : true fragrance								</a>
+
+																	<span class="chapter-release-date">
+										<i>July 3, 2025</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-47/">
+									Chapter 47 - Earn 1 million yuan and pretend to be a Expert								</a>
+
+																	<span class="chapter-release-date">
+										<i>December 18, 2022</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-46/">
+									Chapter 46 - Wang Ma Next Door								</a>
+
+																	<span class="chapter-release-date">
+										<i>December 18, 2022</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-45/">
+									Chapter 45 - An Awesome Fool								</a>
+
+																	<span class="chapter-release-date">
+										<i>December 18, 2022</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-44/">
+									Chapter 44 -  This Shaman Is Very Insidious								</a>
+
+																	<span class="chapter-release-date">
+										<i>December 18, 2022</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-43/">
+									Chapter 43 -  I have a deep relationship with the tribe.								</a>
+
+																	<span class="chapter-release-date">
+										<i>December 18, 2022</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-42/">
+									Chapter 42 -  I Want to Marry a Wife								</a>
+
+																	<span class="chapter-release-date">
+										<i>December 18, 2022</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-41/">
+									Chapter 41 - Kill Me 								</a>
+
+																	<span class="chapter-release-date">
+										<i>December 18, 2022</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-40/">
+									Chapter 40 -  Ten Experts								</a>
+
+																	<span class="chapter-release-date">
+										<i>December 16, 2022</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-39/">
+									Chapter 39 - Why Did I Die Again?								</a>
+
+																	<span class="chapter-release-date">
+										<i>December 16, 2022</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-38/">
+									Chapter 38 - Dog								</a>
+
+																	<span class="chapter-release-date">
+										<i>December 16, 2022</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-37/">
+									Chapter 37 - Low Profile Bro's Ambition								</a>
+
+																	<span class="chapter-release-date">
+										<i>December 16, 2022</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-36/">
+									Chapter 36 - Panicking from Making Money								</a>
+
+																	<span class="chapter-release-date">
+										<i>December 16, 2022</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-35/">
+									Chapter 35 -  Low Profile Bro								</a>
+
+																	<span class="chapter-release-date">
+										<i>December 12, 2022</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-34/">
+									Chapter 34  - Young Master Dai No. 2 Appears								</a>
+
+																	<span class="chapter-release-date">
+										<i>December 12, 2022</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-33/">
+									Chapter 33 -  Young Master Dai's								</a>
+
+																	<span class="chapter-release-date">
+										<i>December 12, 2022</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-32/">
+									Chapter 32 -  Who Took Advantage								</a>
+
+																	<span class="chapter-release-date">
+										<i>December 12, 2022</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-31/">
+									Chapter 31  - Sweet Lackey								</a>
+
+																	<span class="chapter-release-date">
+										<i>December 12, 2022</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-30/">
+									Chapter 30  - Martial Arts Proficiency Manual								</a>
+
+																	<span class="chapter-release-date">
+										<i>December 12, 2022</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-29/">
+									Chapter 29 -  Young Master Dai Recovered								</a>
+
+																	<span class="chapter-release-date">
+										<i>December 12, 2022</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-28/">
+									Chapter 28  - Full of Tricks								</a>
+
+																	<span class="chapter-release-date">
+										<i>December 12, 2022</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-27/">
+									Chapter 27 -  Indispensable Young Master Dai								</a>
+
+																	<span class="chapter-release-date">
+										<i>December 12, 2022</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-26/">
+									Chapter 26  - Childhood Brothers								</a>
+
+																	<span class="chapter-release-date">
+										<i>December 12, 2022</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-25/">
+									Chapter 25  - Immortal Cultivation? Immortality								</a>
+
+																	<span class="chapter-release-date">
+										<i>December 12, 2022</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-24/">
+									Chapter 24  - Chicky								</a>
+
+																	<span class="chapter-release-date">
+										<i>December 12, 2022</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-23/">
+									Chapter 23 -  I Admit I Was Impulsive								</a>
+
+																	<span class="chapter-release-date">
+										<i>December 12, 2022</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-22/">
+									Chapter 22  - Rat King								</a>
+
+																	<span class="chapter-release-date">
+										<i>December 12, 2022</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-21/">
+									Chapter 21  - Bone Hunting Skeleton Beast								</a>
+
+																	<span class="chapter-release-date">
+										<i>December 12, 2022</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-20/">
+									Chapter 20  - Obtaining the Second Slave								</a>
+
+																	<span class="chapter-release-date">
+										<i>December 12, 2022</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-19/">
+									Chapter 19								</a>
+
+																	<span class="chapter-release-date">
+										<i>December 9, 2022</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-18/">
+									Chapter 18								</a>
+
+																	<span class="chapter-release-date">
+										<i>December 9, 2022</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-17/">
+									Chapter 17								</a>
+
+																	<span class="chapter-release-date">
+										<i>December 9, 2022</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-16/">
+									Chapter 16								</a>
+
+																	<span class="chapter-release-date">
+										<i>December 9, 2022</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-15/">
+									Chapter 15								</a>
+
+																	<span class="chapter-release-date">
+										<i>December 9, 2022</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-14/">
+									Chapter 14								</a>
+
+																	<span class="chapter-release-date">
+										<i>December 9, 2022</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-13/">
+									Chapter 13								</a>
+
+																	<span class="chapter-release-date">
+										<i>December 9, 2022</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-12/">
+									Chapter 12								</a>
+
+																	<span class="chapter-release-date">
+										<i>December 9, 2022</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-11/">
+									Chapter 11								</a>
+
+																	<span class="chapter-release-date">
+										<i>December 9, 2022</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-10/">
+									Chapter 10								</a>
+
+																	<span class="chapter-release-date">
+										<i>December 9, 2022</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-9/">
+									Chapter 9								</a>
+
+																	<span class="chapter-release-date">
+										<i>December 9, 2022</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-8/">
+									Chapter 8								</a>
+
+																	<span class="chapter-release-date">
+										<i>December 9, 2022</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-7/">
+									Chapter 7								</a>
+
+																	<span class="chapter-release-date">
+										<i>December 9, 2022</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-6/">
+									Chapter 6								</a>
+
+																	<span class="chapter-release-date">
+										<i>December 9, 2022</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-5/">
+									Chapter 5								</a>
+
+																	<span class="chapter-release-date">
+										<i>December 9, 2022</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-4/">
+									Chapter 4								</a>
+
+																	<span class="chapter-release-date">
+										<i>December 9, 2022</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-3/">
+									Chapter 3								</a>
+
+																	<span class="chapter-release-date">
+										<i>December 9, 2022</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-2/">
+									Chapter 2								</a>
+
+																	<span class="chapter-release-date">
+										<i>December 9, 2022</i>									</span>
+																
+								
+							</li>
+							
+						
+							<li class="wp-manga-chapter    ">
+																
+								<a href="https://wuxiaworld.site/novel/i-can-bring-in-game-items-out/chapter-1/">
+									Chapter 1								</a>
+
+																	<span class="chapter-release-date">
+										<i>December 9, 2022</i>									</span>
+																
+								
+							</li>
+							
+						
+						
+							</ul>
+
+			
+		
+					<div class="c-chapter-readmore">
+				<span class="btn btn-link chapter-readmore">
+					Show more 				</span>
+			</div>
+		
+	</div>
+</div>

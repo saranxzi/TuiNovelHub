@@ -1,0 +1,29 @@
+epub:
+  chapter_level: 2
+  include_toc: true
+  custom_css: true
+  use_ebooklib: false # Default to pandoc if available
+  ebooklib_compression: false
+  ebooklib_validation: false
+  pandoc_args: []
+
+  # Font configuration
+  font_family: "bitter" # Default font family (bitter, bookerly, etc.)
+  # Available fonts: bitter (default), bookerly
+  # Use 'wn-dl list-fonts' to see all available fonts
+
+images:
+  download_covers: true
+  target_size: [600, 800]
+  quality: 85
+  format: "JPEG"
+
+processing:
+  max_workers: 10
+  rate_limit: 0.5
+  timeout: 30
+
+logging:
+  level: "WARNING" # Silent by default, use --with-info for verbose
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  file: null

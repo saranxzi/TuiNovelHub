@@ -1,0 +1,152 @@
+# NovelFull Provider Configuration
+# This file contains the configuration for scraping novels from NovelFull (novelfull.com)
+
+provider:
+  name: "NovelFull"
+  base_url: "https://novelfull.com"
+  description: "Web novel provider for novelfull.com"
+
+# CSS selectors for extracting content
+selectors:
+  # Novel metadata selectors
+  title: "h3.title"
+  author: ".info div:-soup-contains('Author:') a"
+  description: ".desc-text"
+  cover_image: ".book img"
+  genres: ".info div:-soup-contains('Genre:') a"
+  alternative_names: ".info div:-soup-contains('Alternative names:')"
+  source: ".info div:-soup-contains('Source:')"
+  status: ".info div:-soup-contains('Status:') a"
+  rating: "#rateVal"
+  rating_count: ".rate .small strong span:last-child"
+  rating_score: ".rate .small strong span:first-child"
+
+  # Chapter discovery selectors
+  chapter_list: "ul.list-chapter li a"
+  latest_chapter: ".l-chapter .l-chapters li a"
+
+  # Chapter content selectors
+  chapter_title: ".chapter-title"
+  chapter_content: "#chapter-content"
+  prev_chapter: "#prev_chap"
+  next_chapter: "#next_chap"
+
+  # Pagination selectors
+  pagination_container: ".pagination"
+  pagination_links: ".pagination li a"
+  pagination_last: ".pagination .last a"
+  pagination_next: ".pagination .next a"
+
+# Request settings
+request:
+  rate_limit: 1.0 # Seconds between requests (be respectful)
+  max_retries: 3 # Maximum retry attempts
+  timeout: 30 # Request timeout in seconds
+  user_agent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+
+  # Headers to send with requests
+  headers:
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8"
+    "Accept-Language": "en-US,en;q=0.5"
+    "Accept-Encoding": "gzip, deflate"
+    "Connection": "keep-alive"
+    "Upgrade-Insecure-Requests": "1"
+
+# Chapter discovery settings
+chapter_discovery:
+  discovery_method: "pagination" # Use pagination to get all chapters
+  pagination:
+    base_url_pattern: "{novel_url}?page={page}"
+    start_page: 1
+    max_pages: 100 # Safety limit (increased for large novels)
+    max_concurrent: 8 # Maximum concurrent requests for pagination
+    page_param: "page"
+
+# Chapter downloading settings
+chapter_downloading:
+  max_concurrent: 60 # Maximum concurrent chapter downloads
+  chunk_size: 60 # Number of chapters to process in each chunk
+  retry_failed: true # Retry failed chapter downloads
+  max_retries: 3 # Maximum retries for failed chapters
+  delay_between_chunks: 0.5 # Delay in seconds between chunks
+
+# Content processing settings
+content_processing:
+  # Use markdownify for better HTML to markdown conversion
+  use_markdownify: true
+
+  remove_selectors:
+    - ".ads"
+    - ".advertisement"
+    - ".ad-container"
+    - ".google-ads"
+    - ".adsense"
+    - ".chapter-nav"
+    - ".btn-group"
+    - ".text-center"
+    - ".support-author"
+    - ".donation"
+    - ".patreon"
+    - ".social-links"
+    - ".share-buttons"
+    - ".navigation"
+    - ".breadcrumb"
+    - "script"
+    - "style"
+    - ".bg-info"
+    - "#chapter_error"
+    - ".translator-note"
+    - ".author-note"
+    - ".promo"
+    - ".banner"
+
+  transformations:
+    - type: "remove_empty_paragraphs"
+    - type: "normalize_whitespace"
+    - type: "remove_duplicate_content"
+    - type: "remove_ad_paragraphs"
+    - type: "fix_invalid_characters"
+
+  # Content-based title extraction
+  enhance_titles_from_content: true # Extract better titles from chapter content
+  title_search_paragraphs: 3 # Number of paragraphs to search for titles
+
+  # Intelligent title merging (prevents "no HTML content" warnings)
+  intelligent_title_merging: true # Merge duplicate chapter headings intelligently
+  remove_redundant_headings: true # Remove redundant H2 headings from content
+  prefer_descriptive_titles: true # Choose more descriptive titles over simple ones
+
+# Rate limiting
+rate_limiting:
+  requests_per_minute: 30
+  burst_limit: 5
+
+# Error handling
+error_handling:
+  max_consecutive_failures: 5
+  retry_delay: 2.0
+  skip_on_error: true
+
+# Output formatting
+output:
+  chapter_title_format: "title_only"
+  include_chapter_numbers: true
+
+  # EPUB specific settings
+  epub:
+    chapter_level: 2 # Chapter break level for Pandoc
+    include_toc: true # Include table of contents
+    toc_depth: 2 # TOC depth
+    # Chapter title formatting options
+    chapter_title_format: "title_only" # Options: title_only, number_title, chapter_number_title, number_only
+    chapter_number_format: "arabic" # Options: arabic, roman, roman_upper
+
+    # EbookLib backup generator settings
+    use_ebooklib: false # Force use of EbookLib instead of Pandoc
+    ebooklib_fallback: true # Enable automatic fallback to EbookLib when Pandoc fails
+    ebooklib_compression: true # Enable EPUB compression for smaller file sizes
+    ebooklib_validation: true # Enable EPUB structure validation
+
+    # Pandoc-specific settings (when not using EbookLib)
+    custom_css: true # Include custom CSS styling
+    pandoc_args: [] # Additional Pandoc command line arguments

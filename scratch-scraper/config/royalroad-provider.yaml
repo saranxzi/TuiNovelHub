@@ -1,0 +1,175 @@
+# RoyalRoad Provider Configuration
+# This file contains the configuration for scraping novels from RoyalRoad (royalroad.com)
+
+provider:
+  name: "RoyalRoad"
+  base_url: "https://www.royalroad.com"
+  description: "Web novel provider for royalroad.com"
+
+# CSS selectors for extracting content
+selectors:
+  # Novel metadata selectors
+  title: ".fic-header .fic-title h1"
+  author: ".fic-header .fic-title h4 a"
+  description: ".description .hidden-content"
+  cover_image: ".fic-header .cover-art-container img.thumbnail"
+  genres: ".fiction-tag"
+  tags: ".fiction-tag"
+  status: ".fiction-info .label"
+  rating: ".fiction-stats .rating"
+
+  # Chapter discovery selectors
+  chapter_list: "tr.chapter-row"
+  chapter_links: "tr.chapter-row td a"
+
+  # Chapter content selectors
+  chapter_title: ".chapter-content p:first-child"
+  chapter_content: ".chapter-inner.chapter-content"
+  prev_chapter: ".nav-previous a"
+  next_chapter: ".nav-next a"
+
+# Request settings
+request:
+  rate_limit: 1.5 # Seconds between requests (be respectful to RoyalRoad)
+  max_retries: 3 # Maximum retry attempts
+  timeout: 30 # Request timeout in seconds
+  user_agent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+
+  # Headers to send with requests
+  headers:
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8"
+    "Accept-Language": "en-US,en;q=0.5"
+    "Accept-Encoding": "gzip, deflate"
+    "Connection": "keep-alive"
+    "Upgrade-Insecure-Requests": "1"
+
+# Chapter discovery settings
+chapter_discovery:
+  discovery_method: "static" # RoyalRoad lists all chapters on the main page
+  pagination:
+    enabled: false # No pagination needed for RoyalRoad
+
+# Chapter downloading settings
+chapter_downloading:
+  max_concurrent: 20 # Maximum concurrent chapter downloads (moderate for RoyalRoad)
+  chunk_size: 30 # Number of chapters to process in each chunk
+  retry_failed: true # Retry failed chapter downloads
+  max_retries: 3 # Maximum retries for failed chapters
+  delay_between_chunks: 1.0 # Delay in seconds between chunks
+
+# Content processing settings
+content_cleaning:
+  # Use markdownify for better HTML to markdown conversion
+  use_markdownify: true
+
+  remove_selectors:
+    - ".ads"
+    - ".advertisement"
+    - ".ad-container"
+    - ".google-ads"
+    - ".adsense"
+    - ".chapter-nav"
+    - ".btn-group"
+    - ".text-center"
+    - ".support-author"
+    - ".donation"
+    - ".patreon"
+    - ".social-links"
+    - ".share-buttons"
+    - ".navigation"
+    - ".breadcrumb"
+    - "script"
+    - "style"
+    - ".bg-info"
+    - "#chapter_error"
+    - ".translator-note"
+    - ".author-note"
+    - ".promo"
+    - ".banner"
+    - ".chapter-nav-bottom"
+    - ".chapter-nav-top"
+    - ".portlet-title"
+
+  text_processing:
+    remove_empty_lines: true
+    replace_quotes: true
+    normalize_whitespace: true
+    enhance_titles_from_content: true # Extract better titles from chapter content
+    title_search_paragraphs: 3 # Number of paragraphs to search for titles
+
+    # Intelligent title merging (prevents "no HTML content" warnings)
+    intelligent_title_merging: true # Merge duplicate chapter headings intelligently
+    remove_redundant_headings: true # Remove redundant H2 headings from content
+    prefer_descriptive_titles: true # Choose more descriptive titles over simple ones
+
+  transformations:
+    - type: "remove_empty_paragraphs"
+    - type: "normalize_whitespace"
+    - type: "remove_duplicate_content"
+    - type: "remove_ad_paragraphs"
+    - type: "fix_invalid_characters"
+
+# Rate limiting
+rate_limiting:
+  requests_per_minute: 25 # Conservative rate limiting for RoyalRoad
+  burst_limit: 5
+
+# Error handling
+error_handling:
+  max_consecutive_failures: 5
+  retry_delay: 2.0
+  skip_on_error: true
+  circuit_breaker:
+    failure_threshold: 5
+    recovery_timeout: 30
+    half_open_max_calls: 3
+
+# Concurrent processing
+concurrent_processing:
+  max_workers: 20 # Maximum concurrent workers
+  chunk_size: 30 # Chapters per chunk
+  delay_between_chunks: 1.0 # Delay between chunks
+
+# Output formatting
+output:
+  chapter_title_format: "title_only"
+  include_chapter_numbers: true
+
+  # EPUB specific settings
+  epub:
+    chapter_level: 2 # Chapter break level for Pandoc
+    include_toc: true # Include table of contents
+    toc_depth: 2 # TOC depth
+    # Chapter title formatting options
+    chapter_title_format: "title_only" # Options: title_only, number_title, chapter_number_title, number_only
+    chapter_number_format: "arabic" # Options: arabic, roman, roman_upper
+
+    # EbookLib backup generator settings
+    use_ebooklib: false # Force use of EbookLib instead of Pandoc
+    ebooklib_fallback: true # Enable automatic fallback to EbookLib when Pandoc fails
+    ebooklib_compression: true # Enable EPUB compression for smaller file sizes
+    ebooklib_validation: true # Enable EPUB structure validation
+
+    # Pandoc-specific settings (when not using EbookLib)
+    custom_css: true # Include custom CSS styling
+    pandoc_args: [] # Additional Pandoc command line arguments
+
+# Domain mappings for URL validation
+domains:
+  - "royalroad.com"
+  - "www.royalroad.com"
+
+# Provider-specific settings
+provider_settings:
+  # RoyalRoad specific configurations
+  extract_rating_from_meta: true # Extract rating from meta tags
+  handle_premium_chapters: false # RoyalRoad doesn't have premium chapters
+  respect_author_notes: true # Keep author notes in content
+  
+  # Content processing
+  preserve_formatting: true # Preserve original formatting where possible
+  clean_chapter_titles: true # Clean up chapter titles
+  
+  # URL patterns
+  novel_url_pattern: "^https?://(www\\.)?royalroad\\.com/fiction/\\d+/"
+  chapter_url_pattern: "^https?://(www\\.)?royalroad\\.com/fiction/\\d+/.+/chapter/\\d+/"

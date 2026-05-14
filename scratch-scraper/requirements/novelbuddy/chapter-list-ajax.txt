@@ -1,0 +1,3918 @@
+:authority
+novelbuddy.com
+:method
+GET
+:path
+/api/manga/3529/chapters?source=detail
+:scheme
+https
+accept
+*/*
+accept-encoding
+gzip, deflate, br, zstd
+accept-language
+en-US,en;q=0.8
+cache-control
+no-cache
+cookie
+dark-mode=1; googtrans=null
+pragma
+no-cache
+priority
+u=1, i
+referer
+https://novelbuddy.com/nano-machine
+sec-ch-ua
+"Not)A;Brand";v="8", "Chromium";v="138", "Brave";v="138"
+sec-ch-ua-mobile
+?0
+sec-ch-ua-platform
+"Windows"
+sec-fetch-dest
+empty
+sec-fetch-mode
+cors
+sec-fetch-site
+same-origin
+sec-gpc
+1
+user-agent
+Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36
+
+this the content in chapter list
+
+<ul class="chapter-list" id="chapter-list">
+    <li id="c-483">
+        <a href="/novel/nano-machine/chapter-483-day-of-the-future" title="Nano Machine (Web Novel KR) - C.483: Day of the Future">
+            <div>
+                <strong class="chapter-title">C.483: Day of the Future</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-482">
+        <a href="/novel/nano-machine/chapter-482-revise-battle-3" title="Nano Machine (Web Novel KR) - C.482: Revise/Battle (3)">
+            <div>
+                <strong class="chapter-title">C.482: Revise/Battle (3)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-481">
+        <a href="/novel/nano-machine/chapter-481-revise-battle-2" title="Nano Machine (Web Novel KR) - C.481: Revise/Battle (2)">
+            <div>
+                <strong class="chapter-title">C.481: Revise/Battle (2)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-480">
+        <a href="/novel/nano-machine/chapter-480-revise-battle" title="Nano Machine (Web Novel KR) - C.480: Revise/Battle (">
+            <div>
+                <strong class="chapter-title">C.480: Revise/Battle (</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-479">
+        <a href="/novel/nano-machine/chapter-479-special-forces-2" title="Nano Machine (Web Novel KR) - C.479: Special Forces (2)">
+            <div>
+                <strong class="chapter-title">C.479: Special Forces (2)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-478">
+        <a href="/novel/nano-machine/chapter-478-special-forces-1" title="Nano Machine (Web Novel KR) - C.478: Special Forces (1)">
+            <div>
+                <strong class="chapter-title">C.478: Special Forces (1)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-477">
+        <a href="/novel/nano-machine/chapter-477-towards-hebei-2" title="Nano Machine (Web Novel KR) - C.477: Towards Hebei (2)">
+            <div>
+                <strong class="chapter-title">C.477: Towards Hebei (2)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-476">
+        <a href="/novel/nano-machine/chapter-476-towards-hebei-1" title="Nano Machine (Web Novel KR) - C.476: Towards Hebei (1)">
+            <div>
+                <strong class="chapter-title">C.476: Towards Hebei (1)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-475">
+        <a href="/novel/nano-machine/chapter-475-tp-3" title="Nano Machine (Web Novel KR) - C.475: TP (3)">
+            <div>
+                <strong class="chapter-title">C.475: TP (3)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-474">
+        <a href="/novel/nano-machine/chapter-474-tp-2" title="Nano Machine (Web Novel KR) - C.474: TP (2)">
+            <div>
+                <strong class="chapter-title">C.474: TP (2)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-473">
+        <a href="/novel/nano-machine/chapter-473-tp-1" title="Nano Machine (Web Novel KR) - C.473: TP (1)">
+            <div>
+                <strong class="chapter-title">C.473: TP (1)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-472">
+        <a href="/novel/nano-machine/chapter-472-descendant-from-the-future-2" title="Nano Machine (Web Novel KR) - C.472: Descendant from the Future (2)">
+            <div>
+                <strong class="chapter-title">C.472: Descendant from the Future (2)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-471">
+        <a href="/novel/nano-machine/chapter-471-descendant-from-the-future-1" title="Nano Machine (Web Novel KR) - C.471: Descendant from the Future (1)">
+            <div>
+                <strong class="chapter-title">C.471: Descendant from the Future (1)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-470">
+        <a href="/novel/nano-machine/chapter-470-demons-2" title="Nano Machine (Web Novel KR) - C.470: Demons (2)">
+            <div>
+                <strong class="chapter-title">C.470: Demons (2)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-469">
+        <a href="/novel/nano-machine/chapter-469-demons-1" title="Nano Machine (Web Novel KR) - C.469: Demons (1)">
+            <div>
+                <strong class="chapter-title">C.469: Demons (1)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-468">
+        <a href="/novel/nano-machine/chapter-468-natural-state-heavenly-master-4" title="Nano Machine (Web Novel KR) - C.468: Natural State (Heavenly Master) (4 )">
+            <div>
+                <strong class="chapter-title">C.468: Natural State (Heavenly Master) (4 )</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-467">
+        <a href="/novel/nano-machine/chapter-467-natural-state-heavenly-master-3" title="Nano Machine (Web Novel KR) - C.467: Natural State (Heavenly Master) (3)">
+            <div>
+                <strong class="chapter-title">C.467: Natural State (Heavenly Master) (3)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-466">
+        <a href="/novel/nano-machine/chapter-466-natural-state-heavenly-master-2" title="Nano Machine (Web Novel KR) - C.466: Natural State (Heavenly Master) (2)">
+            <div>
+                <strong class="chapter-title">C.466: Natural State (Heavenly Master) (2)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-465">
+        <a href="/novel/nano-machine/chapter-465-natural-state-heavenly-master-1" title="Nano Machine (Web Novel KR) - C.465: Natural State (Heavenly Master) (1)">
+            <div>
+                <strong class="chapter-title">C.465: Natural State (Heavenly Master) (1)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-464">
+        <a href="/novel/nano-machine/chapter-464-on-the-verge-of-life-and-death-4" title="Nano Machine (Web Novel KR) - C.464: On the Verge of Life and Death (4)">
+            <div>
+                <strong class="chapter-title">C.464: On the Verge of Life and Death (4)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-463">
+        <a href="/novel/nano-machine/chapter-463-on-the-verge-of-life-and-death-3" title="Nano Machine (Web Novel KR) - C.463: On the Verge of Life and Death (3)">
+            <div>
+                <strong class="chapter-title">C.463: On the Verge of Life and Death (3)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-462">
+        <a href="/novel/nano-machine/chapter-462-on-the-verge-of-life-and-death-2" title="Nano Machine (Web Novel KR) - C.462: On the Verge of Life and Death (2)">
+            <div>
+                <strong class="chapter-title">C.462: On the Verge of Life and Death (2)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-461">
+        <a href="/novel/nano-machine/chapter-461-on-the-verge-of-life-and-death-1" title="Nano Machine (Web Novel KR) - C.461: On the Verge of Life and Death (1)">
+            <div>
+                <strong class="chapter-title">C.461: On the Verge of Life and Death (1)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-460">
+        <a href="/novel/nano-machine/chapter-460-you-arent-him-4" title="Nano Machine (Web Novel KR) - C.460: You Aren't Him (4)">
+            <div>
+                <strong class="chapter-title">C.460: You Aren't Him (4)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-459">
+        <a href="/novel/nano-machine/chapter-459-you-arent-him-3" title="Nano Machine (Web Novel KR) - C.459: You Aren't Him (3)">
+            <div>
+                <strong class="chapter-title">C.459: You Aren't Him (3)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-458">
+        <a href="/novel/nano-machine/chapter-458-you-arent-him-2" title="Nano Machine (Web Novel KR) - C.458: You Aren't Him (2)">
+            <div>
+                <strong class="chapter-title">C.458: You Aren't Him (2)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-457">
+        <a href="/novel/nano-machine/chapter-457-you-arent-him-1" title="Nano Machine (Web Novel KR) - C.457: You Aren't Him (1)">
+            <div>
+                <strong class="chapter-title">C.457: You Aren't Him (1)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-456">
+        <a href="/novel/nano-machine/chapter-456-the-fallen-spirit-beast-3" title="Nano Machine (Web Novel KR) - C.456: The Fallen Spirit Beast (3)">
+            <div>
+                <strong class="chapter-title">C.456: The Fallen Spirit Beast (3)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-455">
+        <a href="/novel/nano-machine/chapter-455-the-fallen-spirit-beast-2" title="Nano Machine (Web Novel KR) - C.455: The Fallen Spirit Beast (2)">
+            <div>
+                <strong class="chapter-title">C.455: The Fallen Spirit Beast (2)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-454">
+        <a href="/novel/nano-machine/chapter-454-the-fallen-spirit-beast-1" title="Nano Machine (Web Novel KR) - C.454: The Fallen Spirit Beast (1)">
+            <div>
+                <strong class="chapter-title">C.454: The Fallen Spirit Beast (1)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-453">
+        <a href="/novel/nano-machine/chapter-453-demon-god-vs-god-of-the-east-2" title="Nano Machine (Web Novel KR) - C.453: Demon God vs. God of the East (2)">
+            <div>
+                <strong class="chapter-title">C.453: Demon God vs. God of the East (2)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-452">
+        <a href="/novel/nano-machine/chapter-452-demon-god-vs-god-of-the-east-1" title="Nano Machine (Web Novel KR) - C.452: Demon God vs. God of the East (1)">
+            <div>
+                <strong class="chapter-title">C.452: Demon God vs. God of the East (1)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-451">
+        <a href="/novel/nano-machine/chapter-451-the-one-trapped-in-changbai-mountain-4" title="Nano Machine (Web Novel KR) - C.451: The One Trapped in Changbai Mountain (4)">
+            <div>
+                <strong class="chapter-title">C.451: The One Trapped in Changbai Mountain (4)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-450">
+        <a href="/novel/nano-machine/chapter-450-the-one-trapped-in-changbai-mountain-3" title="Nano Machine (Web Novel KR) - C.450: The One Trapped in Changbai Mountain (3)">
+            <div>
+                <strong class="chapter-title">C.450: The One Trapped in Changbai Mountain (3)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-449">
+        <a href="/novel/nano-machine/chapter-449-the-one-trapped-in-changbai-mountain-2" title="Nano Machine (Web Novel KR) - C.449: The One Trapped in Changbai Mountain (2)">
+            <div>
+                <strong class="chapter-title">C.449: The One Trapped in Changbai Mountain (2)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-448">
+        <a href="/novel/nano-machine/chapter-448-the-one-trapped-in-changbai-mountain-1" title="Nano Machine (Web Novel KR) - C.448: The One Trapped in Changbai Mountain (1)">
+            <div>
+                <strong class="chapter-title">C.448: The One Trapped in Changbai Mountain (1)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-447">
+        <a href="/novel/nano-machine/chapter-447-the-end-of-the-alliance-4" title="Nano Machine (Web Novel KR) - C.447: The End of the Alliance (4)">
+            <div>
+                <strong class="chapter-title">C.447: The End of the Alliance (4)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-446">
+        <a href="/novel/nano-machine/chapter-446-the-end-of-the-alliance-3" title="Nano Machine (Web Novel KR) - C.446: The End of the Alliance (3)">
+            <div>
+                <strong class="chapter-title">C.446: The End of the Alliance (3)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-445">
+        <a href="/novel/nano-machine/chapter-445-the-end-of-the-alliance-2" title="Nano Machine (Web Novel KR) - C.445: The End of the Alliance (2)">
+            <div>
+                <strong class="chapter-title">C.445: The End of the Alliance (2)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-444">
+        <a href="/novel/nano-machine/chapter-444-the-end-of-the-alliance-1" title="Nano Machine (Web Novel KR) - C.444: The End of the Alliance (1)">
+            <div>
+                <strong class="chapter-title">C.444: The End of the Alliance (1)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-443">
+        <a href="/novel/nano-machine/chapter-443-god-of-the-east-ark-wui-2" title="Nano Machine (Web Novel KR) - C.443: God of the East, Ark Wui (2)">
+            <div>
+                <strong class="chapter-title">C.443: God of the East, Ark Wui (2)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-442">
+        <a href="/novel/nano-machine/chapter-442-god-of-the-east-ark-wui-1" title="Nano Machine (Web Novel KR) - C.442: God of the East, Ark Wui (1)">
+            <div>
+                <strong class="chapter-title">C.442: God of the East, Ark Wui (1)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-441">
+        <a href="/novel/nano-machine/chapter-441-guardian-of-changbai-mountai" title="Nano Machine (Web Novel KR) - C.441: Guardian of Changbai Mountai">
+            <div>
+                <strong class="chapter-title">C.441: Guardian of Changbai Mountai</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-440">
+        <a href="/novel/nano-machine/chapter-440-guardian-of-changbai-mountain-2" title="Nano Machine (Web Novel KR) - C.440: Guardian of Changbai Mountain (2)">
+            <div>
+                <strong class="chapter-title">C.440: Guardian of Changbai Mountain (2)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-439">
+        <a href="/novel/nano-machine/chapter-439-guardian-of-changbai-mountain-1" title="Nano Machine (Web Novel KR) - C.439: Guardian of Changbai Mountain (1)">
+            <div>
+                <strong class="chapter-title">C.439: Guardian of Changbai Mountain (1)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-438">
+        <a href="/novel/nano-machine/chapter-438-to-changbai-mountains-4" title="Nano Machine (Web Novel KR) - C.438: To Changbai Mountains (4)">
+            <div>
+                <strong class="chapter-title">C.438: To Changbai Mountains (4)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-437">
+        <a href="/novel/nano-machine/chapter-437-to-changbai-mountains-3" title="Nano Machine (Web Novel KR) - C.437: To Changbai Mountains (3)">
+            <div>
+                <strong class="chapter-title">C.437: To Changbai Mountains (3)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-436">
+        <a href="/novel/nano-machine/chapter-436-to-changbai-mountains-2" title="Nano Machine (Web Novel KR) - C.436: To Changbai Mountains (2)">
+            <div>
+                <strong class="chapter-title">C.436: To Changbai Mountains (2)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-435">
+        <a href="/novel/nano-machine/chapter-435-to-changbai-mountains-1" title="Nano Machine (Web Novel KR) - C.435: To Changbai Mountains (1)">
+            <div>
+                <strong class="chapter-title">C.435: To Changbai Mountains (1)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-434">
+        <a href="/novel/nano-machine/chapter-434-the-five-spirit-beasts-3" title="Nano Machine (Web Novel KR) - C.434: The Five Spirit Beasts (3)">
+            <div>
+                <strong class="chapter-title">C.434: The Five Spirit Beasts (3)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-433">
+        <a href="/novel/nano-machine/chapter-433-the-five-spirit-beasts-2" title="Nano Machine (Web Novel KR) - C.433: The Five Spirit Beasts (2)">
+            <div>
+                <strong class="chapter-title">C.433: The Five Spirit Beasts (2)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-432">
+        <a href="/novel/nano-machine/chapter-432-the-five-spirit-beasts-1" title="Nano Machine (Web Novel KR) - C.432: The Five Spirit Beasts (1)">
+            <div>
+                <strong class="chapter-title">C.432: The Five Spirit Beasts (1)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-431">
+        <a href="/novel/nano-machine/chapter-431-divine-object-3" title="Nano Machine (Web Novel KR) - C.431: Divine Object (3)">
+            <div>
+                <strong class="chapter-title">C.431: Divine Object (3)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-430">
+        <a href="/novel/nano-machine/chapter-430-divine-object-2" title="Nano Machine (Web Novel KR) - C.430: Divine Object (2)">
+            <div>
+                <strong class="chapter-title">C.430: Divine Object (2)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-429">
+        <a href="/novel/nano-machine/chapter-429-divine-object-1" title="Nano Machine (Web Novel KR) - C.429: Divine Object (1)">
+            <div>
+                <strong class="chapter-title">C.429: Divine Object (1)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-428">
+        <a href="/novel/nano-machine/chapter-428-thunder-qi-3" title="Nano Machine (Web Novel KR) - C.428: Thunder Qi (3)">
+            <div>
+                <strong class="chapter-title">C.428: Thunder Qi (3)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-427">
+        <a href="/novel/nano-machine/chapter-427-thunder-qi-2" title="Nano Machine (Web Novel KR) - C.427: Thunder Qi (2)">
+            <div>
+                <strong class="chapter-title">C.427: Thunder Qi (2)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-426">
+        <a href="/novel/nano-machine/chapter-426-thunder-qi-1" title="Nano Machine (Web Novel KR) - C.426: Thunder Qi (1)">
+            <div>
+                <strong class="chapter-title">C.426: Thunder Qi (1)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-425">
+        <a href="/novel/nano-machine/chapter-425-nano-machine-advent-3" title="Nano Machine (Web Novel KR) - C.425: Nano Machine Advent (3)">
+            <div>
+                <strong class="chapter-title">C.425: Nano Machine Advent (3)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-424">
+        <a href="/novel/nano-machine/chapter-424-nano-machine-advent-2" title="Nano Machine (Web Novel KR) - C.424: Nano Machine Advent (2)">
+            <div>
+                <strong class="chapter-title">C.424: Nano Machine Advent (2)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-423">
+        <a href="/novel/nano-machine/chapter-423-nano-machine-advent-1" title="Nano Machine (Web Novel KR) - C.423: Nano Machine Advent (1)">
+            <div>
+                <strong class="chapter-title">C.423: Nano Machine Advent (1)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-422">
+        <a href="/novel/nano-machine/chapter-422-the-battle-for-the-core-4" title="Nano Machine (Web Novel KR) - C.422: The Battle for the Core (4)">
+            <div>
+                <strong class="chapter-title">C.422: The Battle for the Core (4)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-421">
+        <a href="/novel/nano-machine/chapter-421-the-battle-for-the-core-3" title="Nano Machine (Web Novel KR) - C.421: The Battle for the Core (3)">
+            <div>
+                <strong class="chapter-title">C.421: The Battle for the Core (3)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-420">
+        <a href="/novel/nano-machine/chapter-420-the-battle-for-the-core-2" title="Nano Machine (Web Novel KR) - C.420: The Battle for the Core (2)">
+            <div>
+                <strong class="chapter-title">C.420: The Battle for the Core (2)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-419">
+        <a href="/novel/nano-machine/chapter-419-the-battle-for-the-core-1" title="Nano Machine (Web Novel KR) - C.419: The Battle for the Core (1)">
+            <div>
+                <strong class="chapter-title">C.419: The Battle for the Core (1)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-418">
+        <a href="/novel/nano-machine/chapter-418-the-dragon-turtle-3" title="Nano Machine (Web Novel KR) - C.418: The Dragon Turtle (3)">
+            <div>
+                <strong class="chapter-title">C.418: The Dragon Turtle (3)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-417">
+        <a href="/novel/nano-machine/chapter-417-the-dragon-turtle-2" title="Nano Machine (Web Novel KR) - C.417: The Dragon Turtle (2)">
+            <div>
+                <strong class="chapter-title">C.417: The Dragon Turtle (2)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-416">
+        <a href="/novel/nano-machine/chapter-416-the-dragon-turtle-1" title="Nano Machine (Web Novel KR) - C.416: The Dragon Turtle (1)">
+            <div>
+                <strong class="chapter-title">C.416: The Dragon Turtle (1)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-415">
+        <a href="/novel/nano-machine/chapter-415-collapse-of-the-ice-palace-2" title="Nano Machine (Web Novel KR) - C.415: Collapse of the Ice Palace (2)">
+            <div>
+                <strong class="chapter-title">C.415: Collapse of the Ice Palace (2)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-414">
+        <a href="/novel/nano-machine/chapter-414-collapse-of-the-ice-palace-1" title="Nano Machine (Web Novel KR) - C.414: Collapse of the Ice Palace (1)">
+            <div>
+                <strong class="chapter-title">C.414: Collapse of the Ice Palace (1)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-413">
+        <a href="/novel/nano-machine/chapter-413-north-sea-ice-palace-3" title="Nano Machine (Web Novel KR) - C.413: North Sea Ice Palace (3)">
+            <div>
+                <strong class="chapter-title">C.413: North Sea Ice Palace (3)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-412">
+        <a href="/novel/nano-machine/chapter-412-north-sea-ice-palace-2" title="Nano Machine (Web Novel KR) - C.412: North Sea Ice Palace (2)">
+            <div>
+                <strong class="chapter-title">C.412: North Sea Ice Palace (2)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-411">
+        <a href="/novel/nano-machine/chapter-411-north" title="Nano Machine (Web Novel KR) - C.411: North">
+            <div>
+                <strong class="chapter-title">C.411: North</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-410">
+        <a href="/novel/nano-machine/chapter-410-great-hung-clan-of-the-great-plains" title="Nano Machine (Web Novel KR) - C.410: Great Hung Clan of the Great Plains">
+            <div>
+                <strong class="chapter-title">C.410: Great Hung Clan of the Great Plains</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-409">
+        <a href="/novel/nano-machine/chapter-409-great-hung-clan-of-the-great-plains-2" title="Nano Machine (Web Novel KR) - C.409: Great Hung Clan of the Great Plains (2)">
+            <div>
+                <strong class="chapter-title">C.409: Great Hung Clan of the Great Plains (2)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-408">
+        <a href="/novel/nano-machine/chapter-408-great-hung-clan-of-the-great-plains-1" title="Nano Machine (Web Novel KR) - C.408: Great Hung Clan of the Great Plains (1)">
+            <div>
+                <strong class="chapter-title">C.408: Great Hung Clan of the Great Plains (1)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-407">
+        <a href="/novel/nano-machine/chapter-407-to-the-north-2" title="Nano Machine (Web Novel KR) - C.407: To the North (2)">
+            <div>
+                <strong class="chapter-title">C.407: To the North (2)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-406">
+        <a href="/novel/nano-machine/chapter-406-to-the-north-1" title="Nano Machine (Web Novel KR) - C.406: To the North (1)">
+            <div>
+                <strong class="chapter-title">C.406: To the North (1)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-405">
+        <a href="/novel/nano-machine/chapter-405-guest-from-the-north-5" title="Nano Machine (Web Novel KR) - C.405: Guest from the North (5)">
+            <div>
+                <strong class="chapter-title">C.405: Guest from the North (5)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-404">
+        <a href="/novel/nano-machine/chapter-404-guest-from-the-north-4" title="Nano Machine (Web Novel KR) - C.404: Guest from the North (4)">
+            <div>
+                <strong class="chapter-title">C.404: Guest from the North (4)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-403">
+        <a href="/novel/nano-machine/chapter-403-guest-from-the-north-3" title="Nano Machine (Web Novel KR) - C.403: Guest from the North (3)">
+            <div>
+                <strong class="chapter-title">C.403: Guest from the North (3)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-402">
+        <a href="/novel/nano-machine/chapter-402-guest-from-the-north-2" title="Nano Machine (Web Novel KR) - C.402: Guest from the North (2)">
+            <div>
+                <strong class="chapter-title">C.402: Guest from the North (2)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-401">
+        <a href="/novel/nano-machine/chapter-401-guest-from-the-north-1" title="Nano Machine (Web Novel KR) - C.401: Guest from the North (1)">
+            <div>
+                <strong class="chapter-title">C.401: Guest from the North (1)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-400">
+        <a href="/novel/nano-machine/chapter-400-rise-to-the-five-strongest-warriors-3" title="Nano Machine (Web Novel KR) - C.400: Rise to the Five Strongest Warriors (3)">
+            <div>
+                <strong class="chapter-title">C.400: Rise to the Five Strongest Warriors (3)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-399">
+        <a href="/novel/nano-machine/chapter-399-rise-to-the-five-strongest-warriors-2" title="Nano Machine (Web Novel KR) - C.399: Rise to the Five Strongest Warriors (2)">
+            <div>
+                <strong class="chapter-title">C.399: Rise to the Five Strongest Warriors (2)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-398">
+        <a href="/novel/nano-machine/chapter-398-rise-to-the-five-strongest-warriors-1" title="Nano Machine (Web Novel KR) - C.398: Rise to the Five Strongest Warriors (1)">
+            <div>
+                <strong class="chapter-title">C.398: Rise to the Five Strongest Warriors (1)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-397">
+        <a href="/novel/nano-machine/chapter-397-second-generation-chun-ma-5" title="Nano Machine (Web Novel KR) - C.397: Second Generation Chun Ma (5)">
+            <div>
+                <strong class="chapter-title">C.397: Second Generation Chun Ma (5)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-396">
+        <a href="/novel/nano-machine/chapter-396-second-generation-chun-ma-4" title="Nano Machine (Web Novel KR) - C.396: Second Generation Chun Ma (4)">
+            <div>
+                <strong class="chapter-title">C.396: Second Generation Chun Ma (4)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-395">
+        <a href="/novel/nano-machine/chapter-395-second-generation-chun-ma-3" title="Nano Machine (Web Novel KR) - C.395: Second Generation Chun Ma (3)">
+            <div>
+                <strong class="chapter-title">C.395: Second Generation Chun Ma (3)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-394">
+        <a href="/novel/nano-machine/chapter-394-second-generation-chun-ma-2" title="Nano Machine (Web Novel KR) - C.394: Second Generation Chun Ma (2)">
+            <div>
+                <strong class="chapter-title">C.394: Second Generation Chun Ma (2)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-393">
+        <a href="/novel/nano-machine/chapter-393-second-generation-chun-ma-1" title="Nano Machine (Web Novel KR) - C.393: Second Generation Chun Ma (1)">
+            <div>
+                <strong class="chapter-title">C.393: Second Generation Chun Ma (1)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-392">
+        <a href="/novel/nano-machine/chapter-392-the-heavenly-demon-emperor-3" title="Nano Machine (Web Novel KR) - C.392: The Heavenly Demon Emperor (3)">
+            <div>
+                <strong class="chapter-title">C.392: The Heavenly Demon Emperor (3)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-391">
+        <a href="/novel/nano-machine/chapter-391-the-heavenly-demon-emperor-2" title="Nano Machine (Web Novel KR) - C.391: The Heavenly Demon Emperor (2)">
+            <div>
+                <strong class="chapter-title">C.391: The Heavenly Demon Emperor (2)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-390">
+        <a href="/novel/nano-machine/chapter-390-the-heavenly-demon-emperor-1" title="Nano Machine (Web Novel KR) - C.390: The Heavenly Demon Emperor (1)">
+            <div>
+                <strong class="chapter-title">C.390: The Heavenly Demon Emperor (1)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-389">
+        <a href="/novel/nano-machine/chapter-389-non-aggression-treaty-2" title="Nano Machine (Web Novel KR) - C.389: Non-Aggression Treaty (2)">
+            <div>
+                <strong class="chapter-title">C.389: Non-Aggression Treaty (2)</strong>
+                <time class="chapter-update">Feb 27, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-388">
+        <a href="/novel/nano-machine/chapter-388-non-aggression-treaty-1" title="Nano Machine (Web Novel KR) - C.388: Non-Aggression Treaty (1)">
+            <div>
+                <strong class="chapter-title">C.388: Non-Aggression Treaty (1)</strong>
+                <time class="chapter-update">Feb 27, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-387">
+        <a href="/novel/nano-machine/chapter-387-destruction-annulment-2" title="Nano Machine (Web Novel KR) - C.387: Destruction (Annulment) (2)">
+            <div>
+                <strong class="chapter-title">C.387: Destruction (Annulment) (2)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-386">
+        <a href="/novel/nano-machine/chapter-386-destruction-1" title="Nano Machine (Web Novel KR) - C.386: Destruction (1)">
+            <div>
+                <strong class="chapter-title">C.386: Destruction (1)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-385">
+        <a href="/novel/nano-machine/chapter-385-worth-and-value-2" title="Nano Machine (Web Novel KR) - C.385: Worth and Value (2)">
+            <div>
+                <strong class="chapter-title">C.385: Worth and Value (2)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-384">
+        <a href="/novel/nano-machine/chapter-384-worth-and-value-1" title="Nano Machine (Web Novel KR) - C.384: Worth and Value (1)">
+            <div>
+                <strong class="chapter-title">C.384: Worth and Value (1)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-383">
+        <a href="/novel/nano-machine/chapter-383-title-of-five-strongest-warriors-4" title="Nano Machine (Web Novel KR) - C.383: Title of Five Strongest Warriors (4)">
+            <div>
+                <strong class="chapter-title">C.383: Title of Five Strongest Warriors (4)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-382">
+        <a href="/novel/nano-machine/chapter-382-title-of-five-strongest-warriors-3" title="Nano Machine (Web Novel KR) - C.382: Title of Five Strongest Warriors (3)">
+            <div>
+                <strong class="chapter-title">C.382: Title of Five Strongest Warriors (3)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-381">
+        <a href="/novel/nano-machine/chapter-381-title-of-five-strongest-warriors-2" title="Nano Machine (Web Novel KR) - C.381: Title of Five Strongest Warriors (2)">
+            <div>
+                <strong class="chapter-title">C.381: Title of Five Strongest Warriors (2)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-380">
+        <a href="/novel/nano-machine/chapter-380-title-of-five-strongest-warriors-1" title="Nano Machine (Web Novel KR) - C.380: Title of Five Strongest Warriors (1)">
+            <div>
+                <strong class="chapter-title">C.380: Title of Five Strongest Warriors (1)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-379">
+        <a href="/novel/nano-machine/chapter-379-dont-touch-him-2" title="Nano Machine (Web Novel KR) - C.379: Don’t touch him (2)">
+            <div>
+                <strong class="chapter-title">C.379: Don’t touch him (2)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-378">
+        <a href="/novel/nano-machine/chapter-378-dont-touch-him-1" title="Nano Machine (Web Novel KR) - C.378: Don’t touch him (1)">
+            <div>
+                <strong class="chapter-title">C.378: Don’t touch him (1)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-377">
+        <a href="/novel/nano-machine/chapter-377-the-imperial-escort-5" title="Nano Machine (Web Novel KR) - C.377: The Imperial Escort (5)">
+            <div>
+                <strong class="chapter-title">C.377: The Imperial Escort (5)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-376">
+        <a href="/novel/nano-machine/chapter-376-the-imperial-escort-4" title="Nano Machine (Web Novel KR) - C.376: The Imperial Escort (4)">
+            <div>
+                <strong class="chapter-title">C.376: The Imperial Escort (4)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-375">
+        <a href="/novel/nano-machine/chapter-375-the-imperial-escort-3" title="Nano Machine (Web Novel KR) - C.375: The Imperial Escort (3)">
+            <div>
+                <strong class="chapter-title">C.375: The Imperial Escort (3)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-374">
+        <a href="/novel/nano-machine/chapter-374-the-imperial-escort-2" title="Nano Machine (Web Novel KR) - C.374: The Imperial Escort (2)">
+            <div>
+                <strong class="chapter-title">C.374: The Imperial Escort (2)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-373">
+        <a href="/novel/nano-machine/chapter-373-the-imperial-escort-1" title="Nano Machine (Web Novel KR) - C.373: The Imperial Escort (1)">
+            <div>
+                <strong class="chapter-title">C.373: The Imperial Escort (1)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-372">
+        <a href="/novel/nano-machine/chapter-372-hand-crafted-4" title="Nano Machine (Web Novel KR) - C.372: Hand Crafted (4)">
+            <div>
+                <strong class="chapter-title">C.372: Hand Crafted (4)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-371">
+        <a href="/novel/nano-machine/chapter-371-hand-crafted-3" title="Nano Machine (Web Novel KR) - C.371: Hand Crafted (3)">
+            <div>
+                <strong class="chapter-title">C.371: Hand Crafted (3)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-370">
+        <a href="/novel/nano-machine/chapter-370-hand-crafted-2" title="Nano Machine (Web Novel KR) - C.370: Hand Crafted (2)">
+            <div>
+                <strong class="chapter-title">C.370: Hand Crafted (2)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-369">
+        <a href="/novel/nano-machine/chapter-369-hand-crafted-1" title="Nano Machine (Web Novel KR) - C.369: : Hand Crafted (1)">
+            <div>
+                <strong class="chapter-title">C.369: : Hand Crafted (1)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-368">
+        <a href="/novel/nano-machine/chapter-368-the-trinity-2" title="Nano Machine (Web Novel KR) - C.368: The Trinity (2)">
+            <div>
+                <strong class="chapter-title">C.368: The Trinity (2)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-367">
+        <a href="/novel/nano-machine/chapter-367-the-trinity-1" title="Nano Machine (Web Novel KR) - C.367: The Trinity (1)">
+            <div>
+                <strong class="chapter-title">C.367: The Trinity (1)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-366">
+        <a href="/novel/nano-machine/chapter-366-be-the-flame-hu-bong-3" title="Nano Machine (Web Novel KR) - C.366: Be the Flame, Hu Bong (3)">
+            <div>
+                <strong class="chapter-title">C.366: Be the Flame, Hu Bong (3)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-365">
+        <a href="/novel/nano-machine/chapter-365-be-the-flame-hu-bong-2" title="Nano Machine (Web Novel KR) - C.365: Be the Flame, Hu Bong (2)">
+            <div>
+                <strong class="chapter-title">C.365: Be the Flame, Hu Bong (2)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-364">
+        <a href="/novel/nano-machine/chapter-364-be-the-flame-hu-bong" title="Nano Machine (Web Novel KR) - C.364: Be the Flame, Hu Bong">
+            <div>
+                <strong class="chapter-title">C.364: Be the Flame, Hu Bong</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-363">
+        <a href="/novel/nano-machine/chapter-363-incarnation-of-qilin-3" title="Nano Machine (Web Novel KR) - C.363: Incarnation of Qilin (3)">
+            <div>
+                <strong class="chapter-title">C.363: Incarnation of Qilin (3)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-362">
+        <a href="/novel/nano-machine/chapter-362-incarnation-of-qilin-2" title="Nano Machine (Web Novel KR) - C.362: Incarnation of Qilin (2)">
+            <div>
+                <strong class="chapter-title">C.362: Incarnation of Qilin (2)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-361">
+        <a href="/novel/nano-machine/chapter-361-incarnation-of-qilin-1" title="Nano Machine (Web Novel KR) - C.361: Incarnation of Qilin (1)">
+            <div>
+                <strong class="chapter-title">C.361: Incarnation of Qilin (1)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-360">
+        <a href="/novel/nano-machine/chapter-360-not-an-ally-2" title="Nano Machine (Web Novel KR) - C.360: Not An Ally (2)">
+            <div>
+                <strong class="chapter-title">C.360: Not An Ally (2)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-359">
+        <a href="/novel/nano-machine/chapter-359-not-an-ally-1" title="Nano Machine (Web Novel KR) - C.359: Not An Ally (1)">
+            <div>
+                <strong class="chapter-title">C.359: Not An Ally (1)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-358">
+        <a href="/novel/nano-machine/chapter-358-the-blood-of-monsters-3" title="Nano Machine (Web Novel KR) - C.358: The Blood Of Monsters (3)">
+            <div>
+                <strong class="chapter-title">C.358: The Blood Of Monsters (3)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-357">
+        <a href="/novel/nano-machine/chapter-357-the-blood-of-monsters-2" title="Nano Machine (Web Novel KR) - C.357: The Blood Of Monsters (2)">
+            <div>
+                <strong class="chapter-title">C.357: The Blood Of Monsters (2)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-356">
+        <a href="/novel/nano-machine/chapter-356-the-blood-of-monsters-1" title="Nano Machine (Web Novel KR) - C.356: The Blood Of Monsters (1)">
+            <div>
+                <strong class="chapter-title">C.356: The Blood Of Monsters (1)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-355">
+        <a href="/novel/nano-machine/chapter-355-the-hidden-power-within-the-imperial-palace-4" title="Nano Machine (Web Novel KR) - C.355: The Hidden Power Within The Imperial Palace (4)">
+            <div>
+                <strong class="chapter-title">C.355: The Hidden Power Within The Imperial Palace (4)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-354">
+        <a href="/novel/nano-machine/chapter-354-the-hidden-power-within-the-imperial-palace-3" title="Nano Machine (Web Novel KR) - C.354: The Hidden Power Within The Imperial Palace (3)">
+            <div>
+                <strong class="chapter-title">C.354: The Hidden Power Within The Imperial Palace (3)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-353">
+        <a href="/novel/nano-machine/chapter-353-the-hidden-power-within-the-imperial-palace-2" title="Nano Machine (Web Novel KR) - C.353: The Hidden Power Within The Imperial Palace (2)">
+            <div>
+                <strong class="chapter-title">C.353: The Hidden Power Within The Imperial Palace (2)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-352">
+        <a href="/novel/nano-machine/chapter-352-the-hidden-power-within-the-imperial-palace-1" title="Nano Machine (Web Novel KR) - C.352: The Hidden Power Within The Imperial Palace (1)">
+            <div>
+                <strong class="chapter-title">C.352: The Hidden Power Within The Imperial Palace (1)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-351">
+        <a href="/novel/nano-machine/chapter-351-kuak-kuak" title="Nano Machine (Web Novel KR) - C.351: “Kuak! Kuak!”">
+            <div>
+                <strong class="chapter-title">C.351: “Kuak! Kuak!”</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-350">
+        <a href="/novel/nano-machine/chapter-350" title="Nano Machine (Web Novel KR) - C.350">
+            <div>
+                <strong class="chapter-title">C.350</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-349">
+        <a href="/novel/nano-machine/chapter-349-you-will-help-me-4" title="Nano Machine (Web Novel KR) - C.349: You will help me (4)">
+            <div>
+                <strong class="chapter-title">C.349: You will help me (4)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-348">
+        <a href="/novel/nano-machine/chapter-348-you-will-help-me-3" title="Nano Machine (Web Novel KR) - C.348: You will help me (3)">
+            <div>
+                <strong class="chapter-title">C.348: You will help me (3)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-347">
+        <a href="/novel/nano-machine/chapter-347-you-will-help-me-2" title="Nano Machine (Web Novel KR) - C.347: You will help me (2)">
+            <div>
+                <strong class="chapter-title">C.347: You will help me (2)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-346">
+        <a href="/novel/nano-machine/chapter-346-you-will-help-me-1" title="Nano Machine (Web Novel KR) - C.346: You will help me (1)">
+            <div>
+                <strong class="chapter-title">C.346: You will help me (1)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-345">
+        <a href="/novel/nano-machine/chapter-345-imperial-order-9" title="Nano Machine (Web Novel KR) - C.345: Imperial Order (9)">
+            <div>
+                <strong class="chapter-title">C.345: Imperial Order (9)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-344">
+        <a href="/novel/nano-machine/chapter-344-imperial-order-8" title="Nano Machine (Web Novel KR) - C.344: Imperial Order (8">
+            <div>
+                <strong class="chapter-title">C.344: Imperial Order (8</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-343">
+        <a href="/novel/nano-machine/chapter-343-imperial-order-7" title="Nano Machine (Web Novel KR) - C.343: Imperial Order (7)">
+            <div>
+                <strong class="chapter-title">C.343: Imperial Order (7)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-342">
+        <a href="/novel/nano-machine/chapter-342-imperial-order-6" title="Nano Machine (Web Novel KR) - C.342: Imperial Order (6)">
+            <div>
+                <strong class="chapter-title">C.342: Imperial Order (6)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-341">
+        <a href="/novel/nano-machine/chapter-341-imperial-order-5" title="Nano Machine (Web Novel KR) - C.341: Imperial Order (5)">
+            <div>
+                <strong class="chapter-title">C.341: Imperial Order (5)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-340">
+        <a href="/novel/nano-machine/chapter-340-imperial-order-4" title="Nano Machine (Web Novel KR) - C.340: Imperial Order (4)">
+            <div>
+                <strong class="chapter-title">C.340: Imperial Order (4)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-339">
+        <a href="/novel/nano-machine/chapter-339-imperial-order-3" title="Nano Machine (Web Novel KR) - C.339: Imperial Order (3)">
+            <div>
+                <strong class="chapter-title">C.339: Imperial Order (3)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-338">
+        <a href="/novel/nano-machine/chapter-338-imperial-order" title="Nano Machine (Web Novel KR) - C.338: Imperial Order">
+            <div>
+                <strong class="chapter-title">C.338: Imperial Order</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-337">
+        <a href="/novel/nano-machine/chapter-337-imperial-ord" title="Nano Machine (Web Novel KR) - C.337: Imperial Ord">
+            <div>
+                <strong class="chapter-title">C.337: Imperial Ord</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-336">
+        <a href="/novel/nano-machine/chapter-336-return-to-the-demonic-cult-4" title="Nano Machine (Web Novel KR) - C.336: Return to the Demonic Cult (4)">
+            <div>
+                <strong class="chapter-title">C.336: Return to the Demonic Cult (4)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-335">
+        <a href="/novel/nano-machine/chapter-335-return-to-the-demonic-cult-3" title="Nano Machine (Web Novel KR) - C.335: Return to the Demonic Cult (3">
+            <div>
+                <strong class="chapter-title">C.335: Return to the Demonic Cult (3</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-334">
+        <a href="/novel/nano-machine/chapter-334-return-to-the-demonic-cult-2" title="Nano Machine (Web Novel KR) - C.334: Return to the Demonic Cult (2)">
+            <div>
+                <strong class="chapter-title">C.334: Return to the Demonic Cult (2)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-333">
+        <a href="/novel/nano-machine/chapter-333-return-to-the-demo" title="Nano Machine (Web Novel KR) - C.333: Return to the Demo">
+            <div>
+                <strong class="chapter-title">C.333: Return to the Demo</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-332">
+        <a href="/novel/nano-machine/chapter-332-extreme-4" title="Nano Machine (Web Novel KR) - C.332: Extreme (4)">
+            <div>
+                <strong class="chapter-title">C.332: Extreme (4)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-331">
+        <a href="/novel/nano-machine/chapter-331-extreme-3" title="Nano Machine (Web Novel KR) - C.331: Extreme (3)">
+            <div>
+                <strong class="chapter-title">C.331: Extreme (3)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-330">
+        <a href="/novel/nano-machine/chapter-330-extreme-2" title="Nano Machine (Web Novel KR) - C.330: Extreme (2)">
+            <div>
+                <strong class="chapter-title">C.330: Extreme (2)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-329">
+        <a href="/novel/nano-machine/chapter-329-extreme-1" title="Nano Machine (Web Novel KR) - C.329: Extreme (1)">
+            <div>
+                <strong class="chapter-title">C.329: Extreme (1)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-328">
+        <a href="/novel/nano-machine/chapter-328-two-birds-in-one-stone-7" title="Nano Machine (Web Novel KR) - C.328: Two birds in one stone (7)">
+            <div>
+                <strong class="chapter-title">C.328: Two birds in one stone (7)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-327">
+        <a href="/novel/nano-machine/chapter-327-two-birds-in-one-stone-6" title="Nano Machine (Web Novel KR) - C.327: Two birds in one stone (6)">
+            <div>
+                <strong class="chapter-title">C.327: Two birds in one stone (6)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-326">
+        <a href="/novel/nano-machine/chapter-326-two-birds-in-one-stone-5" title="Nano Machine (Web Novel KR) - C.326: Two birds in one stone (5)">
+            <div>
+                <strong class="chapter-title">C.326: Two birds in one stone (5)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-325">
+        <a href="/novel/nano-machine/chapter-325-two-birds-in-one-stone-4" title="Nano Machine (Web Novel KR) - C.325: Two birds in one stone (4)">
+            <div>
+                <strong class="chapter-title">C.325: Two birds in one stone (4)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-324">
+        <a href="/novel/nano-machine/chapter-324-two-birds-in-one-stone-3" title="Nano Machine (Web Novel KR) - C.324: Two birds in one stone (3)">
+            <div>
+                <strong class="chapter-title">C.324: Two birds in one stone (3)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-323">
+        <a href="/novel/nano-machine/chapter-323-323-two-birds-in-one-stone-2" title="Nano Machine (Web Novel KR) - C.323: Two birds in one stone (2)">
+            <div>
+                <strong class="chapter-title">C.323: Two birds in one stone (2)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-322">
+        <a href="/novel/nano-machine/chapter-322-two-birds-in-one-stone-1" title="Nano Machine (Web Novel KR) - C.322: Two birds in one stone (1)">
+            <div>
+                <strong class="chapter-title">C.322: Two birds in one stone (1)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-321">
+        <a href="/novel/nano-machine/chapter-321-cold-blood-blockage-6" title="Nano Machine (Web Novel KR) - C.321: Cold blood blockage (6)">
+            <div>
+                <strong class="chapter-title">C.321: Cold blood blockage (6)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-320">
+        <a href="/novel/nano-machine/chapter-320-cold-blood-blockage-5" title="Nano Machine (Web Novel KR) - C.320: Cold blood blockage (5)">
+            <div>
+                <strong class="chapter-title">C.320: Cold blood blockage (5)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-319">
+        <a href="/novel/nano-machine/chapter-319-cold-blood-blockage-4" title="Nano Machine (Web Novel KR) - C.319: Cold blood blockage (4)">
+            <div>
+                <strong class="chapter-title">C.319: Cold blood blockage (4)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-318">
+        <a href="/novel/nano-machine/chapter-318-cold-blood-blockage-3" title="Nano Machine (Web Novel KR) - C.318: Cold blood blockage (3)">
+            <div>
+                <strong class="chapter-title">C.318: Cold blood blockage (3)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-317">
+        <a href="/novel/nano-machine/chapter-317-cold-blood-blockage-2" title="Nano Machine (Web Novel KR) - C.317: Cold blood blockage (2)">
+            <div>
+                <strong class="chapter-title">C.317: Cold blood blockage (2)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-316">
+        <a href="/novel/nano-machine/chapter-316-cold-blood-blockage-1" title="Nano Machine (Web Novel KR) - C.316: Cold blood blockage (1)">
+            <div>
+                <strong class="chapter-title">C.316: Cold blood blockage (1)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-315">
+        <a href="/novel/nano-machine/chapter-315-a-successor-4" title="Nano Machine (Web Novel KR) - C.315: A successor (4)">
+            <div>
+                <strong class="chapter-title">C.315: A successor (4)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-314">
+        <a href="/novel/nano-machine/chapter-314-a-successor-3" title="Nano Machine (Web Novel KR) - C.314: A successor (3)">
+            <div>
+                <strong class="chapter-title">C.314: A successor (3)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-313">
+        <a href="/novel/nano-machine/chapter-313-a-successor-2" title="Nano Machine (Web Novel KR) - C.313: A successor (2)">
+            <div>
+                <strong class="chapter-title">C.313: A successor (2)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-312">
+        <a href="/novel/nano-machine/chapter-312-a-successor-1" title="Nano Machine (Web Novel KR) - C.312: A successor (1)">
+            <div>
+                <strong class="chapter-title">C.312: A successor (1)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-311">
+        <a href="/novel/nano-machine/chapter-311-dead-man-tells-no-tales-4" title="Nano Machine (Web Novel KR) - C.311: Dead man tells no tales (4)">
+            <div>
+                <strong class="chapter-title">C.311: Dead man tells no tales (4)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-310">
+        <a href="/novel/nano-machine/chapter-310-dead-man-tells-no-tales-3" title="Nano Machine (Web Novel KR) - C.310: Dead man tells no tales (3)">
+            <div>
+                <strong class="chapter-title">C.310: Dead man tells no tales (3)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-309">
+        <a href="/novel/nano-machine/chapter-309-dead-man-tells-no-tales-2" title="Nano Machine (Web Novel KR) - C.309: Dead man tells no tales (2)">
+            <div>
+                <strong class="chapter-title">C.309: Dead man tells no tales (2)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-308">
+        <a href="/novel/nano-machine/chapter-308-dead-man-tells-no-tales-1" title="Nano Machine (Web Novel KR) - C.308: Dead man tells no tales (1)">
+            <div>
+                <strong class="chapter-title">C.308: Dead man tells no tales (1)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-307">
+        <a href="/novel/nano-machine/chapter-307-disaster-above-a-ship-6" title="Nano Machine (Web Novel KR) - C.307: Disaster above a ship (6)">
+            <div>
+                <strong class="chapter-title">C.307: Disaster above a ship (6)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-306">
+        <a href="/novel/nano-machine/chapter-306-disaster-above-a-ship-5" title="Nano Machine (Web Novel KR) - C.306: Disaster above a ship (5">
+            <div>
+                <strong class="chapter-title">C.306: Disaster above a ship (5</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-305">
+        <a href="/novel/nano-machine/chapter-305-disaster-above-a-ship-4" title="Nano Machine (Web Novel KR) - C.305: Disaster above a ship (4)">
+            <div>
+                <strong class="chapter-title">C.305: Disaster above a ship (4)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-304">
+        <a href="/novel/nano-machine/chapter-304-disaster-above-a-ship-3" title="Nano Machine (Web Novel KR) - C.304: Disaster above a ship (3)">
+            <div>
+                <strong class="chapter-title">C.304: Disaster above a ship (3)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-303">
+        <a href="/novel/nano-machine/chapter-303-disaster-above-a-ship-2" title="Nano Machine (Web Novel KR) - C.303: Disaster above a ship (2)">
+            <div>
+                <strong class="chapter-title">C.303: Disaster above a ship (2)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-302">
+        <a href="/novel/nano-machine/chapter-302-disaster-above-a-ship-1" title="Nano Machine (Web Novel KR) - C.302: Disaster above a ship (1)">
+            <div>
+                <strong class="chapter-title">C.302: Disaster above a ship (1)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-301">
+        <a href="/novel/nano-machine/chapter-301-yongho-family-8" title="Nano Machine (Web Novel KR) - C.301: Yongho Family (8)">
+            <div>
+                <strong class="chapter-title">C.301: Yongho Family (8)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-300">
+        <a href="/novel/nano-machine/chapter-300-yongho-family-7" title="Nano Machine (Web Novel KR) - C.300: Yongho Family (7)">
+            <div>
+                <strong class="chapter-title">C.300: Yongho Family (7)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-299">
+        <a href="/novel/nano-machine/chapter-299-yongho-family-6" title="Nano Machine (Web Novel KR) - C.299: : Yongho Family (6)">
+            <div>
+                <strong class="chapter-title">C.299: : Yongho Family (6)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-298">
+        <a href="/novel/nano-machine/chapter-298-yongho-family-5" title="Nano Machine (Web Novel KR) - C.298: Yongho Family (5)">
+            <div>
+                <strong class="chapter-title">C.298: Yongho Family (5)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-297">
+        <a href="/novel/nano-machine/chapter-297-yongho-family-4" title="Nano Machine (Web Novel KR) - C.297: Yongho Family (4)">
+            <div>
+                <strong class="chapter-title">C.297: Yongho Family (4)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-296">
+        <a href="/novel/nano-machine/chapter-296-yongho-family-3" title="Nano Machine (Web Novel KR) - C.296: Yongho Family (3)">
+            <div>
+                <strong class="chapter-title">C.296: Yongho Family (3)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-295">
+        <a href="/novel/nano-machine/chapter-295-yongho-family-2" title="Nano Machine (Web Novel KR) - C.295: Yongho Family (2)">
+            <div>
+                <strong class="chapter-title">C.295: Yongho Family (2)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-294">
+        <a href="/novel/nano-machine/chapter-294-yongho-family-1" title="Nano Machine (Web Novel KR) - C.294: Yongho Family (1)">
+            <div>
+                <strong class="chapter-title">C.294: Yongho Family (1)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-293">
+        <a href="/novel/nano-machine/chapter-293-you-think-i-could-not-do-it-6" title="Nano Machine (Web Novel KR) - C.293: You think I could not do it (6)">
+            <div>
+                <strong class="chapter-title">C.293: You think I could not do it (6)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-292">
+        <a href="/novel/nano-machine/chapter-292-you-think-i-could-not-do-it-5" title="Nano Machine (Web Novel KR) - C.292: You think I could not do it (5)">
+            <div>
+                <strong class="chapter-title">C.292: You think I could not do it (5)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-291">
+        <a href="/novel/nano-machine/chapter-291-you-think-i-could-not-do-it-4" title="Nano Machine (Web Novel KR) - C.291: You think I could not do it (4)">
+            <div>
+                <strong class="chapter-title">C.291: You think I could not do it (4)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-290">
+        <a href="/novel/nano-machine/chapter-290-you-think-i-could-not-do-it-3" title="Nano Machine (Web Novel KR) - C.290: You think I could not do it (3)">
+            <div>
+                <strong class="chapter-title">C.290: You think I could not do it (3)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-289">
+        <a href="/novel/nano-machine/chapter-289-you-think-i-could-not-do-it-2" title="Nano Machine (Web Novel KR) - C.289: You think I could not do it (2)">
+            <div>
+                <strong class="chapter-title">C.289: You think I could not do it (2)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-288">
+        <a href="/novel/nano-machine/chapter-288-you-think-i-could-not-do-it-1" title="Nano Machine (Web Novel KR) - C.288: You think I could not do it (1)">
+            <div>
+                <strong class="chapter-title">C.288: You think I could not do it (1)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-287">
+        <a href="/novel/nano-machine/chapter-287-emergence-6" title="Nano Machine (Web Novel KR) - C.287: Emergence (6)">
+            <div>
+                <strong class="chapter-title">C.287: Emergence (6)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-286">
+        <a href="/novel/nano-machine/chapter-286-emergence-5" title="Nano Machine (Web Novel KR) - C.286: Emergence (5)">
+            <div>
+                <strong class="chapter-title">C.286: Emergence (5)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-285">
+        <a href="/novel/nano-machine/chapter-285-emergence-4" title="Nano Machine (Web Novel KR) - C.285: Emergence (4)">
+            <div>
+                <strong class="chapter-title">C.285: Emergence (4)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-284">
+        <a href="/novel/nano-machine/chapter-284-emergence-3" title="Nano Machine (Web Novel KR) - C.284: Emergence (3)">
+            <div>
+                <strong class="chapter-title">C.284: Emergence (3)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-283">
+        <a href="/novel/nano-machine/chapter-283-emergence-2" title="Nano Machine (Web Novel KR) - C.283: Emergence (2)">
+            <div>
+                <strong class="chapter-title">C.283: Emergence (2)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-282">
+        <a href="/novel/nano-machine/chapter-282-emergence-1" title="Nano Machine (Web Novel KR) - C.282: Emergence (1)">
+            <div>
+                <strong class="chapter-title">C.282: Emergence (1)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-281">
+        <a href="/novel/nano-machine/chapter-281-within-the-sword-creek-7" title="Nano Machine (Web Novel KR) - C.281: Within the Sword Creek (7)">
+            <div>
+                <strong class="chapter-title">C.281: Within the Sword Creek (7)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-280">
+        <a href="/novel/nano-machine/chapter-280-within-the-sword-creek-6" title="Nano Machine (Web Novel KR) - C.280: Within the Sword Creek (6)">
+            <div>
+                <strong class="chapter-title">C.280: Within the Sword Creek (6)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-279">
+        <a href="/novel/nano-machine/chapter-279-within-the-sword-creek-5" title="Nano Machine (Web Novel KR) - C.279: Within the Sword Creek (5)">
+            <div>
+                <strong class="chapter-title">C.279: Within the Sword Creek (5)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-278">
+        <a href="/novel/nano-machine/chapter-278-within-the-sword-creek-4" title="Nano Machine (Web Novel KR) - C.278: Within the Sword Creek (4)">
+            <div>
+                <strong class="chapter-title">C.278: Within the Sword Creek (4)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-277">
+        <a href="/novel/nano-machine/chapter-277-within-the-sword-creek-3" title="Nano Machine (Web Novel KR) - C.277: Within the Sword Creek (3)">
+            <div>
+                <strong class="chapter-title">C.277: Within the Sword Creek (3)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-276">
+        <a href="/novel/nano-machine/chapter-276-within-the-sword-creek-2" title="Nano Machine (Web Novel KR) - C.276: Within the Sword Creek (2)">
+            <div>
+                <strong class="chapter-title">C.276: Within the Sword Creek (2)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-275">
+        <a href="/novel/nano-machine/chapter-275-within-the-sword-creek-1" title="Nano Machine (Web Novel KR) - C.275: Within the Sword Creek (1)">
+            <div>
+                <strong class="chapter-title">C.275: Within the Sword Creek (1)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-274">
+        <a href="/novel/nano-machine/chapter-274-sword-creek-grave-of-swords-4" title="Nano Machine (Web Novel KR) - C.274: Sword Creek, Grave of swords (4)">
+            <div>
+                <strong class="chapter-title">C.274: Sword Creek, Grave of swords (4)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-273">
+        <a href="/novel/nano-machine/chapter-273-sword-creek-grave-of-swords-3" title="Nano Machine (Web Novel KR) - C.273: Sword Creek, Grave of swords (3)">
+            <div>
+                <strong class="chapter-title">C.273: Sword Creek, Grave of swords (3)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-272">
+        <a href="/novel/nano-machine/chapter-272-sword-creek-grave-of-swords-2" title="Nano Machine (Web Novel KR) - C.272: Sword Creek, Grave of swords (2)">
+            <div>
+                <strong class="chapter-title">C.272: Sword Creek, Grave of swords (2)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-271">
+        <a href="/novel/nano-machine/chapter-271-sword-creek-grave-of-swords-1" title="Nano Machine (Web Novel KR) - C.271: Sword Creek, Grave of swords (1)">
+            <div>
+                <strong class="chapter-title">C.271: Sword Creek, Grave of swords (1)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-270">
+        <a href="/novel/nano-machine/chapter-270-night-in-the-inn-6" title="Nano Machine (Web Novel KR) - C.270: Night in the Inn (6)">
+            <div>
+                <strong class="chapter-title">C.270: Night in the Inn (6)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-269">
+        <a href="/novel/nano-machine/chapter-269-night-in-the-inn-5" title="Nano Machine (Web Novel KR) - C.269: Night in the Inn (5)">
+            <div>
+                <strong class="chapter-title">C.269: Night in the Inn (5)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-268">
+        <a href="/novel/nano-machine/chapter-268-night-in-the-inn-4" title="Nano Machine (Web Novel KR) - C.268: Night in the Inn (4)">
+            <div>
+                <strong class="chapter-title">C.268: Night in the Inn (4)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-267">
+        <a href="/novel/nano-machine/chapter-267-267-night-in-the-inn-3" title="Nano Machine (Web Novel KR) - C.267: Night in the Inn (3)">
+            <div>
+                <strong class="chapter-title">C.267: Night in the Inn (3)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-266">
+        <a href="/novel/nano-machine/chapter-266-266-night-in-the-inn-2" title="Nano Machine (Web Novel KR) - C.266: Night in the Inn (2)">
+            <div>
+                <strong class="chapter-title">C.266: Night in the Inn (2)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-265">
+        <a href="/novel/nano-machine/chapter-265-265-night-in-the-inn-1" title="Nano Machine (Web Novel KR) - C.265: Night in the Inn (1)">
+            <div>
+                <strong class="chapter-title">C.265: Night in the Inn (1)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-264">
+        <a href="/novel/nano-machine/chapter-264-264-going-out-to-yulin-5" title="Nano Machine (Web Novel KR) - C.264: Going out to Yulin (5)">
+            <div>
+                <strong class="chapter-title">C.264: Going out to Yulin (5)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-263">
+        <a href="/novel/nano-machine/chapter-263-going-out-to-yulin-4" title="Nano Machine (Web Novel KR) - C.263: Going out to Yulin (4)">
+            <div>
+                <strong class="chapter-title">C.263: Going out to Yulin (4)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-262">
+        <a href="/novel/nano-machine/chapter-262-going-out-to-yulin-3" title="Nano Machine (Web Novel KR) - C.262: Going out to Yulin (3)">
+            <div>
+                <strong class="chapter-title">C.262: Going out to Yulin (3)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-261">
+        <a href="/novel/nano-machine/chapter-261-going-out-to-yulin-2" title="Nano Machine (Web Novel KR) - C.261: Going out to Yulin (2)">
+            <div>
+                <strong class="chapter-title">C.261: Going out to Yulin (2)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-260">
+        <a href="/novel/nano-machine/chapter-260-260-going-out-to-yulin-1" title="Nano Machine (Web Novel KR) - C.260: Going out to Yulin (1)">
+            <div>
+                <strong class="chapter-title">C.260: Going out to Yulin (1)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-259">
+        <a href="/novel/nano-machine/chapter-259-coronation-9" title="Nano Machine (Web Novel KR) - C.259: Coronation (9)">
+            <div>
+                <strong class="chapter-title">C.259: Coronation (9)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-258">
+        <a href="/novel/nano-machine/chapter-258-coronation-8" title="Nano Machine (Web Novel KR) - C.258: Coronation (8)">
+            <div>
+                <strong class="chapter-title">C.258: Coronation (8)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-257">
+        <a href="/novel/nano-machine/chapter-257-coronation-7" title="Nano Machine (Web Novel KR) - C.257: Coronation (7)">
+            <div>
+                <strong class="chapter-title">C.257: Coronation (7)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-256">
+        <a href="/novel/nano-machine/chapter-256-coronation-6" title="Nano Machine (Web Novel KR) - C.256: Coronation (6)">
+            <div>
+                <strong class="chapter-title">C.256: Coronation (6)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-255">
+        <a href="/novel/nano-machine/chapter-255-coronation-5" title="Nano Machine (Web Novel KR) - C.255: Coronation (5)">
+            <div>
+                <strong class="chapter-title">C.255: Coronation (5)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-254">
+        <a href="/novel/nano-machine/chapter-254-coronation-4" title="Nano Machine (Web Novel KR) - C.254: Coronation (4)">
+            <div>
+                <strong class="chapter-title">C.254: Coronation (4)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-253">
+        <a href="/novel/nano-machine/chapter-253-coronation-3" title="Nano Machine (Web Novel KR) - C.253: Coronation (3)">
+            <div>
+                <strong class="chapter-title">C.253: Coronation (3)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-252">
+        <a href="/novel/nano-machine/chapter-252-coronation-2" title="Nano Machine (Web Novel KR) - C.252: Coronation (2)">
+            <div>
+                <strong class="chapter-title">C.252: Coronation (2)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-251">
+        <a href="/novel/nano-machine/chapter-251-coronation-1" title="Nano Machine (Web Novel KR) - C.251: Coronation (1)">
+            <div>
+                <strong class="chapter-title">C.251: Coronation (1)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-250">
+        <a href="/novel/nano-machine/chapter-250-culprit-10" title="Nano Machine (Web Novel KR) - C.250: Culprit (10)">
+            <div>
+                <strong class="chapter-title">C.250: Culprit (10)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-249">
+        <a href="/novel/nano-machine/chapter-249-culprit-9" title="Nano Machine (Web Novel KR) - C.249: Culprit (9)">
+            <div>
+                <strong class="chapter-title">C.249: Culprit (9)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-248">
+        <a href="/novel/nano-machine/chapter-248-culprit-8" title="Nano Machine (Web Novel KR) - C.248: Culprit (8)">
+            <div>
+                <strong class="chapter-title">C.248: Culprit (8)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-247">
+        <a href="/novel/nano-machine/chapter-247-culprit-7" title="Nano Machine (Web Novel KR) - C.247: Culprit (7)">
+            <div>
+                <strong class="chapter-title">C.247: Culprit (7)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-246">
+        <a href="/novel/nano-machine/chapter-246-culprit-6" title="Nano Machine (Web Novel KR) - C.246: Culprit (6)">
+            <div>
+                <strong class="chapter-title">C.246: Culprit (6)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-245">
+        <a href="/novel/nano-machine/chapter-245-culprit-5" title="Nano Machine (Web Novel KR) - C.245: Culprit (5)">
+            <div>
+                <strong class="chapter-title">C.245: Culprit (5)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-244">
+        <a href="/novel/nano-machine/chapter-244-culprit-4" title="Nano Machine (Web Novel KR) - C.244: Culprit (4)">
+            <div>
+                <strong class="chapter-title">C.244: Culprit (4)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-243">
+        <a href="/novel/nano-machine/chapter-243-culprit-3" title="Nano Machine (Web Novel KR) - C.243: Culprit (3)">
+            <div>
+                <strong class="chapter-title">C.243: Culprit (3)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-242">
+        <a href="/novel/nano-machine/chapter-242-culprit-2" title="Nano Machine (Web Novel KR) - C.242: Culprit (2)">
+            <div>
+                <strong class="chapter-title">C.242: Culprit (2)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-241">
+        <a href="/novel/nano-machine/chapter-241-culprit-1" title="Nano Machine (Web Novel KR) - C.241: Culprit (1)">
+            <div>
+                <strong class="chapter-title">C.241: Culprit (1)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-240">
+        <a href="/novel/nano-machine/chapter-240-true-successor-7" title="Nano Machine (Web Novel KR) - C.240: True Successor (7)">
+            <div>
+                <strong class="chapter-title">C.240: True Successor (7)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-239">
+        <a href="/novel/nano-machine/chapter-239-true-successor-6" title="Nano Machine (Web Novel KR) - C.239: True Successor (6)">
+            <div>
+                <strong class="chapter-title">C.239: True Successor (6)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-238">
+        <a href="/novel/nano-machine/chapter-238-true-successor-5" title="Nano Machine (Web Novel KR) - C.238: True Successor (5)">
+            <div>
+                <strong class="chapter-title">C.238: True Successor (5)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-237">
+        <a href="/novel/nano-machine/chapter-237-true-successor-4" title="Nano Machine (Web Novel KR) - C.237: True Successor (4)">
+            <div>
+                <strong class="chapter-title">C.237: True Successor (4)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-236">
+        <a href="/novel/nano-machine/chapter-236-true-successor-3" title="Nano Machine (Web Novel KR) - C.236: True Successor (3)">
+            <div>
+                <strong class="chapter-title">C.236: True Successor (3)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-235">
+        <a href="/novel/nano-machine/chapter-235-true-successor-2" title="Nano Machine (Web Novel KR) - C.235: True Successor (2)">
+            <div>
+                <strong class="chapter-title">C.235: True Successor (2)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-234">
+        <a href="/novel/nano-machine/chapter-234-true-successor-1" title="Nano Machine (Web Novel KR) - C.234: True Successor (1)">
+            <div>
+                <strong class="chapter-title">C.234: True Successor (1)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-233">
+        <a href="/novel/nano-machine/chapter-233-walking-into-the-trap-6" title="Nano Machine (Web Novel KR) - C.233: Walking into the trap (6)">
+            <div>
+                <strong class="chapter-title">C.233: Walking into the trap (6)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-232">
+        <a href="/novel/nano-machine/chapter-232-walking-into-the-trap-5" title="Nano Machine (Web Novel KR) - C.232: Walking into the trap (5)">
+            <div>
+                <strong class="chapter-title">C.232: Walking into the trap (5)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-231">
+        <a href="/novel/nano-machine/chapter-231-walking-into-the-trap-4" title="Nano Machine (Web Novel KR) - C.231: Walking into the trap (4)">
+            <div>
+                <strong class="chapter-title">C.231: Walking into the trap (4)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-230">
+        <a href="/novel/nano-machine/chapter-230-walking-into-the-trap-3" title="Nano Machine (Web Novel KR) - C.230: Walking into the trap (3)">
+            <div>
+                <strong class="chapter-title">C.230: Walking into the trap (3)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-229">
+        <a href="/novel/nano-machine/chapter-229-walking-into-the-trap-2" title="Nano Machine (Web Novel KR) - C.229: Walking into the trap (2)">
+            <div>
+                <strong class="chapter-title">C.229: Walking into the trap (2)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-228">
+        <a href="/novel/nano-machine/chapter-228-walking-into-the-trap-1" title="Nano Machine (Web Novel KR) - C.228: Walking into the trap (1)">
+            <div>
+                <strong class="chapter-title">C.228: Walking into the trap (1)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-227">
+        <a href="/novel/nano-machine/chapter-227-anonymous-8" title="Nano Machine (Web Novel KR) - C.227: Anonymous (8)">
+            <div>
+                <strong class="chapter-title">C.227: Anonymous (8)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-226">
+        <a href="/novel/nano-machine/chapter-226-anonymous-7" title="Nano Machine (Web Novel KR) - C.226: Anonymous (7)">
+            <div>
+                <strong class="chapter-title">C.226: Anonymous (7)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-225">
+        <a href="/novel/nano-machine/chapter-225-anonymous-6" title="Nano Machine (Web Novel KR) - C.225: Anonymous (6)">
+            <div>
+                <strong class="chapter-title">C.225: Anonymous (6)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-224">
+        <a href="/novel/nano-machine/chapter-224-anonymous-5" title="Nano Machine (Web Novel KR) - C.224: Anonymous (5)">
+            <div>
+                <strong class="chapter-title">C.224: Anonymous (5)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-223">
+        <a href="/novel/nano-machine/chapter-223-anonymous-4" title="Nano Machine (Web Novel KR) - C.223: Anonymous (4)">
+            <div>
+                <strong class="chapter-title">C.223: Anonymous (4)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-222">
+        <a href="/novel/nano-machine/chapter-222-anonymous-3" title="Nano Machine (Web Novel KR) - C.222: Anonymous (3)">
+            <div>
+                <strong class="chapter-title">C.222: Anonymous (3)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-221">
+        <a href="/novel/nano-machine/chapter-221-anonymous-2" title="Nano Machine (Web Novel KR) - C.221: Anonymous (2)">
+            <div>
+                <strong class="chapter-title">C.221: Anonymous (2)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-220">
+        <a href="/novel/nano-machine/chapter-220-anonymous-1" title="Nano Machine (Web Novel KR) - C.220: Anonymous (1)">
+            <div>
+                <strong class="chapter-title">C.220: Anonymous (1)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-219">
+        <a href="/novel/nano-machine/chapter-219-increase-your-forces-9" title="Nano Machine (Web Novel KR) - C.219: Increase your forces (9)">
+            <div>
+                <strong class="chapter-title">C.219: Increase your forces (9)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-218">
+        <a href="/novel/nano-machine/chapter-218-increase-your-forces-8" title="Nano Machine (Web Novel KR) - C.218: Increase your forces (8)">
+            <div>
+                <strong class="chapter-title">C.218: Increase your forces (8)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-217">
+        <a href="/novel/nano-machine/chapter-217-increase-your-forces-7" title="Nano Machine (Web Novel KR) - C.217: : Increase your forces (7)">
+            <div>
+                <strong class="chapter-title">C.217: : Increase your forces (7)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-216">
+        <a href="/novel/nano-machine/chapter-216-increase-your-forces-6" title="Nano Machine (Web Novel KR) - C.216: Increase your forces (6)">
+            <div>
+                <strong class="chapter-title">C.216: Increase your forces (6)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-215">
+        <a href="/novel/nano-machine/chapter-215-increase-your-forces-5" title="Nano Machine (Web Novel KR) - C.215: Increase your forces (5)">
+            <div>
+                <strong class="chapter-title">C.215: Increase your forces (5)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-214">
+        <a href="/novel/nano-machine/chapter-214-increase-your-forces-4" title="Nano Machine (Web Novel KR) - C.214: Increase your forces (4)">
+            <div>
+                <strong class="chapter-title">C.214: Increase your forces (4)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-213">
+        <a href="/novel/nano-machine/chapter-213-increase-your-forces-3" title="Nano Machine (Web Novel KR) - C.213: Increase your forces (3)">
+            <div>
+                <strong class="chapter-title">C.213: Increase your forces (3)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-212">
+        <a href="/novel/nano-machine/chapter-212-increase-your-forces-2" title="Nano Machine (Web Novel KR) - C.212: Increase your forces (2)">
+            <div>
+                <strong class="chapter-title">C.212: Increase your forces (2)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-211">
+        <a href="/novel/nano-machine/chapter-211-increase-your-forces-1" title="Nano Machine (Web Novel KR) - C.211: Increase your forces (1)">
+            <div>
+                <strong class="chapter-title">C.211: Increase your forces (1)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-210">
+        <a href="/novel/nano-machine/chapter-210-i-will-not-forget-this-debt-5" title="Nano Machine (Web Novel KR) - C.210: I will not forget this debt (5)">
+            <div>
+                <strong class="chapter-title">C.210: I will not forget this debt (5)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-209">
+        <a href="/novel/nano-machine/chapter-209-i-will-not-forget-this-debt-4" title="Nano Machine (Web Novel KR) - C.209: I will not forget this debt (4)">
+            <div>
+                <strong class="chapter-title">C.209: I will not forget this debt (4)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-208">
+        <a href="/novel/nano-machine/chapter-208-i-will-not-forget-this-debt-3" title="Nano Machine (Web Novel KR) - C.208: I will not forget this debt (3)">
+            <div>
+                <strong class="chapter-title">C.208: I will not forget this debt (3)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-207">
+        <a href="/novel/nano-machine/chapter-207-i-will-not-forget-this-debt-2" title="Nano Machine (Web Novel KR) - C.207: I will not forget this debt (2)">
+            <div>
+                <strong class="chapter-title">C.207: I will not forget this debt (2)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-206">
+        <a href="/novel/nano-machine/chapter-206-i-will-not-forget-this-debt-1" title="Nano Machine (Web Novel KR) - C.206: I will not forget this debt (1)">
+            <div>
+                <strong class="chapter-title">C.206: I will not forget this debt (1)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-205">
+        <a href="/novel/nano-machine/chapter-205-hidden-purpose-6" title="Nano Machine (Web Novel KR) - C.205: Hidden Purpose (6)">
+            <div>
+                <strong class="chapter-title">C.205: Hidden Purpose (6)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-204">
+        <a href="/novel/nano-machine/chapter-204-hidden-purpose-5" title="Nano Machine (Web Novel KR) - C.204: Hidden Purpose (5)">
+            <div>
+                <strong class="chapter-title">C.204: Hidden Purpose (5)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-203">
+        <a href="/novel/nano-machine/chapter-203-hidden-purpose-4" title="Nano Machine (Web Novel KR) - C.203: Hidden Purpose (4)">
+            <div>
+                <strong class="chapter-title">C.203: Hidden Purpose (4)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-202">
+        <a href="/novel/nano-machine/chapter-202-hidden-purpose-3" title="Nano Machine (Web Novel KR) - C.202: Hidden Purpose (3)">
+            <div>
+                <strong class="chapter-title">C.202: Hidden Purpose (3)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-201">
+        <a href="/novel/nano-machine/chapter-201-hidden-purpose-2" title="Nano Machine (Web Novel KR) - C.201: Hidden Purpose (2)">
+            <div>
+                <strong class="chapter-title">C.201: Hidden Purpose (2)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-200">
+        <a href="/novel/nano-machine/chapter-200-hidden-purpose-1" title="Nano Machine (Web Novel KR) - C.200: Hidden Purpose (1)">
+            <div>
+                <strong class="chapter-title">C.200: Hidden Purpose (1)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-199">
+        <a href="/novel/nano-machine/chapter-199-guest-from-the-yulin-clan-5" title="Nano Machine (Web Novel KR) - C.199: Guest from the Yulin clan (5)">
+            <div>
+                <strong class="chapter-title">C.199: Guest from the Yulin clan (5)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-198">
+        <a href="/novel/nano-machine/chapter-198-guest-from-the-yulin-clan-4" title="Nano Machine (Web Novel KR) - C.198: Guest from the Yulin clan (4)">
+            <div>
+                <strong class="chapter-title">C.198: Guest from the Yulin clan (4)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-197">
+        <a href="/novel/nano-machine/chapter-197-guest-from-the-yulin-clan-3" title="Nano Machine (Web Novel KR) - C.197: Guest from the Yulin clan (3)">
+            <div>
+                <strong class="chapter-title">C.197: Guest from the Yulin clan (3)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-196">
+        <a href="/novel/nano-machine/chapter-196-guest-from-the-yulin-clan-2" title="Nano Machine (Web Novel KR) - C.196: Guest from the Yulin clan (2)">
+            <div>
+                <strong class="chapter-title">C.196: Guest from the Yulin clan (2)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-195">
+        <a href="/novel/nano-machine/chapter-195-guest-from-the-yulin-clan-1" title="Nano Machine (Web Novel KR) - C.195: Guest from the Yulin clan (1)">
+            <div>
+                <strong class="chapter-title">C.195: Guest from the Yulin clan (1)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-194">
+        <a href="/novel/nano-machine/chapter-194-face-off-9" title="Nano Machine (Web Novel KR) - C.194: Face off (9)">
+            <div>
+                <strong class="chapter-title">C.194: Face off (9)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-193">
+        <a href="/novel/nano-machine/chapter-193-face-off-8" title="Nano Machine (Web Novel KR) - C.193: Face off (8)">
+            <div>
+                <strong class="chapter-title">C.193: Face off (8)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-192">
+        <a href="/novel/nano-machine/chapter-192-face-off-7" title="Nano Machine (Web Novel KR) - C.192: Face off (7)">
+            <div>
+                <strong class="chapter-title">C.192: Face off (7)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-191">
+        <a href="/novel/nano-machine/chapter-191-face-off-6" title="Nano Machine (Web Novel KR) - C.191: Face off (6)">
+            <div>
+                <strong class="chapter-title">C.191: Face off (6)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-190">
+        <a href="/novel/nano-machine/chapter-190-face-off-5" title="Nano Machine (Web Novel KR) - C.190: Face off (5)">
+            <div>
+                <strong class="chapter-title">C.190: Face off (5)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-189">
+        <a href="/novel/nano-machine/chapter-189-face-off-4" title="Nano Machine (Web Novel KR) - C.189: Face off (4)">
+            <div>
+                <strong class="chapter-title">C.189: Face off (4)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-188">
+        <a href="/novel/nano-machine/chapter-188-face-off-3" title="Nano Machine (Web Novel KR) - C.188: Face off (3)">
+            <div>
+                <strong class="chapter-title">C.188: Face off (3)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-187">
+        <a href="/novel/nano-machine/chapter-187-face-off-2" title="Nano Machine (Web Novel KR) - C.187: Face off (2)">
+            <div>
+                <strong class="chapter-title">C.187: Face off (2)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-186">
+        <a href="/novel/nano-machine/chapter-186-face-off-1" title="Nano Machine (Web Novel KR) - C.186: Face off (1)">
+            <div>
+                <strong class="chapter-title">C.186: Face off (1)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-185">
+        <a href="/novel/nano-machine/chapter-185-unexpected-offer-6" title="Nano Machine (Web Novel KR) - C.185: Unexpected Offer (6)">
+            <div>
+                <strong class="chapter-title">C.185: Unexpected Offer (6)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-184">
+        <a href="/novel/nano-machine/chapter-184-unexpected-offer-5" title="Nano Machine (Web Novel KR) - C.184: Unexpected Offer (5)">
+            <div>
+                <strong class="chapter-title">C.184: Unexpected Offer (5)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-183">
+        <a href="/novel/nano-machine/chapter-183-unexpected-offer-4" title="Nano Machine (Web Novel KR) - C.183: Unexpected Offer (4)">
+            <div>
+                <strong class="chapter-title">C.183: Unexpected Offer (4)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-182">
+        <a href="/novel/nano-machine/chapter-182-unexpected-offer-3" title="Nano Machine (Web Novel KR) - C.182: Unexpected Offer (3)">
+            <div>
+                <strong class="chapter-title">C.182: Unexpected Offer (3)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-181">
+        <a href="/novel/nano-machine/chapter-181-unexpected-offer-2" title="Nano Machine (Web Novel KR) - C.181: Unexpected Offer (2)">
+            <div>
+                <strong class="chapter-title">C.181: Unexpected Offer (2)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-180">
+        <a href="/novel/nano-machine/chapter-180-unexpected-offer-1" title="Nano Machine (Web Novel KR) - C.180: Unexpected Offer (1)">
+            <div>
+                <strong class="chapter-title">C.180: Unexpected Offer (1)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-179">
+        <a href="/novel/nano-machine/chapter-179-second-approval-10" title="Nano Machine (Web Novel KR) - C.179: Second approval (10)">
+            <div>
+                <strong class="chapter-title">C.179: Second approval (10)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-178">
+        <a href="/novel/nano-machine/chapter-178-second-approval-9" title="Nano Machine (Web Novel KR) - C.178: Second approval (9)">
+            <div>
+                <strong class="chapter-title">C.178: Second approval (9)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-177">
+        <a href="/novel/nano-machine/chapter-177-second-approval-8" title="Nano Machine (Web Novel KR) - C.177: Second approval (8)">
+            <div>
+                <strong class="chapter-title">C.177: Second approval (8)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-176">
+        <a href="/novel/nano-machine/chapter-176-second-approval-7" title="Nano Machine (Web Novel KR) - C.176: Second approval (7)">
+            <div>
+                <strong class="chapter-title">C.176: Second approval (7)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-175">
+        <a href="/novel/nano-machine/chapter-175-second-approval-6" title="Nano Machine (Web Novel KR) - C.175: Second approval (6)">
+            <div>
+                <strong class="chapter-title">C.175: Second approval (6)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-174">
+        <a href="/novel/nano-machine/chapter-174-second-approval-5" title="Nano Machine (Web Novel KR) - C.174: Second approval (5)">
+            <div>
+                <strong class="chapter-title">C.174: Second approval (5)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-173">
+        <a href="/novel/nano-machine/chapter-173-second-approval-4" title="Nano Machine (Web Novel KR) - C.173: Second approval (4)">
+            <div>
+                <strong class="chapter-title">C.173: Second approval (4)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-172">
+        <a href="/novel/nano-machine/chapter-172-second-approval-3" title="Nano Machine (Web Novel KR) - C.172: Second approval (3)">
+            <div>
+                <strong class="chapter-title">C.172: Second approval (3)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-171">
+        <a href="/novel/nano-machine/chapter-171-second-approval-2" title="Nano Machine (Web Novel KR) - C.171: Second approval (2)">
+            <div>
+                <strong class="chapter-title">C.171: Second approval (2)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-170">
+        <a href="/novel/nano-machine/chapter-170-second-approval-1" title="Nano Machine (Web Novel KR) - C.170: Second approval (1)">
+            <div>
+                <strong class="chapter-title">C.170: Second approval (1)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-169">
+        <a href="/novel/nano-machine/chapter-169-into-the-snakes-mouth-12" title="Nano Machine (Web Novel KR) - C.169: Into the snake’s mouth (12)">
+            <div>
+                <strong class="chapter-title">C.169: Into the snake’s mouth (12)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-168">
+        <a href="/novel/nano-machine/chapter-168-into-the-snakes-mouth-11" title="Nano Machine (Web Novel KR) - C.168: Into the snake's mouth (11)">
+            <div>
+                <strong class="chapter-title">C.168: Into the snake's mouth (11)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-167">
+        <a href="/novel/nano-machine/chapter-167-into-the-snakes-mouth-10" title="Nano Machine (Web Novel KR) - C.167: Into the snake’s mouth (10)">
+            <div>
+                <strong class="chapter-title">C.167: Into the snake’s mouth (10)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-166">
+        <a href="/novel/nano-machine/chapter-166-into-the-snakes-mouth-9" title="Nano Machine (Web Novel KR) - C.166: Into the snake’s mouth (9)">
+            <div>
+                <strong class="chapter-title">C.166: Into the snake’s mouth (9)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-165">
+        <a href="/novel/nano-machine/chapter-165-into-the-snakes-mouth-8" title="Nano Machine (Web Novel KR) - C.165: Into the snake's mouth (8)">
+            <div>
+                <strong class="chapter-title">C.165: Into the snake's mouth (8)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-164">
+        <a href="/novel/nano-machine/chapter-164-into-the-snakes-mouth-7" title="Nano Machine (Web Novel KR) - C.164: Into the snake's mouth (7)">
+            <div>
+                <strong class="chapter-title">C.164: Into the snake's mouth (7)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-163">
+        <a href="/novel/nano-machine/chapter-163-into-the-snakes-mouth-6" title="Nano Machine (Web Novel KR) - C.163: Into the snake's mouth (6)">
+            <div>
+                <strong class="chapter-title">C.163: Into the snake's mouth (6)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-162">
+        <a href="/novel/nano-machine/chapter-162-into-the-snakes-mouth-5" title="Nano Machine (Web Novel KR) - C.162: Into the snake's mouth (5)">
+            <div>
+                <strong class="chapter-title">C.162: Into the snake's mouth (5)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-161">
+        <a href="/novel/nano-machine/chapter-161-into-the-snakes-mouth-4" title="Nano Machine (Web Novel KR) - C.161: Into the snake's mouth (4)">
+            <div>
+                <strong class="chapter-title">C.161: Into the snake's mouth (4)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-160">
+        <a href="/novel/nano-machine/chapter-160-into-the-snakes-mouth-3" title="Nano Machine (Web Novel KR) - C.160: Into the snake's mouth (3)">
+            <div>
+                <strong class="chapter-title">C.160: Into the snake's mouth (3)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-159">
+        <a href="/novel/nano-machine/chapter-159-into-the-snakes-mouth-2" title="Nano Machine (Web Novel KR) - C.159: Into the snake's mouth (2)">
+            <div>
+                <strong class="chapter-title">C.159: Into the snake's mouth (2)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-158">
+        <a href="/novel/nano-machine/chapter-158-into-the-snakes-mouth-1" title="Nano Machine (Web Novel KR) - C.158: Into the snake's mouth (1)">
+            <div>
+                <strong class="chapter-title">C.158: Into the snake's mouth (1)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-157">
+        <a href="/novel/nano-machine/chapter-157-worth-of-a-heir-11" title="Nano Machine (Web Novel KR) - C.157: Worth of a heir (11)">
+            <div>
+                <strong class="chapter-title">C.157: Worth of a heir (11)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-156">
+        <a href="/novel/nano-machine/chapter-156-worth-of-a-heir-10" title="Nano Machine (Web Novel KR) - C.156: Worth of a heir (10)">
+            <div>
+                <strong class="chapter-title">C.156: Worth of a heir (10)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-155">
+        <a href="/novel/nano-machine/chapter-155-worth-of-a-heir-9" title="Nano Machine (Web Novel KR) - C.155: Worth of a heir (9)">
+            <div>
+                <strong class="chapter-title">C.155: Worth of a heir (9)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-154">
+        <a href="/novel/nano-machine/chapter-154-worth-of-a-heir-8" title="Nano Machine (Web Novel KR) - C.154: Worth of a heir (8)">
+            <div>
+                <strong class="chapter-title">C.154: Worth of a heir (8)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-153">
+        <a href="/novel/nano-machine/chapter-153-worth-of-a-heir-7" title="Nano Machine (Web Novel KR) - C.153: Worth of a heir (7)">
+            <div>
+                <strong class="chapter-title">C.153: Worth of a heir (7)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-152">
+        <a href="/novel/nano-machine/chapter-152-worth-of-a-heir-6" title="Nano Machine (Web Novel KR) - C.152: Worth of a heir (6)">
+            <div>
+                <strong class="chapter-title">C.152: Worth of a heir (6)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-151">
+        <a href="/novel/nano-machine/chapter-151-worth-of-a-heir-5" title="Nano Machine (Web Novel KR) - C.151: Worth of a heir (5)">
+            <div>
+                <strong class="chapter-title">C.151: Worth of a heir (5)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-150">
+        <a href="/novel/nano-machine/chapter-150-worth-of-a-heir-4" title="Nano Machine (Web Novel KR) - C.150: Worth of a heir (4)">
+            <div>
+                <strong class="chapter-title">C.150: Worth of a heir (4)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-149">
+        <a href="/novel/nano-machine/chapter-149-worth-of-a-heir-3" title="Nano Machine (Web Novel KR) - C.149: Worth of a heir (3)">
+            <div>
+                <strong class="chapter-title">C.149: Worth of a heir (3)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-148">
+        <a href="/novel/nano-machine/chapter-148-worth-of-a-heir-2" title="Nano Machine (Web Novel KR) - C.148: Worth of a heir (2)">
+            <div>
+                <strong class="chapter-title">C.148: Worth of a heir (2)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-147">
+        <a href="/novel/nano-machine/chapter-147-worth-of-a-heir-1" title="Nano Machine (Web Novel KR) - C.147: Worth of a heir (1)">
+            <div>
+                <strong class="chapter-title">C.147: Worth of a heir (1)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-146">
+        <a href="/novel/nano-machine/chapter-146-scheme-8" title="Nano Machine (Web Novel KR) - C.146: Scheme (8)">
+            <div>
+                <strong class="chapter-title">C.146: Scheme (8)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-145">
+        <a href="/novel/nano-machine/chapter-145-scheme-7" title="Nano Machine (Web Novel KR) - C.145: Scheme (7)">
+            <div>
+                <strong class="chapter-title">C.145: Scheme (7)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-144">
+        <a href="/novel/nano-machine/chapter-144-scheme-6" title="Nano Machine (Web Novel KR) - C.144: Scheme (6)">
+            <div>
+                <strong class="chapter-title">C.144: Scheme (6)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-143">
+        <a href="/novel/nano-machine/chapter-143-scheme-5" title="Nano Machine (Web Novel KR) - C.143: Scheme (5)">
+            <div>
+                <strong class="chapter-title">C.143: Scheme (5)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-142">
+        <a href="/novel/nano-machine/chapter-142-scheme-4" title="Nano Machine (Web Novel KR) - C.142: Scheme (4)">
+            <div>
+                <strong class="chapter-title">C.142: Scheme (4)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-141">
+        <a href="/novel/nano-machine/chapter-141-scheme-3" title="Nano Machine (Web Novel KR) - C.141: Scheme (3)">
+            <div>
+                <strong class="chapter-title">C.141: Scheme (3)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-140">
+        <a href="/novel/nano-machine/chapter-140-scheme-2" title="Nano Machine (Web Novel KR) - C.140: Scheme (2)">
+            <div>
+                <strong class="chapter-title">C.140: Scheme (2)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-139">
+        <a href="/novel/nano-machine/chapter-139-scheme-1" title="Nano Machine (Web Novel KR) - C.139: Scheme (1)">
+            <div>
+                <strong class="chapter-title">C.139: Scheme (1)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-138">
+        <a href="/novel/nano-machine/chapter-138-hidden-underground-treasure-8" title="Nano Machine (Web Novel KR) - C.138: Hidden underground treasure (8)">
+            <div>
+                <strong class="chapter-title">C.138: Hidden underground treasure (8)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-137">
+        <a href="/novel/nano-machine/chapter-137-hidden-underground-treasure-7" title="Nano Machine (Web Novel KR) - C.137: Hidden underground treasure (7)">
+            <div>
+                <strong class="chapter-title">C.137: Hidden underground treasure (7)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-136">
+        <a href="/novel/nano-machine/chapter-136-hidden-underground-treasure-6" title="Nano Machine (Web Novel KR) - C.136: Hidden underground treasure (6)">
+            <div>
+                <strong class="chapter-title">C.136: Hidden underground treasure (6)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-135">
+        <a href="/novel/nano-machine/chapter-135-hidden-underground-treasure-5" title="Nano Machine (Web Novel KR) - C.135: Hidden underground treasure (5)">
+            <div>
+                <strong class="chapter-title">C.135: Hidden underground treasure (5)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-134">
+        <a href="/novel/nano-machine/chapter-134-hidden-underground-treasure-4" title="Nano Machine (Web Novel KR) - C.134: Hidden underground treasure (4)">
+            <div>
+                <strong class="chapter-title">C.134: Hidden underground treasure (4)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-133">
+        <a href="/novel/nano-machine/chapter-133-hidden-underground-treasure-3" title="Nano Machine (Web Novel KR) - C.133: Hidden underground treasure (3)">
+            <div>
+                <strong class="chapter-title">C.133: Hidden underground treasure (3)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-132">
+        <a href="/novel/nano-machine/chapter-132-hidden-underground-treasure-2" title="Nano Machine (Web Novel KR) - C.132: Hidden underground treasure (2)">
+            <div>
+                <strong class="chapter-title">C.132: Hidden underground treasure (2)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-131">
+        <a href="/novel/nano-machine/chapter-131-hidden-underground-treasure-1" title="Nano Machine (Web Novel KR) - C.131: Hidden underground treasure (1)">
+            <div>
+                <strong class="chapter-title">C.131: Hidden underground treasure (1)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-130">
+        <a href="/novel/nano-machine/chapter-130-the-sixth-test-7" title="Nano Machine (Web Novel KR) - C.130: The sixth test (7)">
+            <div>
+                <strong class="chapter-title">C.130: The sixth test (7)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-129">
+        <a href="/novel/nano-machine/chapter-129-the-sixth-test-6" title="Nano Machine (Web Novel KR) - C.129: The sixth test (6)">
+            <div>
+                <strong class="chapter-title">C.129: The sixth test (6)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-128">
+        <a href="/novel/nano-machine/chapter-128-the-sixth-test-5" title="Nano Machine (Web Novel KR) - C.128: The sixth test (5)">
+            <div>
+                <strong class="chapter-title">C.128: The sixth test (5)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-127">
+        <a href="/novel/nano-machine/chapter-127-the-sixth-test-4" title="Nano Machine (Web Novel KR) - C.127: The sixth test (4)">
+            <div>
+                <strong class="chapter-title">C.127: The sixth test (4)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-126">
+        <a href="/novel/nano-machine/chapter-126-the-sixth-test-3" title="Nano Machine (Web Novel KR) - C.126: The sixth test (3)">
+            <div>
+                <strong class="chapter-title">C.126: The sixth test (3)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-125">
+        <a href="/novel/nano-machine/chapter-125-the-sixth-test-2" title="Nano Machine (Web Novel KR) - C.125: The sixth test (2)">
+            <div>
+                <strong class="chapter-title">C.125: The sixth test (2)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-124">
+        <a href="/novel/nano-machine/chapter-124-the-sixth-test-1" title="Nano Machine (Web Novel KR) - C.124: The sixth test (1)">
+            <div>
+                <strong class="chapter-title">C.124: The sixth test (1)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-123">
+        <a href="/novel/nano-machine/chapter-123-completing-the-sword-force-of-the-sky-demon-5" title="Nano Machine (Web Novel KR) - C.123: Completing the Sword Force of the Sky Demon (5)">
+            <div>
+                <strong class="chapter-title">C.123: Completing the Sword Force of the Sky Demon (5)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-122">
+        <a href="/novel/nano-machine/chapter-122-completing-the-sword-force-of-the-sky-demon-4" title="Nano Machine (Web Novel KR) - C.122: Completing the Sword Force of the Sky Demon (4)">
+            <div>
+                <strong class="chapter-title">C.122: Completing the Sword Force of the Sky Demon (4)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-121">
+        <a href="/novel/nano-machine/chapter-121-completing-the-sword-force-of-the-sky-demon-3" title="Nano Machine (Web Novel KR) - C.121: Completing the Sword Force of the Sky Demon (3)">
+            <div>
+                <strong class="chapter-title">C.121: Completing the Sword Force of the Sky Demon (3)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-120">
+        <a href="/novel/nano-machine/chapter-120-completing-the-sword-force-of-the-sky-demon-2" title="Nano Machine (Web Novel KR) - C.120: Completing the Sword Force of the Sky Demon (2)">
+            <div>
+                <strong class="chapter-title">C.120: Completing the Sword Force of the Sky Demon (2)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-119">
+        <a href="/novel/nano-machine/chapter-119-completing-the-sword-force-of-the-sky-demon-1" title="Nano Machine (Web Novel KR) - C.119: Completing the Sword Force of the Sky Demon (1)">
+            <div>
+                <strong class="chapter-title">C.119: Completing the Sword Force of the Sky Demon (1)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-118">
+        <a href="/novel/nano-machine/chapter-118-secret-of-demon-seal-cave-5" title="Nano Machine (Web Novel KR) - C.118: Secret of Demon Seal Cave (5)">
+            <div>
+                <strong class="chapter-title">C.118: Secret of Demon Seal Cave (5)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-117">
+        <a href="/novel/nano-machine/chapter-117-secret-of-demon-seal-cave-4" title="Nano Machine (Web Novel KR) - C.117: Secret of Demon Seal Cave (4)">
+            <div>
+                <strong class="chapter-title">C.117: Secret of Demon Seal Cave (4)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-116">
+        <a href="/novel/nano-machine/chapter-116-secret-of-demon-seal-cave-3" title="Nano Machine (Web Novel KR) - C.116: Secret of Demon Seal Cave (3)">
+            <div>
+                <strong class="chapter-title">C.116: Secret of Demon Seal Cave (3)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-115">
+        <a href="/novel/nano-machine/chapter-115-secret-of-demon-seal-cave-2" title="Nano Machine (Web Novel KR) - C.115: Secret of Demon Seal Cave (2)">
+            <div>
+                <strong class="chapter-title">C.115: Secret of Demon Seal Cave (2)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-114">
+        <a href="/novel/nano-machine/chapter-114-secret-of-demon-seal-cave-1" title="Nano Machine (Web Novel KR) - C.114: Secret of Demon Seal Cave (1)">
+            <div>
+                <strong class="chapter-title">C.114: Secret of Demon Seal Cave (1)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-113">
+        <a href="/novel/nano-machine/chapter-113-master-is-back-4" title="Nano Machine (Web Novel KR) - C.113: Master is back (4)">
+            <div>
+                <strong class="chapter-title">C.113: Master is back (4)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-112">
+        <a href="/novel/nano-machine/chapter-112-master-is-back-3" title="Nano Machine (Web Novel KR) - C.112: Master is back (3)">
+            <div>
+                <strong class="chapter-title">C.112: Master is back (3)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-111">
+        <a href="/novel/nano-machine/chapter-111-master-is-back-2" title="Nano Machine (Web Novel KR) - C.111: Master is back (2)">
+            <div>
+                <strong class="chapter-title">C.111: Master is back (2)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-110">
+        <a href="/novel/nano-machine/chapter-110-master-is-back-1" title="Nano Machine (Web Novel KR) - C.110: Master is back (1)">
+            <div>
+                <strong class="chapter-title">C.110: Master is back (1)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-109">
+        <a href="/novel/nano-machine/chapter-109-closed-room-training-4" title="Nano Machine (Web Novel KR) - C.109: Closed room training (4)">
+            <div>
+                <strong class="chapter-title">C.109: Closed room training (4)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-108">
+        <a href="/novel/nano-machine/chapter-108-closed-room-training-3" title="Nano Machine (Web Novel KR) - C.108: Closed room training (3)">
+            <div>
+                <strong class="chapter-title">C.108: Closed room training (3)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-107">
+        <a href="/novel/nano-machine/chapter-107-closed-room-training-2" title="Nano Machine (Web Novel KR) - C.107: Closed room training (2)">
+            <div>
+                <strong class="chapter-title">C.107: Closed room training (2)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-106">
+        <a href="/novel/nano-machine/chapter-106-closed-room-training-1" title="Nano Machine (Web Novel KR) - C.106: Closed room training (1)">
+            <div>
+                <strong class="chapter-title">C.106: Closed room training (1)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-105">
+        <a href="/novel/nano-machine/chapter-105-earn-the-right-to-take-the-test-6" title="Nano Machine (Web Novel KR) - C.105: Earn the right to take the test (6)">
+            <div>
+                <strong class="chapter-title">C.105: Earn the right to take the test (6)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-104">
+        <a href="/novel/nano-machine/chapter-104-earn-the-right-to-take-the-test-5" title="Nano Machine (Web Novel KR) - C.104: Earn the right to take the test (5)">
+            <div>
+                <strong class="chapter-title">C.104: Earn the right to take the test (5)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-103">
+        <a href="/novel/nano-machine/chapter-103-earn-the-right-to-take-the-test-4" title="Nano Machine (Web Novel KR) - C.103: Earn the right to take the test (4)">
+            <div>
+                <strong class="chapter-title">C.103: Earn the right to take the test (4)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-102">
+        <a href="/novel/nano-machine/chapter-102-earn-the-right-to-take-the-test-3" title="Nano Machine (Web Novel KR) - C.102: Earn the right to take the test (3)">
+            <div>
+                <strong class="chapter-title">C.102: Earn the right to take the test (3)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-101">
+        <a href="/novel/nano-machine/chapter-101-earn-the-right-to-take-the-test-2" title="Nano Machine (Web Novel KR) - C.101: Earn the right to take the test (2)">
+            <div>
+                <strong class="chapter-title">C.101: Earn the right to take the test (2)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-100">
+        <a href="/novel/nano-machine/chapter-100-earn-the-right-to-take-the-test-1" title="Nano Machine (Web Novel KR) - C.100: Earn the right to take the test (1)">
+            <div>
+                <strong class="chapter-title">C.100: Earn the right to take the test (1)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-99">
+        <a href="/novel/nano-machine/chapter-99-just-happened-on-its-own-4" title="Nano Machine (Web Novel KR) - C.99: Just happened on its own (4)">
+            <div>
+                <strong class="chapter-title">C.99: Just happened on its own (4)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-98">
+        <a href="/novel/nano-machine/chapter-98-just-happened-on-its-own-3" title="Nano Machine (Web Novel KR) - C.98: Just happened on its own (3)">
+            <div>
+                <strong class="chapter-title">C.98: Just happened on its own (3)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-97">
+        <a href="/novel/nano-machine/chapter-97-just-happened-on-its-own-2" title="Nano Machine (Web Novel KR) - C.97: Just happened on its own (2)">
+            <div>
+                <strong class="chapter-title">C.97: Just happened on its own (2)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-96">
+        <a href="/novel/nano-machine/chapter-96-just-happened-on-its-own-1" title="Nano Machine (Web Novel KR) - C.96: Just happened on its own (1)">
+            <div>
+                <strong class="chapter-title">C.96: Just happened on its own (1)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-95">
+        <a href="/novel/nano-machine/chapter-95-the-dangerous-third-test-5" title="Nano Machine (Web Novel KR) - C.95: The dangerous third test (5)">
+            <div>
+                <strong class="chapter-title">C.95: The dangerous third test (5)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-94">
+        <a href="/novel/nano-machine/chapter-94-the-dangerous-third-test-4" title="Nano Machine (Web Novel KR) - C.94: The dangerous third test (4)">
+            <div>
+                <strong class="chapter-title">C.94: The dangerous third test (4)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-93">
+        <a href="/novel/nano-machine/chapter-93-the-dangerous-third-test-3" title="Nano Machine (Web Novel KR) - C.93: The dangerous third test (3)">
+            <div>
+                <strong class="chapter-title">C.93: The dangerous third test (3)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-92">
+        <a href="/novel/nano-machine/chapter-92-the-dangerous-third-test-2" title="Nano Machine (Web Novel KR) - C.92: The dangerous third test (2)">
+            <div>
+                <strong class="chapter-title">C.92: The dangerous third test (2)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-91">
+        <a href="/novel/nano-machine/chapter-91-the-dangerous-third-test-1" title="Nano Machine (Web Novel KR) - C.91: The dangerous third test (1)">
+            <div>
+                <strong class="chapter-title">C.91: The dangerous third test (1)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-90">
+        <a href="/novel/nano-machine/chapter-90-the-six-sword-3" title="Nano Machine (Web Novel KR) - C.90: The Six Sword (3)">
+            <div>
+                <strong class="chapter-title">C.90: The Six Sword (3)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-89">
+        <a href="/novel/nano-machine/chapter-89-the-six-sword-2" title="Nano Machine (Web Novel KR) - C.89: The Six Sword (2)">
+            <div>
+                <strong class="chapter-title">C.89: The Six Sword (2)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-88">
+        <a href="/novel/nano-machine/chapter-88-the-six-sword-1" title="Nano Machine (Web Novel KR) - C.88: The Six Sword (1)">
+            <div>
+                <strong class="chapter-title">C.88: The Six Sword (1)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-87">
+        <a href="/novel/nano-machine/chapter-87-learn-the-seven-demon-sword-4" title="Nano Machine (Web Novel KR) - C.87: Learn the Seven Demon Sword (4)">
+            <div>
+                <strong class="chapter-title">C.87: Learn the Seven Demon Sword (4)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-86">
+        <a href="/novel/nano-machine/chapter-86-learn-the-seven-demon-sword-3" title="Nano Machine (Web Novel KR) - C.86: Learn the Seven Demon Sword (3)">
+            <div>
+                <strong class="chapter-title">C.86: Learn the Seven Demon Sword (3)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-85">
+        <a href="/novel/nano-machine/chapter-85-learn-the-seven-demon-sword-2" title="Nano Machine (Web Novel KR) - C.85: Learn the Seven Demon Sword (2)">
+            <div>
+                <strong class="chapter-title">C.85: Learn the Seven Demon Sword (2)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-84">
+        <a href="/novel/nano-machine/chapter-84-learn-the-seven-demon-sword-1" title="Nano Machine (Web Novel KR) - C.84: Learn the Seven Demon Sword (1)">
+            <div>
+                <strong class="chapter-title">C.84: Learn the Seven Demon Sword (1)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-83">
+        <a href="/novel/nano-machine/chapter-83-get-in-line-2" title="Nano Machine (Web Novel KR) - C.83: Get in line (2)">
+            <div>
+                <strong class="chapter-title">C.83: Get in line (2)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-82">
+        <a href="/novel/nano-machine/chapter-82-get-in-line-1" title="Nano Machine (Web Novel KR) - C.82: Get in line (1)">
+            <div>
+                <strong class="chapter-title">C.82: Get in line (1)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-81">
+        <a href="/novel/nano-machine/chapter-81-pay-it-forward-for-more-7" title="Nano Machine (Web Novel KR) - C.81: Pay it forward for more (7)">
+            <div>
+                <strong class="chapter-title">C.81: Pay it forward for more (7)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-80">
+        <a href="/novel/nano-machine/chapter-80-pay-it-forward-for-more-6" title="Nano Machine (Web Novel KR) - C.80: Pay it forward for more (6)">
+            <div>
+                <strong class="chapter-title">C.80: Pay it forward for more (6)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-79">
+        <a href="/novel/nano-machine/chapter-79-pay-it-forward-for-more-5" title="Nano Machine (Web Novel KR) - C.79: Pay it forward for more (5)">
+            <div>
+                <strong class="chapter-title">C.79: Pay it forward for more (5)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-78">
+        <a href="/novel/nano-machine/chapter-78-pay-it-forward-for-more-4" title="Nano Machine (Web Novel KR) - C.78: Pay it forward for more (4)">
+            <div>
+                <strong class="chapter-title">C.78: Pay it forward for more (4)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-77">
+        <a href="/novel/nano-machine/chapter-77-pay-it-forward-for-more-3" title="Nano Machine (Web Novel KR) - C.77: Pay it forward for more (3)">
+            <div>
+                <strong class="chapter-title">C.77: Pay it forward for more (3)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-76">
+        <a href="/novel/nano-machine/chapter-76-pay-it-forward-for-more-2" title="Nano Machine (Web Novel KR) - C.76: Pay it forward for more (2)">
+            <div>
+                <strong class="chapter-title">C.76: Pay it forward for more (2)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-75">
+        <a href="/novel/nano-machine/chapter-75-pay-it-forward-for-more-1" title="Nano Machine (Web Novel KR) - C.75: Pay it forward for more (1)">
+            <div>
+                <strong class="chapter-title">C.75: Pay it forward for more (1)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-74">
+        <a href="/novel/nano-machine/chapter-74-i-will-do-the-same-to-you-6" title="Nano Machine (Web Novel KR) - C.74: I will do the same to you (6)">
+            <div>
+                <strong class="chapter-title">C.74: I will do the same to you (6)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-73">
+        <a href="/novel/nano-machine/chapter-73-i-will-do-the-same-to-you-5" title="Nano Machine (Web Novel KR) - C.73: I will do the same to you (5)">
+            <div>
+                <strong class="chapter-title">C.73: I will do the same to you (5)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-72">
+        <a href="/novel/nano-machine/chapter-72-i-will-do-the-same-to-you-4" title="Nano Machine (Web Novel KR) - C.72: I will do the same to you (4)">
+            <div>
+                <strong class="chapter-title">C.72: I will do the same to you (4)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-71">
+        <a href="/novel/nano-machine/chapter-71-i-will-do-the-same-to-you-3" title="Nano Machine (Web Novel KR) - C.71: I will do the same to you (3)">
+            <div>
+                <strong class="chapter-title">C.71: I will do the same to you (3)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-70">
+        <a href="/novel/nano-machine/chapter-70-i-will-do-the-same-to-you-2" title="Nano Machine (Web Novel KR) - C.70: I will do the same to you (2)">
+            <div>
+                <strong class="chapter-title">C.70: I will do the same to you (2)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-69">
+        <a href="/novel/nano-machine/chapter-69-i-will-do-the-same-to-you-1" title="Nano Machine (Web Novel KR) - C.69: I will do the same to you (1)">
+            <div>
+                <strong class="chapter-title">C.69: I will do the same to you (1)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-68">
+        <a href="/novel/nano-machine/chapter-68-this-tag-is-yours-6" title="Nano Machine (Web Novel KR) - C.68: This tag is yours (6)">
+            <div>
+                <strong class="chapter-title">C.68: This tag is yours (6)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-67">
+        <a href="/novel/nano-machine/chapter-67-this-tag-is-yours-5" title="Nano Machine (Web Novel KR) - C.67: This tag is yours (5)">
+            <div>
+                <strong class="chapter-title">C.67: This tag is yours (5)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-66">
+        <a href="/novel/nano-machine/chapter-66-this-tag-is-yours-4" title="Nano Machine (Web Novel KR) - C.66: This tag is yours (4)">
+            <div>
+                <strong class="chapter-title">C.66: This tag is yours (4)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-65">
+        <a href="/novel/nano-machine/chapter-65-this-tag-is-yours-3" title="Nano Machine (Web Novel KR) - C.65: This tag is yours (3)">
+            <div>
+                <strong class="chapter-title">C.65: This tag is yours (3)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-64">
+        <a href="/novel/nano-machine/chapter-64-this-tag-is-yours-2" title="Nano Machine (Web Novel KR) - C.64: This tag is yours (2)">
+            <div>
+                <strong class="chapter-title">C.64: This tag is yours (2)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-63">
+        <a href="/novel/nano-machine/chapter-63-this-tag-is-yours-1" title="Nano Machine (Web Novel KR) - C.63: This tag is yours (1)">
+            <div>
+                <strong class="chapter-title">C.63: This tag is yours (1)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-62">
+        <a href="/novel/nano-machine/chapter-62-blessing-in-a-disguise-7" title="Nano Machine (Web Novel KR) - C.62: Blessing in a disguise (7)">
+            <div>
+                <strong class="chapter-title">C.62: Blessing in a disguise (7)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-61">
+        <a href="/novel/nano-machine/chapter-61-blessing-in-a-disguise-6" title="Nano Machine (Web Novel KR) - C.61: Blessing in a disguise (6)">
+            <div>
+                <strong class="chapter-title">C.61: Blessing in a disguise (6)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-60">
+        <a href="/novel/nano-machine/chapter-60-blessing-in-a-disguise-5" title="Nano Machine (Web Novel KR) - C.60: Blessing in a disguise (5)">
+            <div>
+                <strong class="chapter-title">C.60: Blessing in a disguise (5)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-59">
+        <a href="/novel/nano-machine/chapter-59-blessing-in-a-disguise-4" title="Nano Machine (Web Novel KR) - C.59: Blessing in a disguise (4)">
+            <div>
+                <strong class="chapter-title">C.59: Blessing in a disguise (4)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-58">
+        <a href="/novel/nano-machine/chapter-58-blessing-in-a-disguise-3" title="Nano Machine (Web Novel KR) - C.58: Blessing in a disguise (3)">
+            <div>
+                <strong class="chapter-title">C.58: Blessing in a disguise (3)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-57">
+        <a href="/novel/nano-machine/chapter-57-blessing-in-a-disguise-2" title="Nano Machine (Web Novel KR) - C.57: Blessing in a disguise (2)">
+            <div>
+                <strong class="chapter-title">C.57: Blessing in a disguise (2)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-56">
+        <a href="/novel/nano-machine/chapter-56-blessing-in-a-disguise-1" title="Nano Machine (Web Novel KR) - C.56: Blessing in a disguise (1)">
+            <div>
+                <strong class="chapter-title">C.56: Blessing in a disguise (1)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-55">
+        <a href="/novel/nano-machine/chapter-55-cool-heads-but-warm-hearts-4" title="Nano Machine (Web Novel KR) - C.55: Cool heads but warm hearts (4)">
+            <div>
+                <strong class="chapter-title">C.55: Cool heads but warm hearts (4)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-54">
+        <a href="/novel/nano-machine/chapter-54-cool-heads-but-warm-hearts-3" title="Nano Machine (Web Novel KR) - C.54: Cool heads but warm hearts (3)">
+            <div>
+                <strong class="chapter-title">C.54: Cool heads but warm hearts (3)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-53">
+        <a href="/novel/nano-machine/chapter-53-cool-heads-but-warm-hearts-2" title="Nano Machine (Web Novel KR) - C.53: Cool heads but warm hearts (2)">
+            <div>
+                <strong class="chapter-title">C.53: Cool heads but warm hearts (2)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-52">
+        <a href="/novel/nano-machine/chapter-52-cool-heads-but-warm-hearts-1" title="Nano Machine (Web Novel KR) - C.52: Cool heads but warm hearts (1)">
+            <div>
+                <strong class="chapter-title">C.52: Cool heads but warm hearts (1)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-51">
+        <a href="/novel/nano-machine/chapter-51-i-will-crush-them-all-5" title="Nano Machine (Web Novel KR) - C.51: I will crush them all (5)">
+            <div>
+                <strong class="chapter-title">C.51: I will crush them all (5)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-50">
+        <a href="/novel/nano-machine/chapter-50-i-will-crush-them-all-4" title="Nano Machine (Web Novel KR) - C.50: I will crush them all (4)">
+            <div>
+                <strong class="chapter-title">C.50: I will crush them all (4)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-49">
+        <a href="/novel/nano-machine/chapter-49-i-will-crush-them-all-3" title="Nano Machine (Web Novel KR) - C.49: I will crush them all (3)">
+            <div>
+                <strong class="chapter-title">C.49: I will crush them all (3)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-48">
+        <a href="/novel/nano-machine/chapter-48-i-will-crush-them-all-2" title="Nano Machine (Web Novel KR) - C.48: I will crush them all (2)">
+            <div>
+                <strong class="chapter-title">C.48: I will crush them all (2)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-47">
+        <a href="/novel/nano-machine/chapter-47-i-will-crush-them-all-1" title="Nano Machine (Web Novel KR) - C.47: I will crush them all (1)">
+            <div>
+                <strong class="chapter-title">C.47: I will crush them all (1)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-46">
+        <a href="/novel/nano-machine/chapter-46-i-will-ram-it-in-until-it-works-3" title="Nano Machine (Web Novel KR) - C.46: I will ram it in until it works (3)">
+            <div>
+                <strong class="chapter-title">C.46: I will ram it in until it works (3)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-45">
+        <a href="/novel/nano-machine/chapter-45-i-will-ram-it-in-until-it-works-2" title="Nano Machine (Web Novel KR) - C.45: I will ram it in until it works (2)">
+            <div>
+                <strong class="chapter-title">C.45: I will ram it in until it works (2)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-44">
+        <a href="/novel/nano-machine/chapter-44-i-will-ram-it-in-until-it-works-1" title="Nano Machine (Web Novel KR) - C.44: I will ram it in until it works (1)">
+            <div>
+                <strong class="chapter-title">C.44: I will ram it in until it works (1)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-43">
+        <a href="/novel/nano-machine/chapter-43-defeat-a-instructor-3" title="Nano Machine (Web Novel KR) - C.43: Defeat a instructor (3)">
+            <div>
+                <strong class="chapter-title">C.43: Defeat a instructor (3)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-42">
+        <a href="/novel/nano-machine/chapter-42-defeat-a-instructor-2" title="Nano Machine (Web Novel KR) - C.42: Defeat a instructor (2)">
+            <div>
+                <strong class="chapter-title">C.42: Defeat a instructor (2)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-41">
+        <a href="/novel/nano-machine/chapter-41-defeat-a-instructor-1" title="Nano Machine (Web Novel KR) - C.41: Defeat a instructor (1)">
+            <div>
+                <strong class="chapter-title">C.41: Defeat a instructor (1)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-40">
+        <a href="/novel/nano-machine/chapter-40-collect-eleven-individuals-4" title="Nano Machine (Web Novel KR) - C.40: Collect eleven individuals (4)">
+            <div>
+                <strong class="chapter-title">C.40: Collect eleven individuals (4)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-39">
+        <a href="/novel/nano-machine/chapter-39-collect-eleven-individuals-3" title="Nano Machine (Web Novel KR) - C.39: Collect eleven individuals (3)">
+            <div>
+                <strong class="chapter-title">C.39: Collect eleven individuals (3)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-38">
+        <a href="/novel/nano-machine/chapter-38-collect-eleven-individuals-2" title="Nano Machine (Web Novel KR) - C.38: Collect eleven individuals (2)">
+            <div>
+                <strong class="chapter-title">C.38: Collect eleven individuals (2)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-37">
+        <a href="/novel/nano-machine/chapter-37-collect-eleven-individuals-1" title="Nano Machine (Web Novel KR) - C.37: Collect eleven individuals (1)">
+            <div>
+                <strong class="chapter-title">C.37: Collect eleven individuals (1)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-36">
+        <a href="/novel/nano-machine/chapter-36-founding-of-truth-from-father-chun-ma-4" title="Nano Machine (Web Novel KR) - C.36: Founding of truth from Father Chun Ma (4)">
+            <div>
+                <strong class="chapter-title">C.36: Founding of truth from Father Chun Ma (4)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-35">
+        <a href="/novel/nano-machine/chapter-35-founding-of-truth-from-father-chun-ma-3" title="Nano Machine (Web Novel KR) - C.35: Founding of truth from Father Chun Ma (3)">
+            <div>
+                <strong class="chapter-title">C.35: Founding of truth from Father Chun Ma (3)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-34">
+        <a href="/novel/nano-machine/chapter-34-founding-of-truth-from-father-chun-ma-2" title="Nano Machine (Web Novel KR) - C.34: Founding of truth from Father Chun Ma (2)">
+            <div>
+                <strong class="chapter-title">C.34: Founding of truth from Father Chun Ma (2)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-33">
+        <a href="/novel/nano-machine/chapter-33-founding-of-truth-from-father-chun-ma-1" title="Nano Machine (Web Novel KR) - C.33: Founding of truth from Father Chun Ma (1)">
+            <div>
+                <strong class="chapter-title">C.33: Founding of truth from Father Chun Ma (1)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-32">
+        <a href="/novel/nano-machine/chapter-32-secret-books-of-the-academy-library-4" title="Nano Machine (Web Novel KR) - C.32: Secret books of the Academy library (4)">
+            <div>
+                <strong class="chapter-title">C.32: Secret books of the Academy library (4)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-31">
+        <a href="/novel/nano-machine/chapter-31-secret-books-of-the-academy-library-3" title="Nano Machine (Web Novel KR) - C.31: Secret books of the Academy library (3)">
+            <div>
+                <strong class="chapter-title">C.31: Secret books of the Academy library (3)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-30">
+        <a href="/novel/nano-machine/chapter-30-secret-books-of-the-academy-library-2" title="Nano Machine (Web Novel KR) - C.30: Secret books of the Academy library (2)">
+            <div>
+                <strong class="chapter-title">C.30: Secret books of the Academy library (2)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-29">
+        <a href="/novel/nano-machine/chapter-29-secret-books-of-the-academy-library-1" title="Nano Machine (Web Novel KR) - C.29: Secret books of the Academy library (1)">
+            <div>
+                <strong class="chapter-title">C.29: Secret books of the Academy library (1)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-28">
+        <a href="/novel/nano-machine/chapter-28-eye-for-an-eye-3" title="Nano Machine (Web Novel KR) - C.28: Eye for an eye (3)">
+            <div>
+                <strong class="chapter-title">C.28: Eye for an eye (3)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-27">
+        <a href="/novel/nano-machine/chapter-27-eye-for-an-eye-2" title="Nano Machine (Web Novel KR) - C.27: Eye for an eye (2)">
+            <div>
+                <strong class="chapter-title">C.27: Eye for an eye (2)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-26">
+        <a href="/novel/nano-machine/chapter-26-eye-for-an-eye-1" title="Nano Machine (Web Novel KR) - C.26: Eye for an eye (1)">
+            <div>
+                <strong class="chapter-title">C.26: Eye for an eye (1)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-25">
+        <a href="/novel/nano-machine/chapter-25-the-second-test-3" title="Nano Machine (Web Novel KR) - C.25: The second test (3)">
+            <div>
+                <strong class="chapter-title">C.25: The second test (3)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-24">
+        <a href="/novel/nano-machine/chapter-24-the-second-test-2" title="Nano Machine (Web Novel KR) - C.24: The second test (2)">
+            <div>
+                <strong class="chapter-title">C.24: The second test (2)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-23">
+        <a href="/novel/nano-machine/chapter-23-the-second-test-1" title="Nano Machine (Web Novel KR) - C.23: The second test (1)">
+            <div>
+                <strong class="chapter-title">C.23: The second test (1)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-22">
+        <a href="/novel/nano-machine/chapter-22-you-brought-it-on-yourself-4" title="Nano Machine (Web Novel KR) - C.22: You brought it on yourself (4)">
+            <div>
+                <strong class="chapter-title">C.22: You brought it on yourself (4)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-21">
+        <a href="/novel/nano-machine/chapter-21-you-brought-it-on-yourself-3" title="Nano Machine (Web Novel KR) - C.21: You brought it on yourself (3)">
+            <div>
+                <strong class="chapter-title">C.21: You brought it on yourself (3)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-20">
+        <a href="/novel/nano-machine/chapter-20-you-brought-it-on-yourself-2" title="Nano Machine (Web Novel KR) - C.20: You brought it on yourself (2)">
+            <div>
+                <strong class="chapter-title">C.20: You brought it on yourself (2)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-19">
+        <a href="/novel/nano-machine/chapter-19-you-brought-it-on-yourself-1" title="Nano Machine (Web Novel KR) - C.19: You brought it on yourself (1)">
+            <div>
+                <strong class="chapter-title">C.19: You brought it on yourself (1)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-18">
+        <a href="/novel/nano-machine/chapter-18-he-lied-to-everyone-3" title="Nano Machine (Web Novel KR) - C.18: He lied to everyone (3)">
+            <div>
+                <strong class="chapter-title">C.18: He lied to everyone (3)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-17">
+        <a href="/novel/nano-machine/chapter-17-he-lied-to-everyone-2" title="Nano Machine (Web Novel KR) - C.17: He lied to everyone (2)">
+            <div>
+                <strong class="chapter-title">C.17: He lied to everyone (2)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-16">
+        <a href="/novel/nano-machine/chapter-16-he-lied-to-everyone-1" title="Nano Machine (Web Novel KR) - C.16: He lied to everyone (1)">
+            <div>
+                <strong class="chapter-title">C.16: He lied to everyone (1)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-15">
+        <a href="/novel/nano-machine/chapter-15-too-fast-private-lesson-3" title="Nano Machine (Web Novel KR) - C.15: Too fast private lesson (3)">
+            <div>
+                <strong class="chapter-title">C.15: Too fast private lesson (3)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-14">
+        <a href="/novel/nano-machine/chapter-14-too-fast-private-lesson-2" title="Nano Machine (Web Novel KR) - C.14: Too fast private lesson (2)">
+            <div>
+                <strong class="chapter-title">C.14: Too fast private lesson (2)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-13">
+        <a href="/novel/nano-machine/chapter-13-too-fast-private-lesson-1" title="Nano Machine (Web Novel KR) - C.13: Too fast private lesson (1)">
+            <div>
+                <strong class="chapter-title">C.13: Too fast private lesson (1)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-12">
+        <a href="/novel/nano-machine/chapter-12-kid-you-are-now-my-apprentice-2" title="Nano Machine (Web Novel KR) - C.12: Kid, you are now my apprentice (2)">
+            <div>
+                <strong class="chapter-title">C.12: Kid, you are now my apprentice (2)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-11">
+        <a href="/novel/nano-machine/chapter-11-kid-you-are-now-my-apprentice-1" title="Nano Machine (Web Novel KR) - C.11: Kid, you are now my apprentice (1)">
+            <div>
+                <strong class="chapter-title">C.11: Kid, you are now my apprentice (1)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-10">
+        <a href="/novel/nano-machine/chapter-10-the-first-test-is-a-piece-of-cake-2" title="Nano Machine (Web Novel KR) - C.10: The first test is a piece of cake (2)">
+            <div>
+                <strong class="chapter-title">C.10: The first test is a piece of cake (2)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-9">
+        <a href="/novel/nano-machine/chapter-9-the-first-test-is-a-piece-of-cake-1" title="Nano Machine (Web Novel KR) - C.9: The first test is a piece of cake (1)">
+            <div>
+                <strong class="chapter-title">C.9: The first test is a piece of cake (1)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-8">
+        <a href="/novel/nano-machine/chapter-8-entering-the-academy-3" title="Nano Machine (Web Novel KR) - C.8: Entering the Academy (3)">
+            <div>
+                <strong class="chapter-title">C.8: Entering the Academy (3)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-7">
+        <a href="/novel/nano-machine/chapter-7-entering-the-academy-2" title="Nano Machine (Web Novel KR) - C.7: Entering the Academy (2)">
+            <div>
+                <strong class="chapter-title">C.7: Entering the Academy (2)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-6">
+        <a href="/novel/nano-machine/chapter-6-entering-the-academy-1" title="Nano Machine (Web Novel KR) - C.6: Entering the Academy (1)">
+            <div>
+                <strong class="chapter-title">C.6: Entering the Academy (1)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-5">
+        <a href="/novel/nano-machine/chapter-5-why-memorize-a-book-2" title="Nano Machine (Web Novel KR) - C.5: Why memorize a book? (2)">
+            <div>
+                <strong class="chapter-title">C.5: Why memorize a book? (2)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-4">
+        <a href="/novel/nano-machine/chapter-4-why-memorize-a-book-1" title="Nano Machine (Web Novel KR) - C.4: Why memorize a book? (1)">
+            <div>
+                <strong class="chapter-title">C.4: Why memorize a book? (1)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-3">
+        <a href="/novel/nano-machine/chapter-3-machine-descended-to-my-body-2" title="Nano Machine (Web Novel KR) - C.3: Machine descended to my body (2)">
+            <div>
+                <strong class="chapter-title">C.3: Machine descended to my body (2)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-2">
+        <a href="/novel/nano-machine/chapter-2-machine-descended-to-my-body-1" title="Nano Machine (Web Novel KR) - C.2: Machine descended to my body (1)">
+            <div>
+                <strong class="chapter-title">C.2: Machine descended to my body (1)</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+    <li id="c-1">
+        <a href="/novel/nano-machine/chapter-1-prologue-crucial-turning-point" title="Nano Machine (Web Novel KR) - C.1: Prologue : Crucial turning point">
+            <div>
+                <strong class="chapter-title">C.1: Prologue : Crucial turning point</strong>
+                <time class="chapter-update">Feb 21, 2023</time>
+            </div>
+        </a>
+    </li>
+</ul>
+<div class="jump-index">
+    <i style="margin-right: 10px;">Jump to :</i>
+    <div class="index-list">
+        <span onclick="jumpToChapter(this)" data-idx="c-100">100</span>
+        <span onclick="jumpToChapter(this)" data-idx="c-200">200</span>
+        <span onclick="jumpToChapter(this)" data-idx="c-300">300</span>
+        <span onclick="jumpToChapter(this)" data-idx="c-400">400</span>
+    </div>
+</div>

@@ -1,0 +1,153 @@
+# wn-dl User Configuration Template
+# This file contains all available user preferences with their default values.
+# Copy this to ~/.config/wn-dl/config.yaml and customize as needed.
+
+preferences:
+  # Font Preferences
+  # Choose which font family to use for EPUB generation
+  font:
+    default_family: "bitter"     # Primary font: bitter, bookerly, literata
+    fallback_family: "bitter"    # Fallback if primary not available
+    
+  # Logging Preferences
+  # Control how much information wn-dl displays
+  logging:
+    level: "WARNING"             # Log level: DEBUG, INFO, WARNING, ERROR, CRITICAL
+    format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+    file: null                   # Log file path (null = console only)
+    
+  # Directory Preferences
+  # Set default directories for input and output
+  directories:
+    output: null                 # Default output directory for scraping (null = current dir)
+    input: null                  # Default input directory for EPUB generation (null = current dir)
+    working: null                # Temporary working directory (null = system temp)
+    auto_create: true            # Automatically create directories if they don't exist
+    
+  # EPUB Generator Preferences
+  # Choose between Pandoc and EbookLib for EPUB generation
+  epub:
+    preferred_generator: "pandoc"  # Primary generator: pandoc, ebooklib
+    fallback_enabled: true         # Enable automatic fallback to other generator
+    include_toc: true              # Include table of contents in EPUB
+    compression: false             # Enable EPUB compression (EbookLib only)
+    
+  # Processing Preferences
+  # Control performance and rate limiting
+  processing:
+    max_workers: 10              # Maximum concurrent workers for downloading
+    rate_limit: 0.5              # Requests per second (lower = slower but safer)
+    timeout: 30                  # Request timeout in seconds
+    
+  # Provider-Specific Preferences
+  # Customize settings for specific novel websites
+  providers:
+    novelfull:
+      rate_limit: 0.5            # Custom rate limit for NovelFull
+      max_workers: 5             # Custom worker count for NovelFull
+      timeout: 30                # Custom timeout for NovelFull
+      
+    novelbin:
+      rate_limit: 0.2            # Slower rate for NovelBin (more stable)
+      max_workers: 3             # Fewer workers for NovelBin
+      timeout: 45                # Longer timeout for NovelBin
+      
+  # Image Preferences
+  # Control cover image downloading and processing
+  images:
+    download_covers: true        # Download cover images
+    quality: 85                  # JPEG quality (1-100)
+    format: "JPEG"               # Image format: JPEG, PNG, WEBP
+
+  # Database Preferences
+  # Control persistent storage of novel metadata
+  database:
+    enabled: true                # Enable persistent storage
+    path: null                   # Custom database path (null = default ~/.wn-dl/novels.db)
+    auto_sync: true              # Automatically sync with filesystem
+    backup_enabled: true         # Enable automatic database backups
+    target_size: [600, 800]      # Target image size [width, height]
+
+  # Cache Preferences
+  # Control web page caching for improved performance
+  cache:
+    enabled: true                # Enable/disable HTTP response caching
+    directory: null              # Cache directory (null = default ~/.wn-dl/cache)
+
+    # Size and Storage Settings
+    size_limit: "1GB"           # Maximum cache size (supports: KB, MB, GB, TB)
+    compression: true            # Enable gzip compression for cached content
+    compression_level: 6         # Compression level (1-9, higher = better compression)
+
+    # Time-based Settings
+    default_ttl: 3600           # Default cache TTL in seconds (1 hour)
+    max_ttl: 86400              # Maximum cache TTL in seconds (24 hours)
+    min_ttl: 300                # Minimum cache TTL in seconds (5 minutes)
+
+    # HTTP Cache Validation
+    respect_cache_headers: true  # Honor HTTP Cache-Control, Expires headers
+    validate_etag: true         # Use ETag for cache validation
+    validate_last_modified: true # Use Last-Modified for cache validation
+    conditional_requests: true   # Use conditional requests (If-None-Match, If-Modified-Since)
+
+    # Cache Behavior
+    cache_errors: false         # Cache HTTP error responses (4xx, 5xx)
+    cache_redirects: true       # Cache redirect responses (3xx)
+    ignore_query_params: []     # Query parameters to ignore in cache keys
+
+    # Cleanup and Maintenance
+    auto_cleanup: true          # Automatically clean expired entries
+    cleanup_interval: 3600      # Cleanup interval in seconds (1 hour)
+    max_entries: 10000          # Maximum number of cached entries
+
+    # Per-Provider Settings
+    # Override cache settings for specific providers
+    providers:
+      novelfull:
+        enabled: true           # Enable caching for NovelFull
+        ttl: 7200              # 2 hours TTL for NovelFull pages
+        size_limit: "200MB"    # Provider-specific size limit
+
+      novelbin:
+        enabled: false         # Disable caching for problematic providers
+        ttl: 1800             # 30 minutes TTL
+
+      novelbuddy:
+        enabled: true
+        ttl: 3600             # 1 hour TTL
+        cache_ajax: true      # Cache AJAX responses
+
+      royalroad:
+        enabled: true
+        ttl: 14400            # 4 hours TTL (stable content)
+
+      wuxiaworld:
+        enabled: true
+        ttl: 10800            # 3 hours TTL
+    
+  # Advanced Preferences
+  # Additional customization options
+  advanced:
+    # Retry settings
+    max_retries: 3               # Maximum retry attempts for failed requests
+    retry_delay: 1.0             # Delay between retries in seconds
+    
+    # Cache settings (deprecated - use cache section below)
+    enable_cache: false          # Enable request caching
+    cache_duration: 3600         # Cache duration in seconds
+    
+    # User agent
+    user_agent: "wn-dl/1.0"      # Custom user agent string
+    
+    # Chapter processing
+    chapter_title_format: "title_only"  # Chapter title format
+    chapter_number_format: "arabic"     # Chapter number format
+    
+    # Content cleaning
+    remove_ads: true             # Remove advertisement content
+    fix_encoding: true           # Fix character encoding issues
+    
+# Configuration metadata (do not modify)
+config_version: "1.0"
+created_by: "wn-dl"
+last_modified: null
