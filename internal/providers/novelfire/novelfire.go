@@ -96,13 +96,11 @@ func (p *NovelFireProvider) GetChapterList(ctx context.Context, novelURL string)
 		return nil, err
 	}
 
-	// For NovelFire, chapters are usually at {novelURL}/chapters
 	chaptersURL := novelURL
 	if !strings.HasSuffix(chaptersURL, "/chapters") {
 		chaptersURL = strings.TrimSuffix(chaptersURL, "/") + "/chapters"
 	}
 
-	// We might need to handle pagination here, but let's try the first page.
 	resp, err := p.client.R().
 		SetContext(ctx).
 		Get(chaptersURL)
@@ -122,6 +120,55 @@ func (p *NovelFireProvider) GetChapterList(ctx context.Context, novelURL string)
 
 	var chapters []providers.ChapterMeta
 
+	// Parse page 1
+	p.extractChapters(doc, &chapters, 1)
+
+	// Discover last page number
+	maxPage := 1
+	doc.Find("ul.pagination li a, .pagination a").Each(func(i int, sel *goquery.Selection) {
+		text := strings.TrimSpace(sel.Text())
+		if pageNum, err := strconv.Atoi(text); err == nil {
+			if pageNum > maxPage {
+				maxPage = pageNum
+			}
+		}
+	})
+
+	// Fetch subsequent pages sequentially with a safe delay to avoid Cloudflare rate limit (HTTP 429)
+	for page := 2; page <= maxPage; page++ {
+		select {
+		case <-ctx.Done():
+			return nil, ctx.Err()
+		default:
+		}
+
+		time.Sleep(500 * time.Millisecond)
+
+		resp, err := p.client.R().
+			SetContext(ctx).
+			SetQueryParam("page", strconv.Itoa(page)).
+			Get(chaptersURL)
+
+		if err != nil {
+			return nil, fmt.Errorf("chapters request failed for page %d: %w", page, err)
+		}
+
+		if resp.IsError() {
+			return nil, fmt.Errorf("chapters page %d returned error status: %s", page, resp.Status())
+		}
+
+		pageDoc, err := goquery.NewDocumentFromReader(strings.NewReader(resp.String()))
+		if err != nil {
+			return nil, fmt.Errorf("failed to parse chapters HTML for page %d: %w", page, err)
+		}
+
+		p.extractChapters(pageDoc, &chapters, page)
+	}
+
+	return chapters, nil
+}
+
+func (p *NovelFireProvider) extractChapters(doc *goquery.Document, chapters *[]providers.ChapterMeta, page int) {
 	doc.Find("ul.chapter-list li a").Each(func(i int, sel *goquery.Selection) {
 		title := strings.TrimSpace(sel.Find(".chapter-title").Text())
 		href := sel.AttrOr("href", "")
@@ -130,21 +177,19 @@ func (p *NovelFireProvider) GetChapterList(ctx context.Context, novelURL string)
 		}
 
 		numStr := strings.TrimSpace(sel.Find(".chapter-no").Text())
-		index := len(chapters) + 1
+		index := (page-1)*100 + i + 1
 		if numStr != "" {
 			if parsed, err := strconv.Atoi(numStr); err == nil {
 				index = parsed
 			}
 		}
 
-		chapters = append(chapters, providers.ChapterMeta{
+		*chapters = append(*chapters, providers.ChapterMeta{
 			Index: index,
 			Title: title,
 			URL:   href,
 		})
 	})
-
-	return chapters, nil
 }
 
 func (p *NovelFireProvider) GetChapterContent(ctx context.Context, chapterURL string) (providers.ChapterContent, error) {

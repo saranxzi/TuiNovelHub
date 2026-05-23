@@ -37,7 +37,7 @@ func TestSyncNovelIntegration(t *testing.T) {
 
 	svc := sync.NewSyncService(database)
 
-	ctx, cancel := context.WithTimeout(context.Background(), 30*time.Second)
+	ctx, cancel := context.WithTimeout(context.Background(), 60*time.Second)
 	defer cancel()
 
 	// --- First sync ---
@@ -159,7 +159,7 @@ func TestTrackNovelFromSearch(t *testing.T) {
 
 	svc := sync.NewSyncService(database)
 
-	ctx, cancel := context.WithTimeout(context.Background(), 30*time.Second)
+	ctx, cancel := context.WithTimeout(context.Background(), 60*time.Second)
 	defer cancel()
 
 	result := providers.SearchResult{
