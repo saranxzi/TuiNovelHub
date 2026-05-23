@@ -74,6 +74,11 @@ func (m Model) Init() tea.Cmd {
 func (m *Model) LoadNovel(novel *db.Novel) tea.Cmd {
 	m.novel = novel
 	m.list.Title = "Chapters — " + novel.Title
+	if novel.TotalChapters == 0 {
+		m.statusBar.SyncStatus = "Syncing..."
+	} else {
+		m.statusBar.SyncStatus = "Idle"
+	}
 	return m.loadChapters()
 }
 
@@ -119,6 +124,19 @@ func (m Model) Update(incoming tea.Msg) (tea.Model, tea.Cmd) {
 	case chaptersLoadedMsg:
 		m.list.SetItems(tmsg.items)
 
+	case tuimsg.SyncCompleteMsg:
+		m.statusBar.SyncStatus = "Idle"
+		if tmsg.Err != nil {
+			m.err = tmsg.Err
+		} else {
+			if m.novel != nil {
+				if updated, err := m.db.GetNovelByID(m.novel.ID); err == nil && updated != nil {
+					m.novel = updated
+				}
+			}
+			cmds = append(cmds, m.loadChapters())
+		}
+
 	case error:
 		m.err = tmsg
 	}
@@ -127,6 +145,13 @@ func (m Model) Update(incoming tea.Msg) (tea.Model, tea.Cmd) {
 	cmds = append(cmds, cmd)
 
 	return m, tea.Batch(cmds...)
+}
+
+func (m Model) GetNovelID() int {
+	if m.novel == nil {
+		return 0
+	}
+	return m.novel.ID
 }
 
 func (m Model) View() string {

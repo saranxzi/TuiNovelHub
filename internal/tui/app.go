@@ -76,12 +76,25 @@ func (a *App) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 				cmd = a.chaptersModel.LoadNovel(novel)
 				cmds = append(cmds, cmd)
 			} else if searchResult, ok := msg.Data.(providers.SearchResult); ok {
-				// We came from search, track it first
-				// This would be async in reality, but simplified here
-				novel, err := a.syncService.TrackNovelFromSearch(context.Background(), searchResult)
-				if err == nil {
+				novel := &db.Novel{
+					ProviderID:  searchResult.ProviderID,
+					SourceURL:   searchResult.URL,
+					Title:       searchResult.Title,
+					Author:      searchResult.Author,
+					CoverURL:    searchResult.CoverURL,
+					Description: searchResult.Description,
+					Status:      "Reading",
+				}
+				if err := a.db.AddNovel(novel); err == nil {
 					cmd = a.chaptersModel.LoadNovel(novel)
 					cmds = append(cmds, cmd)
+
+					// Trigger background sync asynchronously
+					syncCmd := func() tea.Msg {
+						err := a.syncService.SyncNovel(context.Background(), novel)
+						return tuimsg.SyncCompleteMsg{Novel: novel, Err: err}
+					}
+					cmds = append(cmds, syncCmd)
 				}
 			}
 		}
@@ -89,11 +102,6 @@ func (a *App) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 			if chapter, ok := msg.Data.(*db.Chapter); ok {
 				cmd = a.readerModel.LoadChapter(chapter)
 				cmds = append(cmds, cmd)
-				// Initialize size immediately
-				_, sizeCmd := a.readerModel.Update(tea.WindowSizeMsg{Width: a.width, Height: a.height})
-				if sizeCmd != nil {
-					cmds = append(cmds, sizeCmd)
-				}
 			}
 		}
 		if msg.View == "search" {
@@ -103,6 +111,34 @@ func (a *App) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 		if msg.View == "library" {
 			cmd = a.libraryModel.Init()
 			cmds = append(cmds, cmd)
+		}
+
+		// Propagate window size to the newly active view immediately
+		sizeMsg := tea.WindowSizeMsg{Width: a.width, Height: a.height}
+		if a.activeView == "library" {
+			a.libraryModel, cmd = a.libraryModel.Update(sizeMsg)
+			if cmd != nil {
+				cmds = append(cmds, cmd)
+			}
+		} else if a.activeView == "search" {
+			a.searchModel, cmd = a.searchModel.Update(sizeMsg)
+			if cmd != nil {
+				cmds = append(cmds, cmd)
+			}
+		} else if a.activeView == "chapters" {
+			var newModel tea.Model
+			newModel, cmd = a.chaptersModel.Update(sizeMsg)
+			a.chaptersModel = newModel.(chapters.Model)
+			if cmd != nil {
+				cmds = append(cmds, cmd)
+			}
+		} else if a.activeView == "reader" {
+			var newModel tea.Model
+			newModel, cmd = a.readerModel.Update(sizeMsg)
+			a.readerModel = newModel.(reader.Model)
+			if cmd != nil {
+				cmds = append(cmds, cmd)
+			}
 		}
 	}
 
