@@ -74,7 +74,9 @@ func (m Model) Init() tea.Cmd {
 func (m *Model) LoadNovel(novel *db.Novel) tea.Cmd {
 	m.novel = novel
 	m.list.Title = "Chapters — " + novel.Title
-	if novel.TotalChapters == 0 {
+	
+	chaps, err := m.db.GetChaptersByNovelID(novel.ID)
+	if err == nil && len(chaps) == 0 {
 		m.statusBar.SyncStatus = "Syncing..."
 	} else {
 		m.statusBar.SyncStatus = "Idle"
@@ -94,6 +96,11 @@ func (m Model) Update(incoming tea.Msg) (tea.Model, tea.Cmd) {
 		m.statusBar.Width = tmsg.Width
 
 	case tea.KeyMsg:
+		if m.list.FilterState() == list.Filtering {
+			m.list, cmd = m.list.Update(incoming)
+			return m, cmd
+		}
+
 		switch tmsg.String() {
 		case "esc":
 			return m, func() tea.Msg {

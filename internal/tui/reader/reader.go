@@ -236,14 +236,14 @@ func (m *Model) reformatContent() {
 	}
 
 	style := lipgloss.NewStyle().Width(width)
+	wrappedText := style.Render(m.content)
 	
-	leftPadding := 0
 	if m.config.Reader.CenterText && m.width > width {
-		leftPadding = (m.width - width) / 2
-		style = style.PaddingLeft(leftPadding)
+		leftPadding := (m.width - width) / 2
+		wrappedText = lipgloss.NewStyle().PaddingLeft(leftPadding).Render(wrappedText)
 	}
 
-	m.viewport.SetContent(style.Render(m.content))
+	m.viewport.SetContent(wrappedText)
 }
 
 func (m Model) View() string {

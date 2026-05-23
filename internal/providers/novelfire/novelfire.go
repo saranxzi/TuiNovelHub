@@ -80,11 +80,25 @@ func (p *NovelFireProvider) Search(ctx context.Context, query string, page int) 
 			coverURL = "https://novelfire.net" + coverURL
 		}
 
+		chapterCount := 0
+		sel.Find(".novel-stats").Each(func(j int, statSel *goquery.Selection) {
+			text := strings.TrimSpace(statSel.Text())
+			if strings.Contains(text, "Chapters") {
+				parts := strings.Fields(text)
+				if len(parts) > 0 {
+					if parsed, err := strconv.Atoi(parts[0]); err == nil {
+						chapterCount = parsed
+					}
+				}
+			}
+		})
+
 		results = append(results, providers.SearchResult{
-			Title:      title,
-			URL:        novelURL,
-			CoverURL:   coverURL,
-			ProviderID: p.ID(),
+			Title:        title,
+			URL:          novelURL,
+			CoverURL:     coverURL,
+			ChapterCount: chapterCount,
+			ProviderID:   p.ID(),
 		})
 	})
 

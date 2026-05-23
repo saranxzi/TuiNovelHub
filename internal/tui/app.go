@@ -77,13 +77,14 @@ func (a *App) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 				cmds = append(cmds, cmd)
 			} else if searchResult, ok := msg.Data.(providers.SearchResult); ok {
 				novel := &db.Novel{
-					ProviderID:  searchResult.ProviderID,
-					SourceURL:   searchResult.URL,
-					Title:       searchResult.Title,
-					Author:      searchResult.Author,
-					CoverURL:    searchResult.CoverURL,
-					Description: searchResult.Description,
-					Status:      "Reading",
+					ProviderID:    searchResult.ProviderID,
+					SourceURL:     searchResult.URL,
+					Title:         searchResult.Title,
+					Author:        searchResult.Author,
+					CoverURL:      searchResult.CoverURL,
+					Description:   searchResult.Description,
+					TotalChapters: searchResult.ChapterCount,
+					Status:        "Reading",
 				}
 				if err := a.db.AddNovel(novel); err == nil {
 					cmd = a.chaptersModel.LoadNovel(novel)
