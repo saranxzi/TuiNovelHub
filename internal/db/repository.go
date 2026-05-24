@@ -40,36 +40,34 @@ func (db *DB) AddNovel(novel *Novel) error {
 		novel.ProviderID, novel.SourceURL, novel.Title, author, coverURL, description, novel.Status, novel.TotalChapters,
 	).Scan(&novel.ID, &novel.AddedAt, &novel.Priority, &rating)
 
-	if rating.Valid {
-		novel.Rating = rating.Float64
-	}
-
 	if err != nil {
 		return fmt.Errorf("failed to insert novel: %w", err)
+	}
+
+	if rating.Valid {
+		novel.Rating = rating.Float64
 	}
 	return nil
 }
 
-// GetNovelByURL retrieves a novel by its source URL.
-func (db *DB) GetNovelByURL(sourceURL string) (*Novel, error) {
+// scanner is an interface satisfied by both *sql.Row and *sql.Rows.
+type scanner interface {
+	Scan(dest ...interface{}) error
+}
+
+func scanNovelRow(s scanner) (Novel, error) {
 	var n Novel
-	query := `
-		SELECT id, provider_id, source_url, title, author, cover_url, description, status, priority, rating, total_chapters, last_synced_at, added_at
-		FROM novels
-		WHERE source_url = ?
-	`
 	var author, coverURL, description sql.NullString
 	var rating sql.NullFloat64
 	var lastSyncedAt sql.NullTime
 
-	err := db.conn.QueryRow(query, sourceURL).Scan(
-		&n.ID, &n.ProviderID, &n.SourceURL, &n.Title, &author, &coverURL, &description, &n.Status, &n.Priority, &rating, &n.TotalChapters, &lastSyncedAt, &n.AddedAt,
+	err := s.Scan(
+		&n.ID, &n.ProviderID, &n.SourceURL, &n.Title, &author, &coverURL,
+		&description, &n.Status, &n.Priority, &rating, &n.TotalChapters,
+		&lastSyncedAt, &n.AddedAt,
 	)
 	if err != nil {
-		if err == sql.ErrNoRows {
-			return nil, nil // Not found
-		}
-		return nil, fmt.Errorf("failed to get novel by url: %w", err)
+		return n, err
 	}
 
 	if author.Valid {
@@ -87,6 +85,45 @@ func (db *DB) GetNovelByURL(sourceURL string) (*Novel, error) {
 	if lastSyncedAt.Valid {
 		t := lastSyncedAt.Time
 		n.LastSyncedAt = &t
+	}
+
+	return n, nil
+}
+
+func scanChapterRow(s scanner) (Chapter, error) {
+	var c Chapter
+	var title sql.NullString
+	var readAt sql.NullTime
+
+	err := s.Scan(&c.ID, &c.NovelID, &c.ChapterIndex, &title, &c.SourceURL, &c.IsRead, &readAt)
+	if err != nil {
+		return c, err
+	}
+
+	if title.Valid {
+		c.Title = title.String
+	}
+	if readAt.Valid {
+		t := readAt.Time
+		c.ReadAt = &t
+	}
+
+	return c, nil
+}
+
+// GetNovelByURL retrieves a novel by its source URL.
+func (db *DB) GetNovelByURL(sourceURL string) (*Novel, error) {
+	query := `
+		SELECT id, provider_id, source_url, title, author, cover_url, description, status, priority, rating, total_chapters, last_synced_at, added_at
+		FROM novels
+		WHERE source_url = ?
+	`
+	n, err := scanNovelRow(db.conn.QueryRow(query, sourceURL))
+	if err != nil {
+		if err == sql.ErrNoRows {
+			return nil, nil // Not found
+		}
+		return nil, fmt.Errorf("failed to get novel by url: %w", err)
 	}
 
 	return &n, nil
@@ -180,36 +217,10 @@ func (db *DB) ListNovels() ([]Novel, error) {
 
 	var novels []Novel
 	for rows.Next() {
-		var n Novel
-		var author, coverURL, description sql.NullString
-		var rating sql.NullFloat64
-		var lastSyncedAt sql.NullTime
-
-		if err := rows.Scan(
-			&n.ID, &n.ProviderID, &n.SourceURL, &n.Title, &author, &coverURL,
-			&description, &n.Status, &n.Priority, &rating, &n.TotalChapters,
-			&lastSyncedAt, &n.AddedAt,
-		); err != nil {
+		n, err := scanNovelRow(rows)
+		if err != nil {
 			return nil, fmt.Errorf("failed to scan novel row: %w", err)
 		}
-
-		if author.Valid {
-			n.Author = author.String
-		}
-		if coverURL.Valid {
-			n.CoverURL = coverURL.String
-		}
-		if description.Valid {
-			n.Description = description.String
-		}
-		if rating.Valid {
-			n.Rating = rating.Float64
-		}
-		if lastSyncedAt.Valid {
-			t := lastSyncedAt.Time
-			n.LastSyncedAt = &t
-		}
-
 		novels = append(novels, n)
 	}
 	return novels, rows.Err()
@@ -217,43 +228,17 @@ func (db *DB) ListNovels() ([]Novel, error) {
 
 // GetNovelByID retrieves a single novel by its database ID.
 func (db *DB) GetNovelByID(id int) (*Novel, error) {
-	var n Novel
 	query := `
 		SELECT id, provider_id, source_url, title, author, cover_url, description,
 		       status, priority, rating, total_chapters, last_synced_at, added_at
 		FROM novels WHERE id = ?
 	`
-	var author, coverURL, description sql.NullString
-	var rating sql.NullFloat64
-	var lastSyncedAt sql.NullTime
-
-	err := db.conn.QueryRow(query, id).Scan(
-		&n.ID, &n.ProviderID, &n.SourceURL, &n.Title, &author, &coverURL,
-		&description, &n.Status, &n.Priority, &rating, &n.TotalChapters,
-		&lastSyncedAt, &n.AddedAt,
-	)
+	n, err := scanNovelRow(db.conn.QueryRow(query, id))
 	if err != nil {
 		if err == sql.ErrNoRows {
 			return nil, nil
 		}
 		return nil, fmt.Errorf("failed to get novel by id: %w", err)
-	}
-
-	if author.Valid {
-		n.Author = author.String
-	}
-	if coverURL.Valid {
-		n.CoverURL = coverURL.String
-	}
-	if description.Valid {
-		n.Description = description.String
-	}
-	if rating.Valid {
-		n.Rating = rating.Float64
-	}
-	if lastSyncedAt.Valid {
-		t := lastSyncedAt.Time
-		n.LastSyncedAt = &t
 	}
 
 	return &n, nil
@@ -275,22 +260,10 @@ func (db *DB) GetChaptersByNovelID(novelID int) ([]Chapter, error) {
 
 	var chapters []Chapter
 	for rows.Next() {
-		var c Chapter
-		var title sql.NullString
-		var readAt sql.NullTime
-
-		if err := rows.Scan(&c.ID, &c.NovelID, &c.ChapterIndex, &title, &c.SourceURL, &c.IsRead, &readAt); err != nil {
+		c, err := scanChapterRow(rows)
+		if err != nil {
 			return nil, fmt.Errorf("failed to scan chapter row: %w", err)
 		}
-
-		if title.Valid {
-			c.Title = title.String
-		}
-		if readAt.Valid {
-			t := readAt.Time
-			c.ReadAt = &t
-		}
-
 		chapters = append(chapters, c)
 	}
 	return chapters, rows.Err()
@@ -305,26 +278,12 @@ func (db *DB) GetNextUnreadChapter(novelID int) (*Chapter, error) {
 		ORDER BY chapter_index ASC
 		LIMIT 1
 	`
-	var c Chapter
-	var title sql.NullString
-	var readAt sql.NullTime
-
-	err := db.conn.QueryRow(query, novelID).Scan(
-		&c.ID, &c.NovelID, &c.ChapterIndex, &title, &c.SourceURL, &c.IsRead, &readAt,
-	)
+	c, err := scanChapterRow(db.conn.QueryRow(query, novelID))
 	if err != nil {
 		if err == sql.ErrNoRows {
 			return nil, nil
 		}
 		return nil, fmt.Errorf("failed to get next unread chapter: %w", err)
-	}
-
-	if title.Valid {
-		c.Title = title.String
-	}
-	if readAt.Valid {
-		t := readAt.Time
-		c.ReadAt = &t
 	}
 	return &c, nil
 }
