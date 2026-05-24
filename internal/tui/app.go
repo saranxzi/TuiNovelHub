@@ -16,19 +16,28 @@ import (
 	tea "github.com/charmbracelet/bubbletea"
 )
 
+type ViewName string
+
+const (
+	ViewLibrary  ViewName = "library"
+	ViewSearch   ViewName = "search"
+	ViewChapters ViewName = "chapters"
+	ViewReader   ViewName = "reader"
+)
+
 type App struct {
 	config      *config.Config
 	db          *db.DB
 	syncService *sync.SyncService
 
 	// Children views
-	libraryModel  tea.Model
-	searchModel   tea.Model
+	libraryModel  library.Model
+	searchModel   search.Model
 	chaptersModel chapters.Model
 	readerModel   reader.Model
 
 	// Active view
-	activeView string
+	activeView ViewName
 	width      int
 	height     int
 }
@@ -44,7 +53,7 @@ func NewApp(cfg *config.Config, database *db.DB) *App {
 		searchModel:   search.NewModel(),
 		chaptersModel: chapters.NewModel(database, syncSvc),
 		readerModel:   reader.NewModel(database, cfg),
-		activeView:    "library",
+		activeView:    ViewLibrary,
 	}
 }
 
@@ -54,6 +63,27 @@ func (a *App) Init() tea.Cmd {
 		a.libraryModel.Init(),
 		a.readerModel.Init(),
 	)
+}
+
+func (a *App) routeToActiveView(msg tea.Msg) tea.Cmd {
+	var cmd tea.Cmd
+	var newModel tea.Model
+
+	switch a.activeView {
+	case ViewLibrary:
+		newModel, cmd = a.libraryModel.Update(msg)
+		a.libraryModel = newModel.(library.Model)
+	case ViewSearch:
+		newModel, cmd = a.searchModel.Update(msg)
+		a.searchModel = newModel.(search.Model)
+	case ViewChapters:
+		newModel, cmd = a.chaptersModel.Update(msg)
+		a.chaptersModel = newModel.(chapters.Model)
+	case ViewReader:
+		newModel, cmd = a.readerModel.Update(msg)
+		a.readerModel = newModel.(reader.Model)
+	}
+	return cmd
 }
 
 func (a *App) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
@@ -75,121 +105,86 @@ func (a *App) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 		}
 		cmds = append(cmds, listenToSync(msg.ch))
 	case tuimsg.NavigateMsg:
-		a.activeView = msg.View
-		if msg.View == "chapters" && msg.Data != nil {
-			if novel, ok := msg.Data.(*db.Novel); ok {
-				cmd = a.chaptersModel.LoadNovel(novel)
-				cmds = append(cmds, cmd)
-			} else if searchResult, ok := msg.Data.(providers.SearchResult); ok {
-				novel := &db.Novel{
-					ProviderID:    searchResult.ProviderID,
-					SourceURL:     searchResult.URL,
-					Title:         searchResult.Title,
-					Author:        searchResult.Author,
-					CoverURL:      searchResult.CoverURL,
-					Description:   searchResult.Description,
-					TotalChapters: searchResult.ChapterCount,
-					Status:        "Reading",
-				}
-				if err := a.db.AddNovel(novel); err != nil {
-					a.activeView = "chapters"
+		a.activeView = ViewName(msg.View)
+		switch a.activeView {
+		case ViewChapters:
+			if msg.Data != nil {
+				if novel, ok := msg.Data.(*db.Novel); ok {
 					cmd = a.chaptersModel.LoadNovel(novel)
 					cmds = append(cmds, cmd)
-					cmds = append(cmds, func() tea.Msg { return err })
-				} else {
-					cmd = a.chaptersModel.LoadNovel(novel)
-					cmds = append(cmds, cmd)
+				} else if searchResult, ok := msg.Data.(providers.SearchResult); ok {
+					novel := &db.Novel{
+						ProviderID:    searchResult.ProviderID,
+						SourceURL:     searchResult.URL,
+						Title:         searchResult.Title,
+						Author:        searchResult.Author,
+						CoverURL:      searchResult.CoverURL,
+						Description:   searchResult.Description,
+						TotalChapters: searchResult.ChapterCount,
+						Status:        "Reading",
+					}
+					if err := a.db.AddNovel(novel); err != nil {
+						a.activeView = ViewChapters
+						cmd = a.chaptersModel.LoadNovel(novel)
+						cmds = append(cmds, cmd)
+						cmds = append(cmds, func() tea.Msg { return err })
+					} else {
+						cmd = a.chaptersModel.LoadNovel(novel)
+						cmds = append(cmds, cmd)
 
-					// Trigger background sync asynchronously with progress updates
-					ch := make(chan tea.Msg, 100)
-					go func() {
-						defer close(ch)
-						err := a.syncService.SyncNovel(context.Background(), novel, func(pageChapters []providers.ChapterMeta) {
-							ch <- tuimsg.SyncProgressMsg{NovelID: novel.ID}
-						})
-						ch <- tuimsg.SyncCompleteMsg{Novel: novel, Err: err}
-					}()
-					cmds = append(cmds, listenToSync(ch))
+						// Trigger background sync asynchronously with progress updates
+						ch := make(chan tea.Msg, 100)
+						go func() {
+							defer close(ch)
+							err := a.syncService.SyncNovel(context.Background(), novel, func(pageChapters []providers.ChapterMeta) {
+								ch <- tuimsg.SyncProgressMsg{NovelID: novel.ID}
+							})
+							ch <- tuimsg.SyncCompleteMsg{Novel: novel, Err: err}
+						}()
+						cmds = append(cmds, listenToSync(ch))
+					}
 				}
 			}
-		}
-		if msg.View == "reader" && msg.Data != nil {
-			if chapter, ok := msg.Data.(*db.Chapter); ok {
-				cmd = a.readerModel.LoadChapter(chapter)
-				cmds = append(cmds, cmd)
+		case ViewReader:
+			if msg.Data != nil {
+				if chapter, ok := msg.Data.(*db.Chapter); ok {
+					cmd = a.readerModel.LoadChapter(chapter)
+					cmds = append(cmds, cmd)
+				}
 			}
-		}
-		if msg.View == "search" {
+		case ViewSearch:
 			cmd = a.searchModel.Init()
 			cmds = append(cmds, cmd)
-		}
-		if msg.View == "library" {
+		case ViewLibrary:
 			cmd = a.libraryModel.Init()
 			cmds = append(cmds, cmd)
 		}
 
 		// Propagate window size to the newly active view immediately
-		sizeMsg := tea.WindowSizeMsg{Width: a.width, Height: a.height}
-		if a.activeView == "library" {
-			a.libraryModel, cmd = a.libraryModel.Update(sizeMsg)
-			if cmd != nil {
-				cmds = append(cmds, cmd)
-			}
-		} else if a.activeView == "search" {
-			a.searchModel, cmd = a.searchModel.Update(sizeMsg)
-			if cmd != nil {
-				cmds = append(cmds, cmd)
-			}
-		} else if a.activeView == "chapters" {
-			var newModel tea.Model
-			newModel, cmd = a.chaptersModel.Update(sizeMsg)
-			a.chaptersModel = newModel.(chapters.Model)
-			if cmd != nil {
-				cmds = append(cmds, cmd)
-			}
-		} else if a.activeView == "reader" {
-			var newModel tea.Model
-			newModel, cmd = a.readerModel.Update(sizeMsg)
-			a.readerModel = newModel.(reader.Model)
-			if cmd != nil {
-				cmds = append(cmds, cmd)
-			}
-		}
+		cmd = a.routeToActiveView(tea.WindowSizeMsg{Width: a.width, Height: a.height})
+		cmds = append(cmds, cmd)
 	}
 
-	// Route msg to active view
-	if a.activeView == "library" {
-		a.libraryModel, cmd = a.libraryModel.Update(msg)
-		cmds = append(cmds, cmd)
-	} else if a.activeView == "search" {
-		a.searchModel, cmd = a.searchModel.Update(msg)
-		cmds = append(cmds, cmd)
-	} else if a.activeView == "chapters" {
-		var newModel tea.Model
-		newModel, cmd = a.chaptersModel.Update(msg)
-		a.chaptersModel = newModel.(chapters.Model)
-		cmds = append(cmds, cmd)
-	} else if a.activeView == "reader" {
-		var newModel tea.Model
-		newModel, cmd = a.readerModel.Update(msg)
-		a.readerModel = newModel.(reader.Model)
-		cmds = append(cmds, cmd)
-	}
+	// Route incoming msg to active view
+	cmd = a.routeToActiveView(msg)
+	cmds = append(cmds, cmd)
 
 	return a, tea.Batch(cmds...)
 }
 
 func (a *App) View() string {
-	if a.activeView == "library" {
+	switch a.activeView {
+	case ViewLibrary:
 		return a.libraryModel.View()
-	} else if a.activeView == "search" {
+	case ViewSearch:
 		return a.searchModel.View()
-	} else if a.activeView == "chapters" {
+	case ViewChapters:
 		return a.chaptersModel.View()
-	} else if a.activeView == "reader" {
+	case ViewReader:
 		return a.readerModel.View()
+	default:
+		return "Unknown view"
 	}
-	return "Unknown view"
 }
 
 type syncChannelMsg struct {
