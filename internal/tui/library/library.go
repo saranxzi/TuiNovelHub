@@ -96,6 +96,17 @@ func (m Model) Update(incoming tea.Msg) (tea.Model, tea.Cmd) {
 			return m, func() tea.Msg {
 				return tuimsg.NavigateMsg{View: "search"}
 			}
+		case "d", "x", "delete":
+			idx := m.table.Cursor()
+			if idx >= 0 && idx < len(m.novels) {
+				novel := m.novels[idx]
+				err := m.db.DeleteNovel(novel.ID)
+				if err != nil {
+					m.err = err
+					return m, nil
+				}
+				return m, m.loadNovels()
+			}
 		case "enter":
 			// Navigate to chapter list for the selected novel
 			idx := m.table.Cursor()
@@ -134,7 +145,7 @@ func (m Model) View() string {
 
 	help := lipgloss.NewStyle().
 		Foreground(lipgloss.Color("240")).
-		Render("  a: add novel • enter: view chapters • q: quit")
+		Render("  a: add novel • enter: view chapters • d/x: delete • q: quit")
 
 	tableView := baseStyle.Render(m.table.View())
 

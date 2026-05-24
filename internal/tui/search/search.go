@@ -83,6 +83,10 @@ func (m Model) Update(incoming tea.Msg) (tea.Model, tea.Cmd) {
 	case tea.KeyMsg:
 		switch tmsg.String() {
 		case "esc":
+			if !m.input.Focused() {
+				m.input.Focus()
+				return m, nil
+			}
 			return m, func() tea.Msg {
 				return tuimsg.NavigateMsg{View: "library"}
 			}
