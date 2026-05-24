@@ -168,7 +168,7 @@ func TestTrackNovelFromSearch(t *testing.T) {
 		ProviderID: "novelfire",
 	}
 
-	novel, err := svc.TrackNovelFromSearch(ctx, result)
+	novel, err := svc.TrackNovelFromSearch(ctx, result, nil)
 	if err != nil {
 		t.Fatalf("TrackNovelFromSearch failed: %v", err)
 	}

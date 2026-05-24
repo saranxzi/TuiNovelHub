@@ -91,7 +91,12 @@ func (a *App) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 					TotalChapters: searchResult.ChapterCount,
 					Status:        "Reading",
 				}
-				if err := a.db.AddNovel(novel); err == nil {
+				if err := a.db.AddNovel(novel); err != nil {
+					a.activeView = "chapters"
+					cmd = a.chaptersModel.LoadNovel(novel)
+					cmds = append(cmds, cmd)
+					cmds = append(cmds, func() tea.Msg { return err })
+				} else {
 					cmd = a.chaptersModel.LoadNovel(novel)
 					cmds = append(cmds, cmd)
 

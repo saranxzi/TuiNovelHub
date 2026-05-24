@@ -20,22 +20,23 @@ func NewSyncService(database *db.DB) *SyncService {
 }
 
 // TrackNovelFromSearch creates a novel record from a search result and immediately syncs it.
-func (s *SyncService) TrackNovelFromSearch(ctx context.Context, result providers.SearchResult) (*db.Novel, error) {
+func (s *SyncService) TrackNovelFromSearch(ctx context.Context, result providers.SearchResult, onProgress func([]providers.ChapterMeta)) (*db.Novel, error) {
 	novel := &db.Novel{
-		ProviderID:  result.ProviderID,
-		SourceURL:   result.URL,
-		Title:       result.Title,
-		Author:      result.Author,
-		CoverURL:    result.CoverURL,
-		Description: result.Description,
-		Status:      "Reading",
+		ProviderID:    result.ProviderID,
+		SourceURL:     result.URL,
+		Title:         result.Title,
+		Author:        result.Author,
+		CoverURL:      result.CoverURL,
+		Description:   result.Description,
+		TotalChapters: result.ChapterCount,
+		Status:        "Reading",
 	}
 
 	if err := s.db.AddNovel(novel); err != nil {
 		return nil, fmt.Errorf("failed to track novel: %w", err)
 	}
 
-	if err := s.SyncNovel(ctx, novel, nil); err != nil {
+	if err := s.SyncNovel(ctx, novel, onProgress); err != nil {
 		return novel, fmt.Errorf("novel tracked but initial sync failed: %w", err)
 	}
 
@@ -49,9 +50,11 @@ func (s *SyncService) SyncNovel(ctx context.Context, novel *db.Novel, onProgress
 		return fmt.Errorf("provider %q not found", novel.ProviderID)
 	}
 
+	var totalInserted int
 	chapters, err := p.GetChapterList(ctx, novel.SourceURL, func(pageChapters []providers.ChapterMeta) {
 		if len(pageChapters) > 0 {
-			_, _ = s.db.AddChapters(novel.ID, pageChapters)
+			inserted, _ := s.db.AddChapters(novel.ID, pageChapters)
+			totalInserted += inserted
 		}
 		if onProgress != nil {
 			onProgress(pageChapters)
@@ -66,19 +69,13 @@ func (s *SyncService) SyncNovel(ctx context.Context, novel *db.Novel, onProgress
 		return nil
 	}
 
-	inserted, err := s.db.AddChapters(novel.ID, chapters)
-	if err != nil {
-		s.db.LogSync(novel.ID, "sync_db_error", err.Error())
-		return fmt.Errorf("failed to add chapters to db: %w", err)
-	}
-
 	totalChapters := len(chapters)
 	if err := s.db.UpdateNovelSync(novel.ID, totalChapters); err != nil {
 		s.db.LogSync(novel.ID, "sync_update_error", err.Error())
 		return fmt.Errorf("failed to update novel sync status: %w", err)
 	}
 
-	s.db.LogSync(novel.ID, "sync_success", fmt.Sprintf("Synced %d chapters (%d new)", totalChapters, inserted))
+	s.db.LogSync(novel.ID, "sync_success", fmt.Sprintf("Synced %d chapters (%d new)", totalChapters, totalInserted))
 	return nil
 }
 
