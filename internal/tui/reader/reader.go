@@ -30,16 +30,20 @@ type Model struct {
 	height      int
 	title       string
 	content     string
+	lineWidth   int
+	centerText  bool
 }
 
 func NewModel(database *db.DB, cfg *config.Config) Model {
 	s := components.NewSpinner()
 	vp := viewport.New(0, 0)
 	return Model{
-		db:       database,
-		config:   cfg,
-		spinner:  s,
-		viewport: vp,
+		db:         database,
+		config:     cfg,
+		spinner:    s,
+		viewport:   vp,
+		lineWidth:  cfg.Reader.MaxLineWidth,
+		centerText: cfg.Reader.CenterText,
 	}
 }
 
@@ -186,21 +190,27 @@ func (m Model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 			}
 
 		case "[":
-			m.config.Reader.MaxLineWidth -= 5
-			if m.config.Reader.MaxLineWidth < 30 {
-				m.config.Reader.MaxLineWidth = 30
+			m.lineWidth -= 5
+			if m.lineWidth < 30 {
+				m.lineWidth = 30
 			}
+			m.config.Reader.MaxLineWidth = m.lineWidth
+			_ = m.config.Save()
 			m.reformatContent()
 
 		case "]":
-			m.config.Reader.MaxLineWidth += 5
-			if m.config.Reader.MaxLineWidth > 160 {
-				m.config.Reader.MaxLineWidth = 160
+			m.lineWidth += 5
+			if m.lineWidth > 160 {
+				m.lineWidth = 160
 			}
+			m.config.Reader.MaxLineWidth = m.lineWidth
+			_ = m.config.Save()
 			m.reformatContent()
 
 		case "\\":
-			m.config.Reader.CenterText = !m.config.Reader.CenterText
+			m.centerText = !m.centerText
+			m.config.Reader.CenterText = m.centerText
+			_ = m.config.Save()
 			m.reformatContent()
 		}
 	}
@@ -249,14 +259,14 @@ func (m *Model) reformatContent() {
 	}
 
 	width := m.width
-	if m.config.Reader.MaxLineWidth > 0 && m.config.Reader.MaxLineWidth < width {
-		width = m.config.Reader.MaxLineWidth
+	if m.lineWidth > 0 && m.lineWidth < width {
+		width = m.lineWidth
 	}
 
 	style := lipgloss.NewStyle().Width(width)
 	wrappedText := style.Render(m.content)
 	
-	if m.config.Reader.CenterText && m.width > width {
+	if m.centerText && m.width > width {
 		leftPadding := (m.width - width) / 2
 		wrappedText = lipgloss.NewStyle().PaddingLeft(leftPadding).Render(wrappedText)
 	}
@@ -290,10 +300,10 @@ func (m Model) View() string {
 
 	percent := int(m.viewport.ScrollPercent() * 100)
 	centerStr := "off"
-	if m.config.Reader.CenterText {
+	if m.centerText {
 		centerStr = "on"
 	}
-	footerText := fmt.Sprintf(" %d%% • width: %d • center: %s • keys: esc (exit) • left/right • [ and ] (width) • \\ (center)", percent, m.config.Reader.MaxLineWidth, centerStr)
+	footerText := fmt.Sprintf(" %d%% • width: %d • center: %s • keys: esc (exit) • left/right • [ and ] (width) • \\ (center)", percent, m.lineWidth, centerStr)
 	footerStyle := lipgloss.NewStyle().
 		Foreground(lipgloss.Color("#D1D1D1")).
 		Background(lipgloss.Color("#2A2A2A")).

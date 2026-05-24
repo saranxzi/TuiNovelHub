@@ -15,9 +15,11 @@ import (
 	"treading/internal/providers"
 )
 
+const baseURL = "https://novelfire.net"
+
 func init() {
 	client := resty.New().
-		SetBaseURL("https://novelfire.net").
+		SetBaseURL(baseURL).
 		SetRetryCount(5).
 		SetRetryWaitTime(2 * time.Second).
 		SetRetryMaxWaitTime(60 * time.Second).
@@ -69,7 +71,7 @@ func (p *NovelFireProvider) Search(ctx context.Context, query string, page int) 
 		aTag := sel.Find("a").First()
 		novelURL := aTag.AttrOr("href", "")
 		if novelURL != "" && strings.HasPrefix(novelURL, "/") {
-			novelURL = "https://novelfire.net" + novelURL
+			novelURL = baseURL + novelURL
 		}
 
 		title := aTag.AttrOr("title", sel.Find(".novel-title").Text())
@@ -77,7 +79,7 @@ func (p *NovelFireProvider) Search(ctx context.Context, query string, page int) 
 
 		coverURL := sel.Find("img").AttrOr("data-src", sel.Find("img").AttrOr("src", ""))
 		if coverURL != "" && strings.HasPrefix(coverURL, "/") {
-			coverURL = "https://novelfire.net" + coverURL
+			coverURL = baseURL + coverURL
 		}
 
 		chapterCount := 0
@@ -135,8 +137,7 @@ func (p *NovelFireProvider) GetChapterList(ctx context.Context, novelURL string,
 	var chapters []providers.ChapterMeta
 
 	// Parse page 1
-	var page1Chapters []providers.ChapterMeta
-	p.extractChapters(doc, &page1Chapters, 1)
+	page1Chapters := p.extractChapters(doc, 1)
 	chapters = append(chapters, page1Chapters...)
 	if onProgress != nil {
 		onProgress(page1Chapters)
@@ -181,8 +182,7 @@ func (p *NovelFireProvider) GetChapterList(ctx context.Context, novelURL string,
 			return nil, fmt.Errorf("failed to parse chapters HTML for page %d: %w", page, err)
 		}
 
-		var pageChapters []providers.ChapterMeta
-		p.extractChapters(pageDoc, &pageChapters, page)
+		pageChapters := p.extractChapters(pageDoc, page)
 		chapters = append(chapters, pageChapters...)
 		if onProgress != nil {
 			onProgress(pageChapters)
@@ -192,12 +192,13 @@ func (p *NovelFireProvider) GetChapterList(ctx context.Context, novelURL string,
 	return chapters, nil
 }
 
-func (p *NovelFireProvider) extractChapters(doc *goquery.Document, chapters *[]providers.ChapterMeta, page int) {
+func (p *NovelFireProvider) extractChapters(doc *goquery.Document, page int) []providers.ChapterMeta {
+	var chapters []providers.ChapterMeta
 	doc.Find("ul.chapter-list li a").Each(func(i int, sel *goquery.Selection) {
 		title := strings.TrimSpace(sel.Find(".chapter-title").Text())
 		href := sel.AttrOr("href", "")
 		if href != "" && strings.HasPrefix(href, "/") {
-			href = "https://novelfire.net" + href
+			href = baseURL + href
 		}
 
 		numStr := strings.TrimSpace(sel.Find(".chapter-no").Text())
@@ -208,12 +209,13 @@ func (p *NovelFireProvider) extractChapters(doc *goquery.Document, chapters *[]p
 			}
 		}
 
-		*chapters = append(*chapters, providers.ChapterMeta{
+		chapters = append(chapters, providers.ChapterMeta{
 			Index: index,
 			Title: title,
 			URL:   href,
 		})
 	})
+	return chapters
 }
 
 func (p *NovelFireProvider) GetChapterContent(ctx context.Context, chapterURL string) (providers.ChapterContent, error) {
