@@ -35,7 +35,7 @@ func (s *SyncService) TrackNovelFromSearch(ctx context.Context, result providers
 		return nil, fmt.Errorf("failed to track novel: %w", err)
 	}
 
-	if err := s.SyncNovel(ctx, novel); err != nil {
+	if err := s.SyncNovel(ctx, novel, nil); err != nil {
 		return novel, fmt.Errorf("novel tracked but initial sync failed: %w", err)
 	}
 
@@ -43,13 +43,20 @@ func (s *SyncService) TrackNovelFromSearch(ctx context.Context, result providers
 }
 
 // SyncNovel pulls the latest chapters from the provider and updates the database.
-func (s *SyncService) SyncNovel(ctx context.Context, novel *db.Novel) error {
+func (s *SyncService) SyncNovel(ctx context.Context, novel *db.Novel, onProgress func([]providers.ChapterMeta)) error {
 	p, ok := providers.Get(novel.ProviderID)
 	if !ok {
 		return fmt.Errorf("provider %q not found", novel.ProviderID)
 	}
 
-	chapters, err := p.GetChapterList(ctx, novel.SourceURL)
+	chapters, err := p.GetChapterList(ctx, novel.SourceURL, func(pageChapters []providers.ChapterMeta) {
+		if len(pageChapters) > 0 {
+			_, _ = s.db.AddChapters(novel.ID, pageChapters)
+		}
+		if onProgress != nil {
+			onProgress(pageChapters)
+		}
+	})
 	if err != nil {
 		s.db.LogSync(novel.ID, "sync_failed", err.Error())
 		return fmt.Errorf("failed to fetch chapters for %s: %w", novel.Title, err)
@@ -91,7 +98,7 @@ func (s *SyncService) SyncAll(ctx context.Context) error {
 		default:
 		}
 
-		if err := s.SyncNovel(ctx, &novels[i]); err != nil {
+		if err := s.SyncNovel(ctx, &novels[i], nil); err != nil {
 			log.Printf("sync error for %q: %v", novels[i].Title, err)
 			syncErrors++
 		}

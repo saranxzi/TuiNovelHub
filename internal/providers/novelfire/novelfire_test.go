@@ -31,7 +31,7 @@ func TestNovelFirePipeline(t *testing.T) {
 	firstResult := results[0]
 
 	t.Logf("Fetching chapter list for %s...", firstResult.URL)
-	chapters, err := p.GetChapterList(ctx, firstResult.URL)
+	chapters, err := p.GetChapterList(ctx, firstResult.URL, nil)
 	if err != nil {
 		t.Fatalf("GetChapterList failed: %v", err)
 	}

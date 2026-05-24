@@ -42,7 +42,7 @@ func TestSyncNovelIntegration(t *testing.T) {
 
 	// --- First sync ---
 	t.Logf("Syncing novel %s...", novel.Title)
-	err = svc.SyncNovel(ctx, novel)
+	err = svc.SyncNovel(ctx, novel, nil)
 	if err != nil {
 		t.Fatalf("SyncNovel failed: %v", err)
 	}
@@ -60,7 +60,7 @@ func TestSyncNovelIntegration(t *testing.T) {
 	t.Logf("Sync complete! Total Chapters: %d", syncedNovel.TotalChapters)
 
 	// --- Idempotent re-sync ---
-	err = svc.SyncNovel(ctx, novel)
+	err = svc.SyncNovel(ctx, novel, nil)
 	if err != nil {
 		t.Fatalf("Second SyncNovel failed: %v", err)
 	}

@@ -36,7 +36,7 @@ type Provider interface {
 	// Search queries the source and returns paginated results.
 	Search(ctx context.Context, query string, page int) ([]SearchResult, error)
 	// GetChapterList returns all chapter metadata for a given novel URL.
-	GetChapterList(ctx context.Context, novelURL string) ([]ChapterMeta, error)
+	GetChapterList(ctx context.Context, novelURL string, onProgress func([]ChapterMeta)) ([]ChapterMeta, error)
 	// GetChapterContent scrapes and returns clean Markdown for one chapter.
 	GetChapterContent(ctx context.Context, chapterURL string) (ChapterContent, error)
 }

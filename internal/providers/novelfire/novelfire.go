@@ -105,7 +105,7 @@ func (p *NovelFireProvider) Search(ctx context.Context, query string, page int) 
 	return results, nil
 }
 
-func (p *NovelFireProvider) GetChapterList(ctx context.Context, novelURL string) ([]providers.ChapterMeta, error) {
+func (p *NovelFireProvider) GetChapterList(ctx context.Context, novelURL string, onProgress func([]providers.ChapterMeta)) ([]providers.ChapterMeta, error) {
 	if err := p.limiter.Wait(ctx); err != nil {
 		return nil, err
 	}
@@ -135,7 +135,12 @@ func (p *NovelFireProvider) GetChapterList(ctx context.Context, novelURL string)
 	var chapters []providers.ChapterMeta
 
 	// Parse page 1
-	p.extractChapters(doc, &chapters, 1)
+	var page1Chapters []providers.ChapterMeta
+	p.extractChapters(doc, &page1Chapters, 1)
+	chapters = append(chapters, page1Chapters...)
+	if onProgress != nil {
+		onProgress(page1Chapters)
+	}
 
 	// Discover last page number
 	maxPage := 1
@@ -176,7 +181,12 @@ func (p *NovelFireProvider) GetChapterList(ctx context.Context, novelURL string)
 			return nil, fmt.Errorf("failed to parse chapters HTML for page %d: %w", page, err)
 		}
 
-		p.extractChapters(pageDoc, &chapters, page)
+		var pageChapters []providers.ChapterMeta
+		p.extractChapters(pageDoc, &pageChapters, page)
+		chapters = append(chapters, pageChapters...)
+		if onProgress != nil {
+			onProgress(pageChapters)
+		}
 	}
 
 	return chapters, nil

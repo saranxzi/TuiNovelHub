@@ -69,6 +69,11 @@ func (a *App) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 	case tea.WindowSizeMsg:
 		a.width = msg.Width
 		a.height = msg.Height
+	case syncChannelMsg:
+		if msg.msg != nil {
+			cmds = append(cmds, func() tea.Msg { return msg.msg })
+		}
+		cmds = append(cmds, listenToSync(msg.ch))
 	case tuimsg.NavigateMsg:
 		a.activeView = msg.View
 		if msg.View == "chapters" && msg.Data != nil {
@@ -90,12 +95,16 @@ func (a *App) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 					cmd = a.chaptersModel.LoadNovel(novel)
 					cmds = append(cmds, cmd)
 
-					// Trigger background sync asynchronously
-					syncCmd := func() tea.Msg {
-						err := a.syncService.SyncNovel(context.Background(), novel)
-						return tuimsg.SyncCompleteMsg{Novel: novel, Err: err}
-					}
-					cmds = append(cmds, syncCmd)
+					// Trigger background sync asynchronously with progress updates
+					ch := make(chan tea.Msg, 100)
+					go func() {
+						defer close(ch)
+						err := a.syncService.SyncNovel(context.Background(), novel, func(pageChapters []providers.ChapterMeta) {
+							ch <- tuimsg.SyncProgressMsg{NovelID: novel.ID}
+						})
+						ch <- tuimsg.SyncCompleteMsg{Novel: novel, Err: err}
+					}()
+					cmds = append(cmds, listenToSync(ch))
 				}
 			}
 		}
@@ -176,4 +185,19 @@ func (a *App) View() string {
 		return a.readerModel.View()
 	}
 	return "Unknown view"
+}
+
+type syncChannelMsg struct {
+	ch  chan tea.Msg
+	msg tea.Msg
+}
+
+func listenToSync(ch chan tea.Msg) tea.Cmd {
+	return func() tea.Msg {
+		msg, ok := <-ch
+		if !ok {
+			return nil
+		}
+		return syncChannelMsg{ch: ch, msg: msg}
+	}
 }

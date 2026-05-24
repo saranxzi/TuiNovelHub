@@ -124,6 +124,9 @@ func (m Model) Update(incoming tea.Msg) (tea.Model, tea.Cmd) {
 	case error:
 		m.err = tmsg
 
+	case tuimsg.SyncProgressMsg:
+		return m, m.loadNovels()
+
 	case novelsLoadedMsg:
 		m.novels = tmsg.novels
 		m.table.SetRows(tmsg.rows)

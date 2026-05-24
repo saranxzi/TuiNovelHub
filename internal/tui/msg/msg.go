@@ -29,3 +29,8 @@ type ChapterContentMsg struct {
 	Content string
 	Err     error
 }
+
+// SyncProgressMsg indicates that progress has been made during a sync operation.
+type SyncProgressMsg struct {
+	NovelID int
+}

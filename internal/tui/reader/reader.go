@@ -293,7 +293,7 @@ func (m Model) View() string {
 	if m.config.Reader.CenterText {
 		centerStr = "on"
 	}
-	footerText := fmt.Sprintf(" %d%% • width: %d • center: %s • keys: esc (exit) • left/right • [/] (width) • \\ (center)", percent, m.config.Reader.MaxLineWidth, centerStr)
+	footerText := fmt.Sprintf(" %d%% • width: %d • center: %s • keys: esc (exit) • left/right • [ and ] (width) • \\ (center)", percent, m.config.Reader.MaxLineWidth, centerStr)
 	footerStyle := lipgloss.NewStyle().
 		Foreground(lipgloss.Color("#D1D1D1")).
 		Background(lipgloss.Color("#2A2A2A")).
