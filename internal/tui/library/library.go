@@ -173,10 +173,10 @@ func (m Model) loadNovels() tea.Cmd {
 
 		var rows []table.Row
 		for _, n := range novels {
-			readCount, total, err := m.db.GetReadProgress(n.ID)
-			progress := "0/0"
+			readCount, _, err := m.db.GetReadProgress(n.ID)
+			progress := fmt.Sprintf("0/%d", n.TotalChapters)
 			if err == nil {
-				progress = fmt.Sprintf("%d/%d", readCount, total)
+				progress = fmt.Sprintf("%d/%d", readCount, n.TotalChapters)
 			}
 
 			lastSynced := "Never"

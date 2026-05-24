@@ -184,6 +184,24 @@ func (m Model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 				loadCmd := m.LoadChapter(prevCh)
 				return m, tea.Batch(saveCmd, loadCmd)
 			}
+
+		case "[":
+			m.config.Reader.MaxLineWidth -= 5
+			if m.config.Reader.MaxLineWidth < 30 {
+				m.config.Reader.MaxLineWidth = 30
+			}
+			m.reformatContent()
+
+		case "]":
+			m.config.Reader.MaxLineWidth += 5
+			if m.config.Reader.MaxLineWidth > 160 {
+				m.config.Reader.MaxLineWidth = 160
+			}
+			m.reformatContent()
+
+		case "\\":
+			m.config.Reader.CenterText = !m.config.Reader.CenterText
+			m.reformatContent()
 		}
 	}
 
@@ -271,7 +289,11 @@ func (m Model) View() string {
 	header := headerStyle.Width(m.width).Render(headerText)
 
 	percent := int(m.viewport.ScrollPercent() * 100)
-	footerText := fmt.Sprintf(" %d%% • keys: esc/backspace (exit) • left/right/p/n (prev/next chapter) • up/down (scroll)", percent)
+	centerStr := "off"
+	if m.config.Reader.CenterText {
+		centerStr = "on"
+	}
+	footerText := fmt.Sprintf(" %d%% • width: %d • center: %s • keys: esc (exit) • left/right • [/] (width) • \\ (center)", percent, m.config.Reader.MaxLineWidth, centerStr)
 	footerStyle := lipgloss.NewStyle().
 		Foreground(lipgloss.Color("#D1D1D1")).
 		Background(lipgloss.Color("#2A2A2A")).
