@@ -2,14 +2,10 @@ package components
 
 import (
 	"fmt"
+	"strings"
 
 	"github.com/charmbracelet/lipgloss"
 )
-
-var statusBarStyle = lipgloss.NewStyle().
-	Foreground(lipgloss.Color("#D1D1D1")).
-	Background(lipgloss.Color("#2A2A2A")).
-	Padding(0, 1)
 
 type StatusBar struct {
 	ViewName   string
@@ -31,13 +27,11 @@ func (s *StatusBar) View() string {
 
 	// Calculate spacing
 	w := lipgloss.Width(left) + lipgloss.Width(right)
-	spaces := ""
+	var spaces string
 	if s.Width > w {
-		for i := 0; i < s.Width-w-2; i++ {
-			spaces += " "
-		}
+		spaces = strings.Repeat(" ", s.Width-w-2)
 	}
 
 	content := left + spaces + right
-	return statusBarStyle.Width(s.Width).Render(content)
+	return StatusBarStyle.Width(s.Width).Render(content)
 }

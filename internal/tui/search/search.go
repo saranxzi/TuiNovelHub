@@ -56,12 +56,20 @@ func NewModel() Model {
 	l.SetShowStatusBar(false)
 	l.SetFilteringEnabled(false)
 
+	var providerID string
+	all := providers.All()
+	if len(all) > 0 {
+		providerID = all[0].ID()
+	} else {
+		providerID = "novelfire"
+	}
+
 	return Model{
 		input:      ti,
 		list:       l,
 		spinner:    components.NewSpinner(),
 		statusBar:  components.NewStatusBar(),
-		providerID: "novelfire",
+		providerID: providerID,
 	}
 }
 
@@ -112,10 +120,17 @@ func (m Model) Update(incoming tea.Msg) (tea.Model, tea.Cmd) {
 				m.input.Blur()
 			}
 		case "tab":
-			if m.providerID == "novelfire" {
-				m.providerID = "royalroad"
-			} else {
-				m.providerID = "novelfire"
+			all := providers.All()
+			if len(all) > 1 {
+				idx := -1
+				for i, p := range all {
+					if p.ID() == m.providerID {
+						idx = i
+						break
+					}
+				}
+				nextIdx := (idx + 1) % len(all)
+				m.providerID = all[nextIdx].ID()
 			}
 		}
 

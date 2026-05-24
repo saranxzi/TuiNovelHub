@@ -23,13 +23,6 @@ type SyncCompleteMsg struct {
 	Err   error
 }
 
-// ChapterContentMsg returns the markdown content of a chapter.
-type ChapterContentMsg struct {
-	Chapter *db.Chapter
-	Content string
-	Err     error
-}
-
 // SyncProgressMsg indicates that progress has been made during a sync operation.
 type SyncProgressMsg struct {
 	NovelID int
