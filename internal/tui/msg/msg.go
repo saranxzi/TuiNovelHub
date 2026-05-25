@@ -27,3 +27,8 @@ type SyncCompleteMsg struct {
 type SyncProgressMsg struct {
 	NovelID int
 }
+
+// NovelDeletedMsg indicates a novel has been deleted.
+type NovelDeletedMsg struct {
+	NovelID int
+}

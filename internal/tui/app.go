@@ -40,6 +40,8 @@ type App struct {
 	activeView ViewName
 	width      int
 	height     int
+
+	syncCancels map[int]context.CancelFunc
 }
 
 func NewApp(cfg *config.Config, database *db.DB) *App {
@@ -54,6 +56,7 @@ func NewApp(cfg *config.Config, database *db.DB) *App {
 		chaptersModel: chapters.NewModel(database, syncSvc),
 		readerModel:   reader.NewModel(database, cfg),
 		activeView:    ViewLibrary,
+		syncCancels:   make(map[int]context.CancelFunc),
 	}
 }
 
@@ -94,6 +97,9 @@ func (a *App) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 	case tea.KeyMsg:
 		switch msg.String() {
 		case "ctrl+c": // Global quit
+			for _, cancel := range a.syncCancels {
+				cancel()
+			}
 			return a, tea.Quit
 		}
 	case tea.WindowSizeMsg:
@@ -104,6 +110,16 @@ func (a *App) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 			cmds = append(cmds, func() tea.Msg { return msg.msg })
 		}
 		cmds = append(cmds, listenToSync(msg.ch))
+	case tuimsg.SyncCompleteMsg:
+		if cancel, ok := a.syncCancels[msg.Novel.ID]; ok {
+			cancel()
+			delete(a.syncCancels, msg.Novel.ID)
+		}
+	case tuimsg.NovelDeletedMsg:
+		if cancel, ok := a.syncCancels[msg.NovelID]; ok {
+			cancel()
+			delete(a.syncCancels, msg.NovelID)
+		}
 	case tuimsg.NavigateMsg:
 		a.activeView = ViewName(msg.View)
 		switch a.activeView {
@@ -133,10 +149,13 @@ func (a *App) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 						cmds = append(cmds, cmd)
 
 						// Trigger background sync asynchronously with progress updates
+						ctx, cancel := context.WithCancel(context.Background())
+						a.syncCancels[novel.ID] = cancel
+
 						ch := make(chan tea.Msg, 100)
 						go func() {
 							defer close(ch)
-							err := a.syncService.SyncNovel(context.Background(), novel, func(pageChapters []providers.ChapterMeta) {
+							err := a.syncService.SyncNovel(ctx, novel, func(pageChapters []providers.ChapterMeta) {
 								ch <- tuimsg.SyncProgressMsg{NovelID: novel.ID}
 							})
 							ch <- tuimsg.SyncCompleteMsg{Novel: novel, Err: err}

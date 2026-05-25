@@ -2,6 +2,8 @@ package sync_test
 
 import (
 	"context"
+	"errors"
+	"strings"
 	"testing"
 	"time"
 
@@ -187,4 +189,39 @@ func TestTrackNovelFromSearch(t *testing.T) {
 		t.Fatal("Expected chapters to be synced")
 	}
 	t.Logf("TrackNovelFromSearch: %q with %d chapters", fromDB.Title, fromDB.TotalChapters)
+}
+
+func TestSyncNovelCancellation(t *testing.T) {
+	tempDir := t.TempDir()
+	database, err := db.Open(tempDir)
+	if err != nil {
+		t.Fatalf("Failed to open database: %v", err)
+	}
+	defer database.Close()
+
+	novel := &db.Novel{
+		ProviderID: "novelfire",
+		SourceURL:  "https://novelfire.net/book/cultivation-online",
+		Title:      "Cultivation Online",
+		Status:     "Reading",
+		Priority:   1,
+	}
+
+	err = database.AddNovel(novel)
+	if err != nil {
+		t.Fatalf("Failed to add novel: %v", err)
+	}
+
+	svc := sync.NewSyncService(database)
+
+	ctx, cancel := context.WithCancel(context.Background())
+	cancel() // Cancel immediately
+
+	err = svc.SyncNovel(ctx, novel, nil)
+	if err == nil {
+		t.Fatal("Expected error due to context cancellation, got nil")
+	}
+	if !strings.Contains(err.Error(), "sync cancelled") && !errors.Is(err, context.Canceled) {
+		t.Fatalf("Expected cancellation error, got: %v", err)
+	}
 }

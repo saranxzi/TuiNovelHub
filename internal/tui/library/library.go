@@ -105,7 +105,12 @@ func (m Model) Update(incoming tea.Msg) (tea.Model, tea.Cmd) {
 					m.err = err
 					return m, nil
 				}
-				return m, m.loadNovels()
+				return m, tea.Batch(
+					m.loadNovels(),
+					func() tea.Msg {
+						return tuimsg.NovelDeletedMsg{NovelID: novel.ID}
+					},
+				)
 			}
 		case "enter":
 			// Navigate to chapter list for the selected novel

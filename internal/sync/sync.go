@@ -52,6 +52,11 @@ func (s *SyncService) SyncNovel(ctx context.Context, novel *db.Novel, onProgress
 
 	var totalInserted int
 	chapters, err := p.GetChapterList(ctx, novel.SourceURL, func(pageChapters []providers.ChapterMeta) {
+		select {
+		case <-ctx.Done():
+			return
+		default:
+		}
 		if len(pageChapters) > 0 {
 			inserted, _ := s.db.AddChapters(novel.ID, pageChapters)
 			totalInserted += inserted
@@ -61,6 +66,11 @@ func (s *SyncService) SyncNovel(ctx context.Context, novel *db.Novel, onProgress
 		}
 	})
 	if err != nil {
+		select {
+		case <-ctx.Done():
+			return fmt.Errorf("sync cancelled: %w", err)
+		default:
+		}
 		s.db.LogSync(novel.ID, "sync_failed", err.Error())
 		return fmt.Errorf("failed to fetch chapters for %s: %w", novel.Title, err)
 	}
@@ -71,10 +81,20 @@ func (s *SyncService) SyncNovel(ctx context.Context, novel *db.Novel, onProgress
 
 	totalChapters := len(chapters)
 	if err := s.db.UpdateNovelSync(novel.ID, totalChapters); err != nil {
+		select {
+		case <-ctx.Done():
+			return fmt.Errorf("sync cancelled: %w", err)
+		default:
+		}
 		s.db.LogSync(novel.ID, "sync_update_error", err.Error())
 		return fmt.Errorf("failed to update novel sync status: %w", err)
 	}
 
+	select {
+	case <-ctx.Done():
+		return fmt.Errorf("sync cancelled: %w", ctx.Err())
+	default:
+	}
 	s.db.LogSync(novel.ID, "sync_success", fmt.Sprintf("Synced %d chapters (%d new)", totalChapters, totalInserted))
 	return nil
 }
