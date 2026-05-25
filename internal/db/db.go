@@ -15,7 +15,8 @@ type DB struct {
 // Open initializes the sqlite database and runs migrations.
 func Open(dataDir string) (*DB, error) {
 	dbPath := filepath.Join(dataDir, "hub.db")
-	conn, err := sql.Open("sqlite", dbPath)
+	dsn := fmt.Sprintf("%s?_busy_timeout=5000&_journal_mode=WAL", dbPath)
+	conn, err := sql.Open("sqlite", dsn)
 	if err != nil {
 		return nil, fmt.Errorf("failed to open database: %w", err)
 	}
