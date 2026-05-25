@@ -97,6 +97,7 @@ func (a *App) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 	case tea.KeyMsg:
 		switch msg.String() {
 		case "ctrl+c": // Global quit
+			// Cancel all running background synchronization routines to prevent database lockups
 			for _, cancel := range a.syncCancels {
 				cancel()
 			}
