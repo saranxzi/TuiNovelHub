@@ -101,8 +101,8 @@ func (m Model) Update(incoming tea.Msg) (tea.Model, tea.Cmd) {
 		case "enter":
 			if m.input.Focused() && m.input.Value() != "" {
 				m.searching = true
-				m.list.SetItems([]list.Item{})
-				return m, searchCmd(m.providerID, m.input.Value())
+				cmd = m.list.SetItems([]list.Item{})
+				return m, tea.Batch(cmd, searchCmd(m.providerID, m.input.Value()))
 			} else if !m.input.Focused() {
 				selected := m.list.SelectedItem()
 				if selected != nil {
@@ -144,7 +144,8 @@ func (m Model) Update(incoming tea.Msg) (tea.Model, tea.Cmd) {
 		for _, r := range tmsg.Results {
 			items = append(items, item{result: r})
 		}
-		m.list.SetItems(items)
+		cmd = m.list.SetItems(items)
+		cmds = append(cmds, cmd)
 		m.input.Blur()
 		m.err = nil
 	}

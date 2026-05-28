@@ -129,7 +129,8 @@ func (m Model) Update(incoming tea.Msg) (tea.Model, tea.Cmd) {
 		}
 
 	case chaptersLoadedMsg:
-		m.list.SetItems(tmsg.items)
+		cmd = m.list.SetItems(tmsg.items)
+		cmds = append(cmds, cmd)
 
 	case tuimsg.SyncProgressMsg:
 		if m.novel != nil && tmsg.NovelID == m.novel.ID {
